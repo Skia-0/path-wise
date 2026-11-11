@@ -1,0 +1,217 @@
+BEGIN;
+
+-- ==========================================
+-- WASSCE 2019 ELECTIVE PHYSICS - PAPER 1 (50 MCQs)
+-- ==========================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id, question_text, 
+    has_diagram, diagram_url, option_a, option_b, option_c, option_d, 
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+('Elective Physics', 2019, 1, 1, 'PH-02', 'The time rate of increase in velocity is called', false, NULL, 'speed.', 'force.', 'momentum.', 'acceleration.', 'D', 'Acceleration is defined as the time rate of change of velocity: a = dv/dt.', 'easy', false),
+
+('Elective Physics', 2019, 1, 2, 'PH-02', 'Which of the following quantities is a vector?', false, NULL, 'Speed', 'Volume', 'Momentum', 'Energy', 'C', 'Momentum (p = mv) has both magnitude and direction, making it a vector quantity.', 'easy', false),
+
+('Elective Physics', 2019, 1, 3, 'PH-02', 'In an elastic collision, momentum is conserved as well as', false, NULL, 'speed.', 'velocity.', 'kinetic energy.', 'potential energy.', 'C', 'By definition, an elastic collision is one in which both total momentum and total kinetic energy are conserved.', 'easy', false),
+
+('Elective Physics', 2019, 1, 4, 'PH-07', 'The induced current in a coil always flows in a direction so as to oppose the change causing it. This statement is known as', false, NULL, 'Ampere''s law.', 'Coulomb''s law.', 'Lenz''s law.', 'Faraday''s law.', 'C', 'Lenz''s law states that the direction of an induced current always opposes the change in magnetic flux that produces it.', 'easy', false),
+
+('Elective Physics', 2019, 1, 5, 'PH-07', 'Which of the following instruments can be used to compare the magnitudes of charges on two given bodies?', false, NULL, 'Proof plane', 'Gold-leaf electroscope', 'The electrophorus', 'Ebonite rod', 'B', 'The degree of divergence of the leaves of a gold-leaf electroscope is proportional to the magnitude of charge on the body.', 'easy', false),
+
+('Elective Physics', 2019, 1, 6, 'PH-03', 'A body of mass 2kg is released from a point 100 m above the ground level. Calculate its kinetic energy 80 m from the point of release. [g = 10 m s⁻²]', false, NULL, '900 J', '1600 J', '200 J', '600 J', 'B', 'Distance fallen h = 80 m. Potential energy lost converts to kinetic energy: KE = mgh = 2 * 10 * 80 = 1600 J.', 'medium', false),
+
+('Elective Physics', 2019, 1, 7, 'PH-04', 'Which of the following waves is not mechanical?', false, NULL, 'Water waves', 'Waves in pipes', 'Sound waves', 'Radio waves', 'D', 'Radio waves are electromagnetic waves and do not require a material medium for propagation.', 'easy', false),
+
+('Elective Physics', 2019, 1, 8, 'PH-02', 'A loaded spring is set in simple harmonic motion. The force that tends to restore the load to its equilibrium position is', false, NULL, 'elastic.', 'gravitational.', 'frictional.', 'adhesive.', 'A', 'The restoring force in a vibrating spring is provided by the elastic force according to Hooke''s law (F = -kx).', 'easy', false),
+
+('Elective Physics', 2019, 1, 9, 'PH-05', 'Which of the following situations cannot produce total internal reflection? A light ray travelling from', false, NULL, 'water to kerosene.', 'glass to water.', 'water to air.', 'Air to water.', 'D', 'Total internal reflection only occurs when light travels from an optically denser medium to an optically less dense medium (higher to lower refractive index). Air is less dense than water.', 'easy', false),
+
+('Elective Physics', 2019, 1, 10, 'PH-06', 'The vacuum in a thermos flask reduces heat loss resulting from', false, NULL, 'conduction only.', 'conduction and convection only.', 'radiation only.', 'radiation and Convection only.', 'B', 'Conduction and convection both require a material medium. The vacuum eliminates medium particles, preventing both modes.', 'easy', false),
+
+('Elective Physics', 2019, 1, 11, 'PH-05', 'The diagram above represents an experimental set-up for verifying', true, 'Physics/2019/Paper 1/PH-2019-P1-Q11-optics-setup.png', 'mirror formula.', 'lens formula.', 'laws of refraction.', 'laws of reflection', 'D', 'The optical pin setup with plane glass/mirror demonstrates incident and reflected rays to verify the laws of reflection.', 'medium', false),
+
+('Elective Physics', 2019, 1, 12, 'PH-02', 'Which of the following statements about a moving object is correct?', false, NULL, 'At a steady speed, the air resistance on it must be equal to zero.', 'When accelerating, the resultant force acting on it must be equal to zero.', 'There must always be a resultant force acting on it.', 'At a steady speed, the resultant force acting on it must be equal to zero.', 'D', 'According to Newton''s First Law of Motion, when an object moves at a constant velocity (steady speed), net/resultant force is zero.', 'medium', false),
+
+('Elective Physics', 2019, 1, 13, 'PH-07', 'The efficiency of a transformer is 100 %. Which of the following equations would be correct?', false, NULL, 'IpEs = IsEp', 'NpEp = NsEs', 'NsIp = NpIs', 'NsIs = NpIp', 'D', 'For 100% efficient transformer, Power Output = Power Input (VsIs = VpIp). Since V is proportional to N, NsIs = NpIp.', 'medium', false),
+
+('Elective Physics', 2019, 1, 14, 'PH-07', 'A freshly demagnetized bar magnet is placed in East-West direction to ensure that,', false, NULL, 'it is affected by the earth''s magnetic field.', 'the magnetic domains are within the earth''s field.', 'magnetic domains remain randomly arranged.', 'magnetic domains are orderly aligned', 'C', 'Placing in the East-West direction avoids alignment with Earth''s North-South magnetic field lines, keeping domains randomly oriented.', 'easy', false),
+
+('Elective Physics', 2019, 1, 15, 'PH-07', 'Which of the following graphs correctly represents the plot of the charge Q against the potential difference V in a capacitor?', true, 'Physics/2019/Paper 1/PH-2019-P1-Q15-q-v-graph.png', 'Graph A (Decreasing linear)', 'Graph B (Straight line through origin)', 'Graph C (Horizontal line)', 'Graph D (Hyperbolic decay)', 'B', 'Charge Q is directly proportional to potential difference V (Q = CV), yielding a straight-line graph passing through the origin.', 'easy', false),
+
+('Elective Physics', 2019, 1, 16, 'PH-01', 'A small amount of air is introduced into the vacuum above the mercury in a mercury barometer tube. The mercury level falls because the air molecules', false, NULL, 'cool the mercury and make it contract.', 'heat the mercury and make it lighter.', 'increase the pressure above the mercury.', 'decrease the pressure above the mercury.', 'C', 'Trapped air exerts downward pressure on top of the mercury column, reducing the height sustained by external atmospheric pressure.', 'medium', false),
+
+('Elective Physics', 2019, 1, 17, 'PH-06', 'Calculate the quantity of heat needed to change 60 g of ice at 0.0 °C to water at 80.0 °C. [Specific latent heat of fusion of ice = 3.36 x 10⁵ J kg⁻¹, specific heat capacity of water = 4.2 x 10³ J kg⁻¹ K⁻¹]', false, NULL, '22.17 kJ', '40.32 kJ', '4.80 kJ', '20.16 kJ', 'B', 'Q = m*Lf + m*c*dT = (0.06 * 3.36*10^5) + (0.06 * 4200 * 80) = 20160 + 20160 = 40320 J = 40.32 kJ.', 'medium', false),
+
+('Elective Physics', 2019, 1, 18, 'PH-06', 'The wire of a platinum resistance thermometer has a resistance of 3.5 Ω at 0 °C and 10.5 Ω at 100 °C. Calculate the temperature of the wire when its resistance is 7.5 Ω.', false, NULL, '57°C', '78°C', '25°C', '36°C', 'A', 'T = [(Rt - R0) / (R100 - R0)] * 100 = [(7.5 - 3.5) / (10.5 - 3.5)] * 100 = (4 / 7) * 100 = 57.14°C ≈ 57°C.', 'medium', false),
+
+('Elective Physics', 2019, 1, 19, 'PH-04', 'A transverse wave of frequency 9 Hz travels 4.5 m in 0.6 s. Calculate the wavelength of the wave.', false, NULL, '1.20m', '3.33m', '0.30m', '0.83m', 'D', 'Wave speed v = distance / time = 4.5 / 0.6 = 7.5 m/s. Wavelength λ = v / f = 7.5 / 9 = 0.833 m.', 'medium', false),
+
+('Elective Physics', 2019, 1, 20, 'PH-04', 'The speed of sound is least in which of the following media?', false, NULL, 'Wood', 'Air', 'Brass', 'Water', 'B', 'Sound travels slowest in gases (air ≈ 340 m/s) compared to liquids (water ≈ 1500 m/s) and solids (wood/brass > 3000 m/s).', 'easy', false),
+
+('Elective Physics', 2019, 1, 21, 'PH-04', 'Which of the following characteristics of waves can be demonstrated using a ripple tank? I. Reflection II. Refraction III. Diffraction', false, NULL, 'I only', 'II only', 'I and II only', 'I, II and III', 'D', 'A ripple tank demonstrates reflection, refraction, diffraction, and interference of water waves.', 'easy', false),
+
+('Elective Physics', 2019, 1, 22, 'PH-09', 'Which of the following graphs gives the correct relationship between energy and mass when mass is converted to energy?', true, 'Physics/2019/Paper 1/PH-2019-P1-Q22-energy-mass-graph.png', 'Graph A (Constant line)', 'Graph B (Straight line through origin)', 'Graph C (Parabolic curve)', 'Graph D (Decreasing linear)', 'B', 'Einstein''s equation E = mc² shows E is directly proportional to m, yielding a straight line passing through origin.', 'easy', false),
+
+('Elective Physics', 2019, 1, 23, 'PH-02', 'An 800 kg car moving at 80 km h⁻¹ collides with a 1200 kg car moving at 40 km h⁻¹ in the same direction. If the cars stick together, calculate their common speed.', false, NULL, '56 km h⁻¹', '60 km h⁻¹', '8 km h⁻¹', '40 km h⁻¹', 'A', 'Conservation of momentum: m1*u1 + m2*u2 = (m1 + m2)*v. (800*80 + 1200*40) = 2000*v => (64000 + 48000) = 2000*v => 112000 = 2000*v => v = 56 km h⁻¹.', 'medium', false),
+
+('Elective Physics', 2019, 1, 24, 'PH-02', 'The mass of an object is doubled while the force acting on it is halved. The resulting acceleration of the object is', false, NULL, 'doubled.', 'quadrupled.', 'quartered.', 'halved.', 'C', 'a = F / m. New acceleration a'' = (F/2) / (2m) = F / (4m) = a / 4.', 'medium', false),
+
+('Elective Physics', 2019, 1, 25, 'PH-06', 'The maximum and minimum thermometer reads the', false, NULL, 'maximum temperature during the day and minimum temperature at night from the time it was last reset', 'maximum temperature at night and minimum temperature during the day from the time it was last reset.', 'maximum temperature during the day and minimum temperature at night at all times.', 'maximum temperature at night and minimum temperature during the day at all times.', 'A', 'A Six''s thermometer records extremes of temperature over a period since its last reset.', 'easy', false),
+
+('Elective Physics', 2019, 1, 26, 'PH-07', 'An a.c. generator can be converted to a d.c. generator by replacing the', false, NULL, 'commutator with slip rings.', 'slip rings with a commutator.', 'commutator with an armature.', 'armature with a commutator.', 'B', 'Replacing slip rings with a split-ring commutator converts alternating induced voltage to unidirectional direct current.', 'easy', false),
+
+('Elective Physics', 2019, 1, 27, 'PH-07', 'Which of the following statements is the correct reason for which soft iron is used in making the armature of an electric bell? Soft iron', false, NULL, 'retains its magnetism for a long time.', 'is a diamagnetic material.', 'loses its magnetism easily.', 'is not easily magnetized.', 'C', 'Soft iron is a temporary magnet; it magnetizes and demagnetizes quickly when current is switched on and off.', 'easy', false),
+
+('Elective Physics', 2019, 1, 28, 'PH-07', 'The diagram above illustrates a metre bridge circuit under balanced condition. Determine the value of x.', true, 'Physics/2019/Paper 1/PH-2019-P1-Q28-metre-bridge.png', '57.2cm', '71.4cm', '10.0 cm', '28.6cm', 'D', 'Balanced bridge condition: 2 / x = 5 / (100 - x) => 2(100 - x) = 5x => 200 - 2x = 5x => 7x = 200 => x = 28.57 cm ≈ 28.6 cm.', 'medium', false),
+
+('Elective Physics', 2019, 1, 29, 'PH-07', 'Which of the following devices is used for storing electric charge?', false, NULL, 'Capacitor', 'Transformer', 'Ammeter', 'Potentiometer', 'A', 'A capacitor is an electrical component used to store electrostatic charge and energy.', 'easy', false),
+
+('Elective Physics', 2019, 1, 30, 'PH-02', 'An electron of mass 9.1 x 10⁻³¹ kg moves with a speed of 2.0 x 10⁶ m s⁻¹ round the nucleus of an atom in a circular path of radius 6.1 x 10⁻¹¹ m. Determine the angular speed of the electron.', false, NULL, '5.22 x 10¹⁵ rad s⁻¹', '3.28 x 10¹⁶ rad s⁻¹', '8.55 x 10³ rad s⁻¹', '9.11 x 10¹³ rad s⁻¹', 'B', 'Angular speed ω = v / r = (2.0 * 10^6) / (6.1 * 10^-11) = 3.278 * 10^16 rad/s ≈ 3.28 * 10^16 rad/s.', 'medium', false),
+
+('Elective Physics', 2019, 1, 31, 'PH-02', 'Using the data from question 30, calculate the centripetal force acting on the electron.', false, NULL, '1.3 x 10⁻²⁶ N', '7.7 x 10⁻⁴⁷ N', '6.0 x 10⁻⁸ N', '3.0 x 10⁻¹⁴ N', 'C', 'Fc = m * v² / r = (9.1 * 10^-31 * 4.0 * 10^12) / (6.1 * 10^-11) = (3.64 * 10^-18) / (6.1 * 10^-11) = 5.967 * 10^-8 N ≈ 6.0 * 10^-8 N.', 'medium', false),
+
+('Elective Physics', 2019, 1, 32, 'PH-07', 'A device consumes 100 W of power when connected to a 120 V source. Calculate its resistance.', false, NULL, '144 Ω', '1.2 Ω', '12000 Ω', '20 Ω', 'A', 'Power P = V² / R => R = V² / P = (120 * 120) / 100 = 14400 / 100 = 144 Ω.', 'easy', false),
+
+('Elective Physics', 2019, 1, 33, 'PH-04', 'Which property of a wave remains constant when the wave travels from one medium into another?', false, NULL, 'Frequency', 'Amplitude', 'Wavelength', 'Velocity', 'A', 'Frequency is determined solely by the wave source and remains constant across medium boundaries.', 'easy', false),
+
+('Elective Physics', 2019, 1, 34, 'PH-06', 'The anomalous expansion of water occurs in the range', false, NULL, '0 °C to 100 °C', '0 °C to 4 °C', '4 °C to 100 °C', '-4 °C to 0 °C', 'B', 'Water contracts instead of expanding when heated from 0°C to 4°C, reaching maximum density at 4°C.', 'easy', false),
+
+('Elective Physics', 2019, 1, 35, 'PH-05', 'A ray of light travelling from a rectangular glass block of refractive index 1.5 into air, strikes the block-air boundary at an incident angle of 30°. Calculate the angle of refraction.', false, NULL, '45.0°', '48.6°', '20.0°', '19.5°', 'B', 'Snell''s law: n1 * sin(i) = n2 * sin(r) => 1.5 * sin(30°) = 1.0 * sin(r) => 1.5 * 0.5 = sin(r) => sin(r) = 0.75 => r = 48.59° ≈ 48.6°.', 'medium', false),
+
+('Elective Physics', 2019, 1, 36, 'PH-06', 'A rectangular piece of iron measuring 4 cm x 3 cm at 20°C is heated until its temperature increases by 100°C. Calculate the new area of the metal. [Linear expansivity of iron = 1.2 x 10⁻⁵ K⁻¹]', false, NULL, '12.0173 cm²', '12.0144 cm²', '12.0346 cm²', '12.0288 cm²', 'D', 'Initial area A0 = 12 cm². Area expansivity β = 2α = 2.4 * 10^-5 K^-1. ΔA = A0 * β * ΔT = 12 * 2.4*10^-5 * 100 = 0.0288 cm². New area = 12 + 0.0288 = 12.0288 cm².', 'medium', false),
+
+('Elective Physics', 2019, 1, 37, 'PH-10', 'Two bodies of masses 3.0 kg and 2.0 kg are 50 cm apart. Calculate the force of attraction between them. [G= 6.67 x 10⁻¹¹ N m² kg⁻²]', false, NULL, '5.0 x 10 N', '1.6 x 10⁻⁹ N', '1.3 x 10³ N', '2.3 x 10³ N', 'B', 'F = G*m1*m2 / r² = (6.67*10^-11 * 3.0 * 2.0) / (0.5)² = (4.002*10^-10) / 0.25 = 1.6008 * 10^-9 N.', 'medium', false),
+
+('Elective Physics', 2019, 1, 38, 'PH-02', 'The diagram above illustrates an object moving in a circular path at constant speed. Which of the arrows correctly indicate the direction of linear velocity?', true, 'Physics/2019/Paper 1/PH-2019-P1-Q38-circular-motion.png', 'W', 'Z', 'X', 'Y', 'D', 'Linear velocity is always directed along the tangent to the circular path at any given point (indicated by vector Y).', 'easy', false),
+
+('Elective Physics', 2019, 1, 39, 'PH-06', 'Which of the following thermometers is used to measure the temperature of the human body?', false, NULL, 'Platinum resistance thermometer', 'Thermocouple', 'Alcohol-in-glass thermometer', 'Gas thermometer', 'C', 'Clinical thermometers are liquid-in-glass (mercury or alcohol) thermometers calibrated around human body temperatures.', 'easy', false),
+
+('Elective Physics', 2019, 1, 40, 'PH-04', 'In the diagram above, the time taken to trace a wave between P and Q is', true, 'Physics/2019/Paper 1/PH-2019-P1-Q40-wave-period-graph.png', '1 ½ periods.', '2 periods.', '1 period.', '1 ¼ periods.', 'A', 'Counting complete wave cycles between point P (trough) and point Q (crest): 1 full wave + 0.5 wave = 1.5 (1 ½) periods.', 'medium', false),
+
+('Elective Physics', 2019, 1, 41, 'PH-07', 'Which of the following components does not serve as a safety device in electrical circuits?', false, NULL, 'Earth wire', 'Connecting wires', 'Fuse', 'Switch', 'B', 'Connecting wires conduct current through the circuit, whereas fuses, switches, and earth wires act as protective/safety devices.', 'easy', false),
+
+('Elective Physics', 2019, 1, 42, 'PH-01', 'Which of the following liquids has the highest surface tension?', false, NULL, 'Oily water', 'Soapy water', 'Cold water', 'Hot water', 'C', 'Surface tension decreases with increasing temperature and addition of impurities/surfactants (soap, oil). Cold pure water has highest tension.', 'easy', false),
+
+('Elective Physics', 2019, 1, 43, 'PH-09', 'The nucleon and proton numbers of a neutral atom of an element are 238 and 92 respectively. Determine the number of neutrons in the atom.', false, NULL, '146', '119', '330', '165', 'A', 'Neutron number N = Nucleon number (A) - Proton number (Z) = 238 - 92 = 146.', 'easy', false),
+
+('Elective Physics', 2019, 1, 44, 'PH-06', 'An instrument used to measure relative humidity is the', false, NULL, 'manometer.', 'hygrometer.', 'hydrometer.', 'pyrometer.', 'B', 'A hygrometer is designed specifically to measure atmospheric relative humidity.', 'easy', false),
+
+('Elective Physics', 2019, 1, 45, 'PH-02', 'The area under a velocity-time graph represents', false, NULL, 'distance.', 'speed.', 'acceleration.', 'moment.', 'A', 'Integration or area under a v-t curve yields total displacement/distance covered.', 'easy', false),
+
+('Elective Physics', 2019, 1, 46, 'PH-09', 'Which of the following statements about neutral atom is correct? The', false, NULL, 'number of protons is equal to that of electrons.', 'core is composed of electrons and protons.', 'number of electrons is equal to that of neutrons.', 'number of neutrons is equal to that of protons.', 'A', 'An atom is electrically neutral because the total positive nuclear charge (protons) equals total negative orbital charge (electrons).', 'easy', false),
+
+('Elective Physics', 2019, 1, 47, 'PH-04', 'The property that is not exhibited by sound waves is', false, NULL, 'reflection', 'diffraction.', 'polarization.', 'interference.', 'C', 'Sound waves are longitudinal waves; polarization can only occur in transverse waves.', 'easy', false),
+
+('Elective Physics', 2019, 1, 48, 'PH-09', 'When ultraviolet light is incident on the surface of certain metals, particles are emitted. These particles are called', false, NULL, 'photoelectrons.', 'positrons.', 'protons.', 'photons', 'A', 'Electrons emitted from metal surfaces via the photoelectric effect are termed photoelectrons.', 'easy', false),
+
+('Elective Physics', 2019, 1, 49, 'PH-09', 'Niels Bohr drew certain conclusions about the structure of the atom. Which of the following statements is one of those conclusions?', false, NULL, 'The orbit with the least energy is the farthest from the nucleus.', 'The allowed orbits contain the same number of electrons.', 'Within an atom, there are certain allowed orbits.', 'All of the orbits represent the same amount of energy.', 'C', 'Bohr postulated that electrons revolve around the nucleus only in non-radiating, stationary quantized orbits.', 'easy', false),
+
+('Elective Physics', 2019, 1, 50, 'PH-06', 'The graph above illustrates the variation of temperature with time for a solid that is being heated. Which processes take place at the segments P and Q respectively?', true, 'Physics/2019/Paper 1/PH-2050-P1-Q50-heating-curve.png', 'Condensation and evaporation', 'Freezing and evaporation', 'Evaporation and solidification', 'Melting and boiling', 'D', 'Segment P represents phase change solid to liquid (Melting); segment Q represents liquid to gas (Boiling).', 'easy', false);
+
+
+-- ==========================================
+-- WASSCE 2019 ELECTIVE PHYSICS - PAPER 2 (Theory)
+-- ==========================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id, 
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+('Elective Physics', 2019, 2, 1, '', 'PH-03', 'A stone of mass 20g is released from a catapult whose rubber is stretched through 5cm. If the force constant of the rubber is 200Nm⁻¹, calculate the speed with which the stone leaves the catapult.', false, NULL, 'Speed v = 5.0 m s⁻¹. Elastic energy stored = Kinetic energy gained: 1/2 * k * e² = 1/2 * m * v² => v = e * sqrt(k / m). e = 0.05 m, m = 0.02 kg, k = 200 N/m => v = 0.05 * sqrt(200 / 0.02) = 0.05 * 100 = 5.0 m/s.', 3),
+
+('Elective Physics', 2019, 2, 2, 'a', 'PH-02', 'The diagram above illustrates a projectile motion. Identify each of the physical quantities labelled P, β, H and R.', true, 'Physics/2019/Paper 2/PH-2019-P2-Q02-projectile-motion.png', 'P: Initial velocity (or velocity of projection)
+β: Angle of projection
+H: Maximum height
+R: Horizontal range', 4),
+
+('Elective Physics', 2019, 2, 2, 'b', 'PH-02', 'Write an equation to show the relationship between P, g and Rmax, where g is the acceleration due to gravity and Rmax is maximum R.', false, NULL, 'Rmax = P² / g. Maximum range occurs when angle of projection β = 45°, so sin(2β) = 1. Therefore Rmax = P² / g.', 1),
+
+('Elective Physics', 2019, 2, 3, '', 'PH-09', 'State three observable phenomena in which waves behave like a particle.', false, NULL, '1. Photoelectric effect
+2. Compton scattering
+3. Thermionic emission (or Blackbody radiation / Pair production)', 3),
+
+('Elective Physics', 2019, 2, 4, '', 'PH-07', 'List three magnetic elements that determine the earth''s magnetic field at a point.', false, NULL, '1. Angle of declination (Magnetic declination)
+2. Angle of dip (Magnetic inclination)
+3. Horizontal component of the Earth''s magnetic field (He)', 3),
+
+('Elective Physics', 2019, 2, 5, 'a', 'PH-08', 'Explain free electrons as used in Electronics.', false, NULL, 'Free electrons are valence electrons that have gained sufficient energy to detach from parent atoms and move freely within the conduction band of a material.', 2),
+
+('Elective Physics', 2019, 2, 5, 'b', 'PH-08', 'Explain holes as used in Electronics.', false, NULL, 'A hole is a vacant electron site left in the valence band when an electron jumps to the conduction band, behaving as an effective positive charge carrier.', 2),
+
+('Elective Physics', 2019, 2, 6, 'a', 'PH-05', 'State the principle of operation of fibre optics.', false, NULL, 'Fibre optics operate on the principle of total internal reflection of light within an optically dense core surrounded by a less dense cladding.', 2),
+
+('Elective Physics', 2019, 2, 6, 'b', 'PH-05', 'State two applications of fibre optics in medicine.', false, NULL, '1. Endoscopy (internal body visualization and examination).
+2. Laser surgical light delivery.', 2),
+
+('Elective Physics', 2019, 2, 7, 'a', 'PH-01', 'Define diffusion.', false, NULL, 'Diffusion is the process by which particles move from a region of higher concentration to a region of lower concentration until evenly distributed.', 2),
+
+('Elective Physics', 2019, 2, 7, 'b', 'PH-01', 'State two factors that affect the rate of diffusion.', false, NULL, '1. Temperature
+2. Concentration gradient (or Density / Molecular mass of gas particles)', 2),
+
+('Elective Physics', 2019, 2, 8, 'a_i', 'PH-10', 'State Newton''s Law of Universal Gravitation.', false, NULL, 'Newton''s Law of Universal Gravitation states that any two point masses attract each other with a force proportional to the product of their masses and inversely proportional to the square of the distance between them. (F = G * m1 * m2 / r²)', 2),
+
+('Elective Physics', 2019, 2, 8, 'a_ii', 'PH-10', 'Define gravitational field.', false, NULL, 'A gravitational field is a region of space around a mass in which another mass experiences an attractive gravitational force.', 1),
+
+('Elective Physics', 2019, 2, 8, 'b_i', 'PH-10', 'Derive the equation relating the universal gravitational constant, G, and the acceleration of free fall, g, at the surface of the earth.', false, NULL, 'Weight of body W = m * g. Gravitational force F = G * M * m / R². Setting F = W: m * g = G * M * m / R² => g = G * M / R².', 3),
+
+('Elective Physics', 2019, 2, 8, 'b_ii', 'PH-10', 'State two assumptions for which the relationship in 8(b)(i) holds.', false, NULL, '1. The Earth is a perfectly uniform sphere.
+2. Total mass of the Earth is concentrated at its center (and air resistance is negligible).', 2),
+
+('Elective Physics', 2019, 2, 8, 'c', 'PH-10', 'Calculate the force of attraction between a star of mass 2.00 x 10³⁰ kg and the earth assuming the star is located 1.50 x 10⁸ km from the earth. [Mass of earth = 5.98 x 10²⁴ kg, G = 6.67 x 10⁻¹¹ N m² kg⁻²]', false, NULL, 'Force F = 3.55 x 10²² N. r = 1.50 * 10^8 km = 1.50 * 10^11 m. F = G*Ms*Me / r² = (6.67*10^-11 * 2.00*10^30 * 5.98*10^24) / (1.5*10^11)² = (7.97732 * 10^44) / (2.25 * 10^22) = 3.545 * 10^22 N ≈ 3.55 * 10^22 N.', 3),
+
+('Elective Physics', 2019, 2, 8, 'd_i', 'PH-10', 'Define escape velocity.', false, NULL, 'Escape velocity is the minimum speed required for an object to escape permanently from the gravitational attraction of a celestial body without further propulsion.', 1),
+
+('Elective Physics', 2019, 2, 8, 'd_ii', 'PH-10', 'State two differences between the acceleration of free fall (g) and the universal gravitational constant (G).', false, NULL, '1. g is a vector quantity, whereas G is a scalar quantity.
+2. g varies with location and altitude, whereas G is a universal constant everywhere.', 2),
+
+('Elective Physics', 2019, 2, 9, 'a_i', 'PH-06', 'Explain latent heat.', false, NULL, 'Latent heat is the quantity of heat energy absorbed or released by a substance during a change of phase without any change in temperature.', 2),
+
+('Elective Physics', 2019, 2, 9, 'a_ii', 'PH-06', 'State two factors that affect the rate of evaporation of a liquid.', false, NULL, '1. Temperature of the liquid.
+2. Exposed surface area of the liquid (or Humidity / Air movement).', 2),
+
+('Elective Physics', 2019, 2, 9, 'b_i', 'PH-06', 'Explain this observation: On a dry day, water in a clay pot is cooler than water in a closed plastic container.', false, NULL, 'Clay pots are porous; water seeps through and evaporates from the outer surface, taking latent heat of vaporization from the remaining water inside, creating a cooling effect. Plastic containers are non-porous and prevent evaporative cooling.', 3),
+
+('Elective Physics', 2019, 2, 9, 'b_ii', 'PH-06', 'Explain this observation: Food gets cooked faster in a pressure cooker than in an ordinary cooking pot.', false, NULL, 'Trapped steam inside a pressure cooker increases internal pressure, which elevates the boiling point of water above 100 °C. Food cooks at a higher temperature, speeding up cooking time.', 3),
+
+('Elective Physics', 2019, 2, 9, 'c', 'PH-06', 'State two effects of heat on a substance.', false, NULL, '1. Change in temperature.
+2. Change of state (or Thermal expansion / Change in electrical resistance).', 2),
+
+('Elective Physics', 2019, 2, 9, 'd_i', 'PH-06', 'A 40V electric heater is used to supply a current of 12A for 1400s to a body of mass 1.5kg at the melting point of the body. The body melts and its temperature rises through 60°C in an extra 72s. Determine the latent heat of fusion of the body.', false, NULL, 'Latent heat of fusion Lf = 4.48 x 10⁵ J kg⁻¹. Power P = V * I = 40 * 12 = 480 W. Energy for melting Q = P * t = 480 * 1400 = 672,000 J. Lf = Q / m = 672000 / 1.5 = 448,000 J/kg = 4.48 * 10^5 J kg⁻¹.', 3),
+
+('Elective Physics', 2019, 2, 9, 'd_ii', 'PH-06', 'Using data from question 9(d), determine the specific heat capacity of the body.', false, NULL, 'Specific heat capacity c = 384 J kg⁻¹ K⁻¹. Energy for heating Q2 = P * t2 = 480 * 72 = 34,560 J. Q2 = m * c * dT => 34560 = 1.5 * c * 60 => 34560 = 90 * c => c = 34560 / 90 = 384 J kg⁻¹ K⁻¹.', 3),
+
+('Elective Physics', 2019, 2, 10, 'a_i', 'PH-09', 'Define atomic spectra.', false, NULL, 'Atomic spectra refer to the characteristic series of discrete electromagnetic wave frequencies emitted or absorbed by atoms when electrons transition between quantized energy levels.', 2),
+
+('Elective Physics', 2019, 2, 10, 'a_ii', 'PH-09', 'Differentiate between emission spectra and absorption spectra.', false, NULL, 'Emission spectra consist of bright colored lines on a dark background produced by excited electrons falling to lower energy states. Absorption spectra consist of dark lines on a continuous spectrum produced when ground-state electrons absorb specific photon wavelengths.', 2),
+
+('Elective Physics', 2019, 2, 10, 'b', 'PH-09', 'The diagram above illustrates an electron transition from energy level n = 3 to n = 1. [h = 6.6 x 10⁻³⁴ J s, c = 3.0 x 10⁸ m s⁻¹, 1eV = 1.6 x 10⁻¹⁹ J]. (i) Calculate the energy of the photon. (ii) Calculate the frequency of the photon. (iii) Calculate the wavelength of the photon.', true, 'Physics/2019/Paper 2/PH-2019-P2-Q10b-energy-levels.png', '(i) Energy E = 1.93 x 10⁻¹⁸ J (12.09 eV)
+(ii) Frequency f = 2.93 x 10¹⁵ Hz
+(iii) Wavelength λ = 1.02 x 10⁻⁷ m (102 nm)', 5),
+
+('Elective Physics', 2019, 2, 10, 'c_i', 'PH-09', 'Differentiate between soft x-rays and hard x-rays.', false, NULL, 'Soft X-rays have lower frequencies, longer wavelengths, and lower penetrating power. Hard X-rays have higher frequencies, shorter wavelengths, and higher penetrating power.', 2),
+
+('Elective Physics', 2019, 2, 10, 'c_ii', 'PH-08', 'Draw the circuit symbol for a p - n junction diode.', false, NULL, 'Triangle pointing towards a vertical line (|◀— or —▶|).', 1),
+
+('Elective Physics', 2019, 2, 10, 'c_iii', 'PH-08', 'Give the reason for doping a semiconductor material.', false, NULL, 'Doping is performed to significantly increase the electrical conductivity of an intrinsic semiconductor by increasing charge carrier concentration.', 1),
+
+('Elective Physics', 2019, 2, 11, 'a_i', 'PH-02', 'Define force and state its S. I. unit.', false, NULL, 'Force is any interaction that changes or tends to change an object''s state of rest or uniform motion in a straight line. S.I. unit: Newton (N).', 2),
+
+('Elective Physics', 2019, 2, 11, 'a_ii', 'PH-02', 'List the two types of solid friction.', false, NULL, '1. Static friction
+2. Kinetic (or Dynamic / Sliding) friction', 2),
+
+('Elective Physics', 2019, 2, 11, 'b', 'PH-02', 'A car travelling at a constant speed of 30 ms⁻¹ for 20s was suddenly decelerated when the driver sighted a pot-hole. It took the driver 6s to get to the pot-hole with a reduced speed of 18ms⁻¹. He maintained the steady speed for another 10s to cross the pot-hole. The brakes were then applied and the car came to rest 5s later. (i) Draw the velocity-time graph for the journey. (ii) Calculate the deceleration during the last 5s of the journey. (iii) Calculate the total distance covered.', false, NULL, '(i) v-t graph with key coordinates: (0,30)-(20,30), (26,18), (36,18), (41,0).
+(ii) Deceleration = 3.6 m s⁻²
+(iii) Total distance = 969 m', 6),
+
+('Elective Physics', 2019, 2, 12, 'a', 'PH-09', 'The diagram above illustrates a structure of a typical photocell. (i) Identify each of the parts labelled A and B. (ii) State one function for each of A and B. (iii) Einstein''s photoelectric equation can be written as E = hf - W0. State what each of the terms E, hf, and W0 represents.', true, 'Physics/2019/Paper 2/PH-2019-P2-Q12a-photocell.png', '(i) A: Anode (Collector wire), B: Cathode (Photosensitive curved emitter)
+(ii) Cathode (B) emits photoelectrons when illuminated; Anode (A) collects emitted electrons.
+(iii) E: Maximum kinetic energy of photoelectrons; hf: Incident photon energy; W0: Work function of cathode metal.', 5),
+
+('Elective Physics', 2019, 2, 12, 'b', 'PH-09', 'A photon is incident on a metal whose work function is 1.32eV. An electron is emitted from the surface with a maximum kinetic energy of 1.97 eV. Calculate the frequency of the photon. [1eV = 1.6 x 10⁻¹⁹ J]', false, NULL, 'Frequency f = 7.98 x 10¹⁴ Hz. E = W0 + Kmax = 1.32 + 1.97 = 3.29 eV. E in Joules = 3.29 * 1.6*10^-19 = 5.264 * 10^-19 J. Frequency f = E / h = (5.264 * 10^-19) / (6.6 * 10^-34) = 7.9757 * 10^14 Hz ≈ 7.98 * 10^14 Hz.', 3),
+
+('Elective Physics', 2019, 2, 12, 'c_i', 'PH-09', 'Define half-life of a radioactive element.', false, NULL, 'Half-life is the time required for half of the radioactive nuclei present in a sample to decay.', 1),
+
+('Elective Physics', 2019, 2, 12, 'c_ii', 'PH-09', 'Sketch a graph of the relation N = N0*e^(-λt).', false, NULL, 'Exponential decay curve starting at N0 on vertical axis and decreasing asymptotically towards zero.', 2);
+
+COMMIT;

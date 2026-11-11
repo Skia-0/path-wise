@@ -1,0 +1,697 @@
+BEGIN;
+
+-- ============================================================================
+-- WASSCE 2021 CORE MATHEMATICS - PAPER 1 (OBJECTIVE TEST)
+-- 50 MCQs → questions table
+-- ============================================================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id,
+    question_text, has_diagram, diagram_url,
+    option_a, option_b, option_c, option_d,
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+(
+    'Core Mathematics', 2021, 1, 1, 'CM-01',
+    'Correct 0.00798516 to three significant figures.',
+    FALSE, NULL,
+    '0.008', '0.0109', '0.0800', '0.00799',
+    'D',
+    'Non-zero counting starts at 7. The first 3 significant figures are 7, 9, 8. Since the following digit is 5, we round 8 up to 9, giving 0.00799.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 2, 'CM-01',
+    'Simplify: (11_two)^2.',
+    FALSE, NULL,
+    '10001_two', '1001_two', '1101_two', '101_two',
+    'B',
+    '11_two = 3 in base 10. 3^2 = 9 in base 10. Converting 9 to base 2 gives 1001_two.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 3, 'CM-01',
+    'Solve: 2^(sqrt(2x+1)) = 32.',
+    FALSE, NULL,
+    '24', '13', '11', '12',
+    'D',
+    'Since 32 = 2^5, sqrt(2x+1) = 5. Squaring both sides: 2x + 1 = 25 => 2x = 24 => x = 12.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 4, 'CM-01',
+    'If log_10(2) = m and log_10(3) = n, find log_10(24) in terms of m and n.',
+    FALSE, NULL,
+    '3mn', '4mn', '3m + n', 'm + 3n',
+    'C',
+    'log_10(24) = log_10(2^3 * 3) = 3*log_10(2) + log_10(3) = 3m + n.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 5, 'CM-04',
+    'Find the 5th term of the sequence: 2, 5, 10, 17, ....',
+    FALSE, NULL,
+    '36', '26', '24', '22',
+    'B',
+    'The nth term formula is T_n = n^2 + 1. For n = 5: T_5 = 5^2 + 1 = 26.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 6, 'CM-01',
+    'If P = {-3 < x < 1} and Q = {-1 < x < 3}, where x is a real number, find P ∩ Q.',
+    FALSE, NULL,
+    '{-1 <= x <= 1}', '{-3 < x < 1}', '{-3 <= x <= 1}', '{-1 < x < 1}',
+    'D',
+    'The intersection of the open intervals (-3, 1) and (-1, 3) is the open interval (-1, 1), i.e., {-1 < x < 1}.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 7, 'CM-02',
+    'Factorize 6pq - 3rs - 3ps + 6qr.',
+    FALSE, NULL,
+    '3(r - p)(s - 2q)', '3(r - p)(2q + s)', '3(p - r)(2q - s)', '3(p + r)(2q - s)',
+    'D',
+    'Group terms: 6q(p + r) - 3s(p + r) = (6q - 3s)(p + r) = 3(2q - s)(p + r).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 8, 'CM-01',
+    'What number should be subtracted from the sum of 2(1/6) and 2(7/12) to give 3(1/4)?',
+    FALSE, NULL,
+    '1(1/2)', '1(1/6)', '1(2/3)', '1(1/3)',
+    'A',
+    'Sum = 13/6 + 31/12 = 57/12. Subtract 3(1/4) = 39/12: 57/12 - 39/12 = 18/12 = 3/2 = 1(1/2).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 9, 'CM-02',
+    'Mensah is 5 years old and Joyce is thrice as old as Mensah. In how many years will Joyce be twice as old as Mensah?',
+    FALSE, NULL,
+    '15 years', '10 years', '5 years', '3 years',
+    'C',
+    'Mensah = 5, Joyce = 15. In x years: 15 + x = 2(5 + x) => 15 + x = 10 + 2x => x = 5 years.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 10, 'CM-01',
+    'If 16 * 2^(x+1) = 4^x * 8^(1-x), find the value of x.',
+    FALSE, NULL,
+    '4', '1', '-4', '-1',
+    'D',
+    'Express in powers of 2: 2^4 * 2^(x+1) = 2^(2x) * 2^(3 - 3x) => 2^(x+5) = 2^(3-x) => x + 5 = 3 - x => 2x = -2 => x = -1.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 11, 'CM-01',
+    'The circumference of a circular track is 9 km. A cyclist rides round it a number of times and stops after covering a distance of 302 km. How far is the cyclist from the starting point?',
+    FALSE, NULL,
+    '3 km', '7 km', '5 km', '6 km',
+    'C',
+    '302 mod 9 = 5 km. After completing 33 full laps (297 km), the cyclist is 5 km along the track from the start.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 12, 'CM-01',
+    'Simplify: 2*sqrt(7) - 14/sqrt(7) + 7/sqrt(21).',
+    FALSE, NULL,
+    'sqrt(21)/3', '3*sqrt(21)', '7*sqrt(21)/3', 'sqrt(21)/21',
+    'A',
+    '14/sqrt(7) = 2*sqrt(7). So 2*sqrt(7) - 2*sqrt(7) + 7/sqrt(21) = 7*sqrt(21)/21 = sqrt(21)/3.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 13, 'CM-02',
+    'If 4x + 2y = 16 and 6x - 2y = 4, find the value of (y - x).',
+    FALSE, NULL,
+    '2', '4', '6', '8',
+    'A',
+    'Adding the equations: 10x = 20 => x = 2. Substitute x = 2 into 4(2) + 2y = 16 => 2y = 8 => y = 4. Thus y - x = 4 - 2 = 2.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 14, 'CM-02',
+    'Given that R is directly proportional to L and inversely proportional to P, R = 3 when L = 9 and P = 0.8, find R when L = 15 and P = 1.8.',
+    FALSE, NULL,
+    '0.3', '2.2', '3.3', '6.6',
+    'B',
+    'R = k*L/P => 3 = k*9/0.8 => k = 2.4/9 = 4/15. For L = 15, P = 1.8: R = (4/15 * 15) / 1.8 = 4 / 1.8 = 2.22... ≈ 2.2.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 15, 'CM-05',
+    'In the diagram, angle ABC and angle BCD are right angles, angle BAD = t and angle EDF = 70°. Find the value of t.',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q15-trapezium-angles.png',
+    '165°', '140°', '110°', '70°',
+    'C',
+    'Vertically opposite angles: angle ADC = angle EDF = 70°. In quadrilateral ABCD: sum of interior angles = 360° => 90° + 90° + 70° + t = 360° => t = 110°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 16, 'CM-05',
+    'The sum of the interior angles of a regular polygon with k sides is (3k - 10) right angles. Find the size of the exterior angle.',
+    FALSE, NULL,
+    '60°', '90°', '120°', '40°',
+    'A',
+    'Sum of interior angles = (2k - 4) right angles. Given (2k - 4) = (3k - 10) => k = 6 sides. Exterior angle of regular hexagon = 360° / 6 = 60°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 17, 'CM-02',
+    'Make U the subject of the relation: x = (2U - 3) / (3U + 2).',
+    FALSE, NULL,
+    'U = (2x + 3) / (3x + 2)', 'U = (2x + 3) / (3x - 2)', 'U = (2x - 3) / (3x - 2)', 'U = (2x + 3) / (2 - 3x)',
+    'D',
+    'x(3U + 2) = 2U - 3 => 3Ux + 2x = 2U - 3 => U(3x - 2) = -2x - 3 => U = (2x + 3) / (2 - 3x).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 18, 'CM-03',
+    'A trader paid import duty of 38 kobo in the naira on the cost of an engine. If a total of ₦22,800.00 was paid as import duty, calculate the cost of the engine.',
+    FALSE, NULL,
+    '₦18,000.00', '₦24,000.00', '₦60,000.00', '₦120,000.00',
+    'C',
+    '38 kobo per naira = 38%. Duty = 0.38 * Cost = 22,800 => Cost = 22,800 / 0.38 = ₦60,000.00.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 19, 'CM-06',
+    'The height of an equilateral triangle is 10*sqrt(3) cm. Calculate its perimeter.',
+    FALSE, NULL,
+    '60 cm', '40 cm', '30 cm', '20 cm',
+    'A',
+    'Height h = (sqrt(3)/2)*s = 10*sqrt(3) => s = 20 cm. Perimeter = 3 * 20 = 60 cm.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 20, 'CM-07',
+    'In a triangle LMN, |LM| = 6 cm, angle LMN = 90°, angle LNM = x and sin x = 3/5. Find the area of triangle LMN.',
+    FALSE, NULL,
+    '24 cm²', '30 cm²', '48 cm²', '60 cm²',
+    'A',
+    'sin x = Opposite/Hypotenuse = 6 / LN = 3/5 => LN = 10 cm. Adjacent MN = sqrt(10² - 6²) = 8 cm. Area = 1/2 * 8 * 6 = 24 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 21, 'CM-12',
+    'Consider the statements: P: All students offering Literature (L) also offer History (H); Q: Students offering History (H) do not offer Geography (G). Which of the Venn diagrams correctly illustrates the two statements?',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q21-venn-diagrams.png',
+    'Diagram A', 'Diagram B', 'Diagram C', 'Diagram D',
+    'D',
+    'Statement P implies L is a subset of H (circle L inside circle H). Statement Q implies H and G are disjoint (circle G separate from circle H). Diagram D illustrates this accurately.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 22, 'CM-02',
+    'Find the quadratic equation whose roots are -2q and 5q.',
+    FALSE, NULL,
+    'x² + 3qx + 10q² = 0', 'x² - 3qx + 10q² = 0', 'x² - 3qx - 10q² = 0', 'x² + 3qx - 10q² = 0',
+    'C',
+    'Sum of roots = -2q + 5q = 3q. Product of roots = (-2q)(5q) = -10q². Equation: x² - 3qx - 10q² = 0.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 23, 'CM-07',
+    'If tan θ = 3/4, 180° < θ < 270°, find the value of cos θ.',
+    FALSE, NULL,
+    '-4/5', '-3/5', '4/5', '-3/5',
+    'A',
+    'In the third quadrant, cosine is negative. With opp = 3 and adj = 4, hyp = 5. cos θ = -4/5.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 24, 'CM-02',
+    'If 2/(x-3) - 3/(x-2) = p / ((x-3)(x-2)), find p.',
+    FALSE, NULL,
+    '-(5x - 13)', '(13 - x)', '(5 - x)', '-(x + 5)',
+    'C',
+    'Numerator = 2(x - 2) - 3(x - 3) = 2x - 4 - 3x + 9 = 5 - x. Thus p = 5 - x.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 25, 'CM-05',
+    'The diagonals of a rhombus are 12 cm and 5 cm. Calculate its perimeter.',
+    FALSE, NULL,
+    '34 cm', '17 cm', '24 cm', '26 cm',
+    'D',
+    'Half-diagonals are 6 cm and 2.5 cm. Side length s = sqrt(6² + 2.5²) = sqrt(42.25) = 6.5 cm. Perimeter = 4 * 6.5 = 26 cm.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 26, 'CM-05',
+    'In the diagram triangle XYZ is produced to T. If |XY| = |ZY| and angle XYT = 40°, find angle XZT.',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q26-isosceles-triangle.png',
+    '130°', '110°', '140°', '120°',
+    'B',
+    'In isosceles triangle XYZ with angle Y = 40°, base angle YZX = (180° - 40°)/2 = 70°. Exterior angle XZT = 180° - 70° = 110°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 27, 'CM-06',
+    'A solid brass cube is melted and recast as a solid cone of height h and base radius r. If the height of the cube is h, find r in terms of h.',
+    FALSE, NULL,
+    'r = sqrt(3h/π)', 'r = π*h', 'r = h*sqrt(3/π)', 'r = h',
+    'C',
+    'Volume of cube = h³. Volume of cone = (1/3)*π*r²*h. Equating volumes: h³ = (1/3)*π*r²*h => r² = 3h²/π => r = h*sqrt(3/π).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 28, 'CM-05',
+    'Which of the following is NOT an exterior angle of a regular polygon?',
+    FALSE, NULL,
+    '66°', '24°', '15°', '72°',
+    'A',
+    'Number of sides n = 360° / Exterior Angle. 360° / 66° = 5.45 (not an integer). Thus 66° cannot be an exterior angle of a regular polygon.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 29, 'CM-07',
+    'From a point T, a man moves 12 km due West and then moves 12 km due South to another point Q. Calculate the bearing of T from Q.',
+    FALSE, NULL,
+    '315°', '225°', '135°', '045°',
+    'D',
+    'From Q, point T lies 12 km North and 12 km East. tan θ = 12/12 = 1 => θ = 45°. Bearing of T from Q is 045°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 30, 'CM-05',
+    'In the diagram, O is the centre of circle PQRS, angle PQR = 72° and OR || PS. Find angle OPS.',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q30-circle-parallel.png',
+    '108°', '54°', '36°', '18°',
+    'C',
+    'Central angle POR = 2 * 72° = 144°. In isosceles triangle POR, base angle OPR = (180° - 144°)/2 = 18°. Alternate angle RPS = 18° (OR || PS). Angle OPS = 18° + 18° = 36°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 31, 'CM-06',
+    'A trapezium of sides 10 cm and 21 cm and height 8 cm is inscribed in a circle of radius 7 cm. Calculate the area of the region NOT covered by the trapezium. [Take π = 22/7]',
+    FALSE, NULL,
+    '94 cm²', '84 cm²', '80 cm²', '30 cm²',
+    'D',
+    'Area of circle = (22/7) * 7² = 154 cm². Area of trapezium = 1/2 * (10 + 21) * 8 = 124 cm². Uncovered area = 154 - 124 = 30 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 32, 'CM-10',
+    'Find correct to two decimal places the mean of 1(1/2), 2(2/3), 3(3/4), 4(4/5) and 5(5/6).',
+    FALSE, NULL,
+    '3.72', '3.71', '3.70', '3.69',
+    'B',
+    'Sum = 1.5 + 2.6667 + 3.75 + 4.8 + 5.8333 = 18.55. Mean = 18.55 / 5 = 3.71.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 33, 'CM-02',
+    'A cyclist moved at a speed of X km/h for 2 hours. He then increased his speed by 2 km/h for the next 3 hours. If the total distance covered is 36 km, calculate his initial speed, X.',
+    FALSE, NULL,
+    '3 km/h', '4 km/h', '6 km/h', '12 km/h',
+    'C',
+    'Distance = 2X + 3(X + 2) = 5X + 6 = 36 => 5X = 30 => X = 6 km/h.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 34, 'CM-05',
+    'In the diagram, find the value of (x + y).',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q34-parallel-transversal.png',
+    '215°', '145°', '135°', '70°',
+    'A',
+    'y is supplementary to 35° => y = 180° - 35° = 145°. x is supplementary to 110° => x = 180° - 110° = 70°. Thus x + y = 70° + 145° = 215°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 35, 'CM-05',
+    'In the diagram MP is a tangent to the circle NQR, angle PNQ = 64° and |RQ| = |RN|. Find the angle marked t.',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q35-circle-tangent.png',
+    '58°', '64°', '115°', '130°',
+    'A',
+    'By Alternate Segment Theorem, angle NRQ = angle PNQ = 64°. In isosceles triangle NQR with |RQ| = |RN|, angle RQN = (180° - 64°)/2 = 58°. Angle t = angle RQN = 58°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 36, 'CM-10',
+    'Find the first quartile of 7, 8, 7, 9, 11, 8, 7, 9, 6 and 8.',
+    FALSE, NULL,
+    '7.0', '7.5', '8.0', '8.5',
+    'A',
+    'Ordered data: 6, 7, 7, 7, 8, 8, 8, 9, 9, 11. Lower half is 6, 7, 7, 7, 8. The median of the lower half (Q1) is 7.0.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 37, 'CM-05',
+    'In the diagram, PQRS is a cyclic quadrilateral. Find the value of x.',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q37-cyclic-quadrilateral.png',
+    '100°', '80°', '50°', '30°',
+    'C',
+    'Opposite angles: x + (x + y) = 180° => 2x + y = 180°. Also (2y - 30°) + x = 180° => x + 2y = 210°. Solving simultaneously gives x = 50°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 38, 'CM-06',
+    'A cone has a base radius of 8 cm and height 11 cm. Calculate, correct to two decimal places, the curved surface area. [Take π = 22/7]',
+    FALSE, NULL,
+    '477.71 cm²', '341.98 cm²', '276.57 cm²', '201.14 cm²',
+    'B',
+    'Slant height l = sqrt(8² + 11²) = sqrt(185) ≈ 13.6015 cm. Curved Surface Area = π*r*l = (22/7) * 8 * 13.6015 = 341.98 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 39, 'CM-07',
+    'Given that sin x = 3/5, 0° <= x <= 90°, evaluate (tan x + 2*cos x).',
+    FALSE, NULL,
+    '1/20', '11/20', '1(11/20)', '2(7/20)',
+    'D',
+    'cos x = 4/5, tan x = 3/4. tan x + 2*cos x = 3/4 + 2(4/5) = 3/4 + 8/5 = (15 + 32)/20 = 47/20 = 2(7/20).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 40, 'CM-05',
+    'In the diagram EC is a diameter of circle ABCDE. If angle ABC = 158°, find angle ADE.',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q40-circle-diameter.png',
+    '22°', '112°', '90°', '68°',
+    'D',
+    'In cyclic quad ABCE, angle AEC = 180° - 158° = 22°. Angle in semicircle EDC = 90°. Cyclic quad ABCD gives angle ADC = 180° - 158° = 22°. Thus angle ADE = 90° - 22° = 68°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 41, 'CM-10',
+    'The table shows the heights of thirty-seven players of a basketball team. Calculate, correct to one decimal place, the mean height of the players.',
+    FALSE, NULL,
+    '165.0', '163.0', '162.0', '160.0',
+    'B',
+    'Total height sum = (4*160) + (6*161) + (3*162) + (7*163) + (8*164) + (9*165) = 6030 cm. Mean = 6030 / 37 = 162.97 cm ≈ 163.0 cm.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 42, 'CM-08',
+    'XY is a line segment with coordinates X(-8, -12) and Y(p, q). If the midpoint of XY is (-4, -2), find the coordinates of Y.',
+    FALSE, NULL,
+    '(0, 4)', '(4, 10)', '(-6, -10)', '(0, 8)',
+    'D',
+    '(-8 + p)/2 = -4 => p = 0. (-12 + q)/2 = -2 => q = 8. Coordinates of Y = (0, 8).',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 43, 'CM-02',
+    'Five hundred tickets were sold for a concert. Tickets for adults and children were sold at $4.50 and $3.00, respectively. If the total receipts for the concert was $1,987.50, how many tickets for adults were sold?',
+    FALSE, NULL,
+    '400', '325', '235', '175',
+    'B',
+    'Let a = adult, c = child. a + c = 500 and 4.50a + 3.00c = 1987.50. 4.50a + 3.00(500 - a) = 1987.50 => 1.50a = 487.50 => a = 325.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 44, 'CM-02',
+    'The distance (d) between two villages is more than 18 km but not more than 23 km. Which of these inequalities represents the statement?',
+    FALSE, NULL,
+    '18 < d <= 23', '18 <= d < 23', '18 < d < 23', '18 <= d <= 23',
+    'A',
+    'More than 18 km means d > 18. Not more than 23 km means d <= 23. Combined: 18 < d <= 23.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 45, 'CM-10',
+    'The pie chart represents the distribution of fruits on display in a shop. If there are 60 apples on display, how many oranges are there?',
+    TRUE, 'C-Math/2021/Paper 1/CM-2021-P1-Q45-pie-chart.png',
+    '270', '120', '90', '80',
+    'C',
+    'Orange angle = 360° - (80° + 60° + 100°) = 120°. Apple angle = 80° for 60 apples. Number of oranges = 120° * (60 / 80°) = 90.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 46, 'CM-11',
+    'A box contains 40 identical balls of which 10 are red and 12 blue. If a ball is selected at random from the box, what is the probability that it is neither red nor blue?',
+    FALSE, NULL,
+    '11/20', '9/20', '3/10', '1/4',
+    'B',
+    'Balls neither red nor blue = 40 - (10 + 12) = 18. Probability = 18 / 40 = 9/20.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 47, 'CM-11',
+    'A fair die is tossed twice. What is the probability of getting a sum of at least 10?',
+    FALSE, NULL,
+    '2/3', '5/18', '1/6', '5/36',
+    'C',
+    'Favorable sums (>= 10): (4,6), (5,5), (6,4), (5,6), (6,5), (6,6) = 6 outcomes out of 36. Probability = 6/36 = 1/6.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 48, 'CM-02',
+    'A man will be (x + 10) years old in 8 years time. If 2 years ago he was 63 years, find the value of x.',
+    FALSE, NULL,
+    '67', '63', '57', '55',
+    'B',
+    'Present age = 63 + 2 = 65 years. Age in 8 years = 65 + 8 = 73 years. Given x + 10 = 73 => x = 63.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 49, 'CM-08',
+    'The equation of a line is given as 3x - 5y = 7. Find its gradient (slope).',
+    FALSE, NULL,
+    '3/5', '-3/5', '-5/3', '5/3',
+    'A',
+    'Rearranging in slope-intercept form y = mx + c: 5y = 3x - 7 => y = (3/5)x - 7/5. Gradient m = 3/5.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2021, 1, 50, 'CM-02',
+    'For what value of x is (4 - 2x) / (x + 1) undefined?',
+    FALSE, NULL,
+    '-2', '-1', '1', '2',
+    'B',
+    'An algebraic fraction is undefined when its denominator equals zero: x + 1 = 0 => x = -1.',
+    'easy', FALSE
+);
+
+-- ============================================================================
+-- WASSCE 2021 CORE MATHEMATICS - PAPER 2 (STRUCTURED / THEORY)
+-- ============================================================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id,
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+(
+    'Core Mathematics', 2021, 2, 1, 'a', 'CM-01',
+    'i) Draw the multiplication ⊗ table in modulo 9 on {2, 3, 7, 8}. ii) Use the table to find the truth set of 8 ⊗ m = 2.',
+    FALSE, NULL,
+    'i) Multiplication table mod 9:
+  ⊗ | 2 | 3 | 7 | 8
+ ---+---+---+---+---
+  2 | 4 | 6 | 5 | 7
+  3 | 6 | 0 | 3 | 6
+  7 | 5 | 3 | 4 | 2
+  8 | 7 | 6 | 2 | 1
+
+ii) From row 8 of the table, 8 ⊗ 7 = 2. Truth set = {7}.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 1, 'b', 'CM-12',
+    'Consider statements: X: All policemen wear uniform; Y: Civil servants do not wear uniform. Let P = {Policemen}, T = {people who wear uniform}, C = {civil servants}. i) Draw a Venn diagram to illustrate X and Y. ii) Determine validity of: a) Adu wears uniform -> Adu is policeman; b) Ofei is policeman -> Ofei is not a Civil Servant.',
+    FALSE, NULL,
+    'i) Venn diagram shows circle P inside circle T, and circle C completely disjoint from T.
+ii) a) Invalid (Adu could wear uniform without being a policeman, i.e., in T but not P).
+ii) b) Valid (P is entirely inside T, which is disjoint from C).',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 2, 'a', 'CM-02',
+    'Given p = (q - t) / (t + 1). i) Make t the subject of the relation. ii) Find t when p = 2/3 and q = 3/4.',
+    FALSE, NULL,
+    'i) p(t + 1) = q - t => pt + p = q - t => t(p + 1) = q - p => t = (q - p) / (p + 1).
+ii) t = (3/4 - 2/3) / (2/3 + 1) = (1/12) / (5/3) = 1/20 = 0.05.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 2, 'b', 'CM-02',
+    'Given m = 2x / (1 - x), express (2m - 1) in simplest form in terms of x.',
+    FALSE, NULL,
+    '2m - 1 = 2(2x / (1 - x)) - 1 = 4x / (1 - x) - 1 = (4x - (1 - x)) / (1 - x) = (5x - 1) / (1 - x).',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 3, 'a', 'CM-05',
+    'In the diagram, circle MNPR with center O has reflex angle NOP = 204° and angle NMO = 52°. Find the value of m (angle NPO).',
+    TRUE, 'C-Math/2021/Paper 2/CM-2021-P2-Q03a-circle-angles.png',
+    'Reflex NOP = 204° => interior angle NOP = 360° - 204° = 156°. In isosceles triangle MON (OM = ON), base angle MON = 180° - 2(52°) = 76°. Angle MOP = 156° - 76° = 80°. In isosceles triangle MOP (OM = OP), m = (180° - 80°)/2 = 50°.',
+    7
+),
+(
+    'Core Mathematics', 2021, 2, 3, 'b', 'CM-07',
+    'A ladder of length 6.5 m leans against a vertical wall. If the top of the ladder is 3.6 m from the wall, calculate the distance from the wall to the foot of the ladder to two decimal places.',
+    FALSE, NULL,
+    'Distance = sqrt(6.5² - 3.6²) = sqrt(42.25 - 12.96) = sqrt(29.29) ≈ 5.41 m.',
+    5
+),
+(
+    'Core Mathematics', 2021, 2, 4, 'a', 'CM-06',
+    'A cylindrical pipe of length 210 cm has external diameter 16 cm and thickness 1 cm. Find the volume of metal in constructing the pipe. [Take π = 22/7]',
+    TRUE, 'C-Math/2021/Paper 2/CM-2021-P2-Q04a-cylindrical-pipe.png',
+    'External radius R = 8 cm, internal radius r = 7 cm, height h = 210 cm. Volume = π(R² - r²)h = (22/7)*(64 - 49)*210 = 22 * 15 * 30 = 9,900 cm³.',
+    7
+),
+(
+    'Core Mathematics', 2021, 2, 4, 'b', 'CM-08',
+    'The coordinates of points M and N are (55, -7) and (0, 5) respectively. Calculate the distance between M and N.',
+    FALSE, NULL,
+    'd = sqrt((0 - 55)² + (5 - (-7))²) = sqrt((-55)² + 12²) = sqrt(3025 + 144) = sqrt(3169) ≈ 56.29 units.',
+    5
+),
+(
+    'Core Mathematics', 2021, 2, 5, 'a', 'CM-11',
+    'Two dice are thrown once. Find the probability of obtaining an odd number on the first die and 6 on the second die.',
+    FALSE, NULL,
+    'P(odd on 1st) = 3/6 = 1/2. P(6 on 2nd) = 1/6. Combined probability = (1/2) * (1/6) = 1/12.',
+    4
+),
+(
+    'Core Mathematics', 2021, 2, 5, 'b', 'CM-11',
+    'Two dice are thrown once. Find the probability of obtaining a number greater than 4 on each die.',
+    FALSE, NULL,
+    'P(>4) = 2/6 = 1/3 for each die. Probability = (1/3) * (1/3) = 1/9.',
+    4
+),
+(
+    'Core Mathematics', 2021, 2, 5, 'c', 'CM-11',
+    'Two dice are thrown once. Find the probability of obtaining a total of 9 or 11.',
+    FALSE, NULL,
+    'Sums of 9: (3,6), (4,5), (5,4), (6,3). Sums of 11: (5,6), (6,5). Total favorable = 6. Probability = 6/36 = 1/6.',
+    4
+),
+(
+    'Core Mathematics', 2021, 2, 6, 'a', 'CM-01',
+    'In a military camp, 50 officers had a choice of beans, plantain and rice. 21 chose beans, 24 plantain, 18 rice. 3 chose beans only, 9 plantain only, 2 rice only, and 5 chose all three. Illustrate the information on a Venn diagram.',
+    FALSE, NULL,
+    'Let B=21, P=24, R=18, total N=50. B-only=3, P-only=9, R-only=2, All-three=5. Draw Venn diagram with 3 overlapping sets.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 6, 'b', 'CM-01',
+    'Use the Venn diagram to find the number of officers who chose: i) plantain and beans only; ii) exactly two kinds of food; iii) none of the three kinds of food.',
+    FALSE, NULL,
+    'Let x = B∩P only, y = B∩R only, z = P∩R only.
+3+5+x+y = 21 => x+y = 13.
+9+5+x+z = 24 => x+z = 10.
+2+5+y+z = 18 => y+z = 11.
+Solving gives x=6, y=7, z=4.
+i) Plantain and beans only = 6.
+ii) Exactly two kinds of food = 6 + 7 + 4 = 17.
+iii) None = 50 - (3+9+2+5+6+7+4) = 50 - 36 = 14.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 7, 'a', 'CM-02',
+    'Copy and complete the table of values for the relation y = 4 + 3x - 2x² for -4 <= x <= 4.',
+    FALSE, NULL,
+    'x = -4: y = -40; x = -3: y = -23; x = -2: y = -10; x = -1: y = -1; x = 0: y = 4; x = 1: y = 5; x = 2: y = 2; x = 3: y = -5; x = 4: y = -16.',
+    4
+),
+(
+    'Core Mathematics', 2021, 2, 7, 'b', 'CM-02',
+    'Using a scale of 2cm to 1 unit on the x-axis and 2cm to 5 units on the y-axis, draw the graph for y = 4 + 3x - 2x² for -4 <= x <= 4.',
+    FALSE, NULL,
+    'Plot points (-4, -40), (-3, -23), (-2, -10), (-1, -1), (0, 4), (1, 5), (2, 2), (3, -5), (4, -16) and join with a smooth curve.',
+    5
+),
+(
+    'Core Mathematics', 2021, 2, 7, 'c', 'CM-02',
+    'Using the graph, find the: i) equation of line of symmetry; ii) maximum point of the curve; iii) values of x for which y decreases as x increases.',
+    FALSE, NULL,
+    'i) Line of symmetry: x = 0.75.
+ii) Maximum point: (0.75, 5.13).
+iii) y decreases as x increases for x > 0.75.',
+    4
+),
+(
+    'Core Mathematics', 2021, 2, 8, 'a', 'CM-06',
+    'A solid metal cylinder of height 6m and diameter 28cm is melted and recast into smaller solid cylinders. Each smaller cylinder is 14cm high and 0.5cm in diameter. How many smaller cylinders were obtained? [Take π = 22/7]',
+    FALSE, NULL,
+    'Large volume = π * 14² * 600 = 117,600π cm³. Small volume = π * 0.25² * 14 = 0.875π cm³. Number of cylinders = 117,600π / 0.875π = 134,400 cylinders.',
+    7
+),
+(
+    'Core Mathematics', 2021, 2, 8, 'b', 'CM-02',
+    'The unit digit of a two-digit number is 1 less than the tens digit. If the number is increased by 8 and then divided by the sum of the digits, the result is 8. Find the number.',
+    FALSE, NULL,
+    'Let tens digit = t, unit digit = t - 1. Number = 10t + (t - 1) = 11t - 1. Sum of digits = 2t - 1. Equation: (11t - 1 + 8) / (2t - 1) = 8 => 11t + 7 = 16t - 8 => 5t = 15 => t = 3. Unit digit = 2. The number is 32.',
+    5
+),
+(
+    'Core Mathematics', 2021, 2, 9, 'a', 'CM-01',
+    'The ratio of cars to motorcycles sold at a garage is 5:7. If a dealer sold 142 more motorcycles than cars in a particular month, find the number of each type of vehicle sold.',
+    FALSE, NULL,
+    'Difference in parts = 7 - 5 = 2 parts = 142 => 1 part = 71. Cars sold = 5 * 71 = 355. Motorcycles sold = 7 * 71 = 497.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 9, 'b', 'CM-11',
+    'The probabilities of an athlete winning two independent events are 3/5 and 2/9. Find the probabilities of winning: i) only one event; ii) none of the events.',
+    FALSE, NULL,
+    'i) P(only 1) = (3/5)*(7/9) + (2/5)*(2/9) = 21/45 + 4/45 = 25/45 = 5/9.
+ii) P(none) = (2/5)*(7/9) = 14/45.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 10, 'a', 'CM-07',
+    'A cyclist sets out from town P on bearing 060° to town Q, 5 km away. He then moves on bearing 345° to town R, 6 km from Q. i) Represent the information on a diagram. ii) Calculate correct to two decimal places: A) |PR|; B) bearing of R from P.',
+    FALSE, NULL,
+    'i) Diagram showing P to Q (5 km at 060°) and Q to R (6 km at 345°).
+ii) A) Angle PQR = 345° - 240° = 105°. |PR|² = 5² + 6² - 2(5)(6)cos(105°) = 61 + 15.53 = 76.53 => |PR| = 8.75 km.
+ii) B) sin(QPR)/6 = sin(105°)/8.75 => angle QPR ≈ 41.48°. Bearing of R from P = 60° - 41.48° = 018.52°.',
+    8
+),
+(
+    'Core Mathematics', 2021, 2, 10, 'b', 'CM-10',
+    'The following are arranged in order of size: (x - 2), 4, (x + 2), (2x + 1) and 9. If the median is equal to the mean, find the value of x.',
+    FALSE, NULL,
+    'Median = (x + 2). Mean = ((x - 2) + 4 + (x + 2) + (2x + 1) + 9) / 5 = (4x + 14) / 5. (x + 2) = (4x + 14) / 5 => 5x + 10 = 4x + 14 => x = 4.',
+    4
+),
+(
+    'Core Mathematics', 2021, 2, 11, 'a', 'CM-10',
+    'The average of refuse generated in a community in a week contains 35% plastic, 27.5% liquid, 17.5% metal, 12.5% vegetable matter and others 7.5%. Draw a pie chart to illustrate the information.',
+    FALSE, NULL,
+    'Sector angles: Plastic = 35% * 360° = 126°; Liquid = 27.5% * 360° = 99°; Metal = 17.5% * 360° = 63°; Vegetable = 12.5% * 360° = 45°; Others = 7.5% * 360° = 27°.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 11, 'b', 'CM-05',
+    'In the diagram PQ touches the circle MNOP at P and NP is a diameter. Angle MPQ = 33° and angle PMO = 67°. Find: i) angle NMO; ii) angle MPO.',
+    TRUE, 'C-Math/2021/Paper 2/CM-2021-P2-Q11b-circle-tangent.png',
+    'i) Angle NMP = 90° (angle in semicircle). angle NMO = 90° - 67° = 23°.
+ii) By Alternate Segment Theorem, angle MNP = angle MPQ = 33°. In right triangle NMP, angle NPM = 180° - (90° + 33°) = 57°. angle MPO = 57° - 33° = 24°.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 12, 'a', 'CM-05',
+    'In the diagram, PQR is a circle with centre O. If angle RQO = 46°, find angle RPQ.',
+    TRUE, 'C-Math/2021/Paper 2/CM-2021-P2-Q12a-circle-centre.png',
+    'In triangle ORQ, OR = OQ (radii of circle). Thus triangle ORQ is isosceles with base angle ORQ = angle RQO = 46°. Angle at centre ROQ = 180° - (46° + 46°) = 88°. Angle at circumference RPQ = (1/2) * angle ROQ = (1/2) * 88° = 44°.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 12, 'b', 'CM-02',
+    'A train is scheduled to cover a distance of 120 km at a certain average speed, r. Due to some technical challenges the average speed is reduced by 5 km/h thereby increasing the scheduled time by 20 minutes. Find the average speed, r.',
+    FALSE, NULL,
+    'Time equation: 120/(r - 5) - 120/r = 20/60 = 1/3. Multiplying by 3r(r - 5) gives 360r - 360(r - 5) = r(r - 5) => 1800 = r² - 5r => r² - 5r - 1800 = 0. Factorizing: (r - 45)(r + 40) = 0. Since speed must be positive, r = 45 km/h.',
+    7
+),
+(
+    'Core Mathematics', 2021, 2, 13, 'a', 'CM-02',
+    'A function g is defined on the set of real numbers, R, by g(x) = (1 + 3x) / (x - 1), x ≠ 1. Find the: i) image of -1 under the function g; ii) value of x for which g(x) = 7; iii) value of g(-3).',
+    FALSE, NULL,
+    'i) g(-1) = (1 + 3(-1)) / (-1 - 1) = -2 / -2 = 1.
+ii) g(x) = 7 => (1 + 3x) / (x - 1) = 7 => 1 + 3x = 7x - 7 => 4x = 8 => x = 2.
+iii) g(-3) = (1 + 3(-3)) / (-3 - 1) = -8 / -4 = 2.',
+    6
+),
+(
+    'Core Mathematics', 2021, 2, 13, 'b', 'CM-04',
+    'The sum of the first ten terms of an Arithmetic Progression (A.P) is 120. If the fifth term is 6 less than the eighth, find the: i) common difference; ii) first term.',
+    FALSE, NULL,
+    'i) T_8 - T_5 = (a + 7d) - (a + 4d) = 3d = 6 => d = 2.
+ii) S_10 = (10/2)[2a + 9d] = 5(2a + 18) = 120 => 2a + 18 = 24 => 2a = 6 => a = 3.',
+    6
+);
+
+COMMIT;

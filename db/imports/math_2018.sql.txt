@@ -1,0 +1,151 @@
+BEGIN;
+
+-- =======================================================
+-- WASSCE 2018 CORE MATHEMATICS - PAPER 1 (50 MCQs)
+-- =======================================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id, question_text, 
+    has_diagram, diagram_url, option_a, option_b, option_c, option_d, 
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+('Core Mathematics', 2018, 1, 1, 'CM-01', 'Simplify: (1/4 × 2 1/2) / (12 ÷ 1 1/2).', false, NULL, '5/8', '5/32', '5/64', '5/72', 'C', 'Numerator = 1/4 × 5/2 = 5/8. Denominator = 12 ÷ 3/2 = 12 × 2/3 = 8. Expression = (5/8) / 8 = 5/64.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 2, 'CM-01', 'Given that 3 × 9^(1 + x) = 27^(-x), find the value of x.', false, NULL, '-3/5', '-1 2/3', '-2', '-3', 'A', 'Express with base 3: 3^1 × 3^(2 + 2x) = 3^(-3x) => 3^(3 + 2x) = 3^(-3x) => 3 + 2x = -3x => 5x = -3 => x = -3/5.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 3, 'CM-01', 'In a class of 39 students, 25 offer Fante and 19 offer Twi. Five students do not offer any of the two languages. How many students offer only Twi?', false, NULL, '6', '7', '8', '9', 'D', 'Total n(F ∪ T) = 39 - 5 = 34. n(F ∩ T) = 25 + 19 - 34 = 10. Students offering only Twi = 19 - 10 = 9.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 4, 'CM-01', 'Evaluate: (4 - √2) / √2.', false, NULL, '√2 - 1', '2√2 - 1', '√2 + 1', '2√2 + 1', 'B', 'Rationalize: 4/√2 - √2/√2 = (4√2)/2 - 1 = 2√2 - 1.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 5, 'CM-03', 'Mary and Charity entered into a business partnership and agreed to share their profit in the ratio 4 : 5 respectively. If Mary received GH¢ 5,000.00 less than Charity, how much profit did they make?', false, NULL, 'GH¢30,000.00', 'GH¢35,000.00', 'GH¢40,000.00', 'GH¢45,000.00', 'D', 'Difference = 5 - 4 = 1 part = GH¢ 5,000.00. Total profit = 4 + 5 = 9 parts = 9 × 5,000 = GH¢ 45,000.00.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 6, 'CM-03', 'A man bought a car which costs ₦5,000,000.00 from a dealer on hire purchase. He pays a deposit of ₦3,000,000.00 and agrees to pay the balance at 8% compound interest per annum. If he pays ₦1,000,000.00 at the end of each year, how much will be remaining to be paid after two years?', false, NULL, '₦92,800.00', '₦252,800.00', '₦320,000.00', '₦332,800.00', 'B', 'Initial balance = ₦2,000,000. End of Year 1: 2,000,000 × 1.08 = 2,160,000. After payment = 1,160,000. End of Year 2: 1,160,000 × 1.08 = 1,252,800. After payment = ₦252,800.00.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 7, 'CM-02', 'y varies inversely as the square of x. When x = 3, y = 100. Find the value of x when y = 25.', false, NULL, 'x = 30', 'x = 12', 'x = 6', 'x = 5', 'C', 'y = k / x² => 100 = k / 9 => k = 900. When y = 25: 25 = 900 / x² => x² = 36 => x = 6.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 8, 'CM-02', 'Solve the equation: t - 9/5 = -1 1/15.', false, NULL, 't = 2/5', 't = 11/15', 't = 4/5', 't = 13/15', 'B', 't = 9/5 - 16/15 = 27/15 - 16/15 = 11/15.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 9, 'CM-02', 'Find the truth set of the equation: (x - 2)² + 3 = (x + 1)² - 6.', false, NULL, '{-2}', '{-1}', '{1}', '{2}', 'D', 'x² - 4x + 4 + 3 = x² + 2x + 1 - 6 => x² - 4x + 7 = x² + 2x - 5 => -6x = -12 => x = 2.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 10, 'CM-02', 'Two friends, Dede and Kofi decided to buy the same type of car. They found out that the car cost ₦3,000,000.00. The amount of money (f) which Dede had was not enough to buy the car but Kofi had enough money (k) to buy the car. Which of the following inequalities is true?', false, NULL, 'f ≤ ₦3,000,000.00 ≤ k', 'f > ₦3,000,000.00 > k', 'f < ₦3,000,000.00 ≤ k', 'f ≥ ₦3,000,000.00 > k', 'C', 'Not enough money implies f < 3,000,000. Enough money implies k ≥ 3,000,000. Combining: f < ₦3,000,000.00 ≤ k.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 11, 'CM-02', 'Simplify: z/(z + 2) - (z - 2)/(z - 3).', false, NULL, '(4 - 3z) / [(z + 2)(z - 3)]', '(3z - 4) / [(z - 3)(z + 2)]', '(4 + 3z) / [(z + 3)(z - 2)]', '(4 + 3z) / [(z + 2)(z - 3)]', 'A', '[z(z - 3) - (z - 2)(z + 2)] / [(z + 2)(z - 3)] = [z² - 3z - (z² - 4)] / [(z + 2)(z - 3)] = (4 - 3z) / [(z + 2)(z - 3)].', 'medium', false),
+
+('Core Mathematics', 2018, 1, 12, 'CM-01', 'Simplify: (x⁻¹ + y⁻¹) / (x + y).', false, NULL, 'y/x', 'x/y', '1/xy', 'xy', 'C', '(1/x + 1/y) / (x + y) = [(y + x) / xy] / (x + y) = 1 / xy.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 13, 'CM-06', 'A chord of a circle with radius 5 cm subtends an angle of 70° at the centre. Find, correct to one decimal place, the length of the chord.', false, NULL, '8.2 cm', '5.7 cm', '4.1 cm', '2.9 cm', 'B', 'Chord length = 2 r sin(θ/2) = 2(5) sin(35°) = 10 × 0.5736 = 5.736 cm ≈ 5.7 cm.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 14, 'CM-06', 'A pyramid with a square base has a volume of 1,400 cm³. If a side of the base is 10 cm long, find the height of the pyramid.', false, NULL, '70 cm', '42 cm', '21 cm', '7 cm', 'B', 'V = (1/3) × Base Area × h => 1400 = (1/3) × (10 × 10) × h => 1400 = (100/3) h => h = (1400 × 3) / 100 = 42 cm.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 15, 'CM-06', 'In the diagram, O is the centre of the circle. If the radius of the circle is 12 cm and ∠PQR = 45°, calculate, correct to the nearest cm, the length of arc PR. [Take π = 22/7]', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q15-circle-arc.png', '113 cm', '57 cm', '19 cm', '15 cm', 'C', 'Angle subtended at centre ∠POR = 2 × ∠PQR = 2 × 45° = 90°. Arc length = (90/360) × 2 × (22/7) × 12 = (1/4) × 75.43 = 18.85 cm ≈ 19 cm.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 16, 'CM-05', 'Which of the following about parallelograms is true?', false, NULL, 'Opposite angles are supplementary', 'Opposite angles are complementary', 'Opposite angles are equal', 'Opposite angles are reflex angles', 'C', 'A fundamental geometric property of any parallelogram is that opposite interior angles are equal in measure.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 17, 'CM-05', 'In the diagram, POT is a straight line. If (w + x + y) = 140° and (x + y + z) = 130°, find the value of (x + y).', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q17-straight-line-angles.png', '40°', '50°', '90°', '110°', 'C', 'w + x + y + z = 180° (straight line). w = 180° - (x + y + z) = 180° - 130° = 50°. Then (x + y) = 140° - w = 140° - 50° = 90°.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 18, 'CM-05', 'The interior angles of a pentagon are x°, (x + 5)°, (x + 10)°, (x + 15)°, and (x + 20)°. Find the value of x.', false, NULL, '98', '88', '78', '68', 'A', 'Sum of pentagon interior angles = 540°. x + x + 5 + x + 10 + x + 15 + x + 20 = 540 => 5x + 50 = 540 => 5x = 490 => x = 98.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 19, 'CM-05', 'The diagram shows a rhombus PQRS with diagonals intersecting at O. If the ratio of ∠PQR to ∠QPS is 3 : 7, calculate the value of ∠QSR.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q19-rhombus-diagonals.png', '27°', '45°', '54°', '63°', 'A', 'Adjacent angles in rhombus sum to 180°: 3k + 7k = 180° => 10k = 180° => k = 18°. ∠PQR = 3(18°) = 54°. In △QRS (isosceles with QR=RS), ∠QSR = ∠SQR = 54°/2 = 27°.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 20, 'CM-08', 'Calculate the gradient of the line which passes through the points (1, 4) and (-2, 6).', false, NULL, '-3/2', '-2/3', '2/3', '3/2', 'B', 'm = (y₂ - y₁) / (x₂ - x₁) = (6 - 4) / (-2 - 1) = 2 / -3 = -2/3.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 21, 'CM-08', 'Calculate the distance between points (3, -2) and (8, 10).', false, NULL, '12 units', '13 units', '14 units', '15 units', 'B', 'd = √[(8 - 3)² + (10 - (-2))²] = √[5² + 12²] = √[25 + 144] = √169 = 13 units.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 22, 'CM-07', 'Evaluate: (cos 65° / sin 25°) + (sin 35° / cos 55°).', false, NULL, '3', '2', '1', '0', 'B', 'Using co-function identities: cos 65° = sin 25° and sin 35° = cos 55°. (sin 25° / sin 25°) + (cos 55° / cos 55°) = 1 + 1 = 2.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 23, 'CM-07', 'From a height of 2 m above the ground and at a horizontal distance of 12√3 m from a tree, the angle of elevation of the top of the tree is 30°. How tall is the tree?', false, NULL, '8 m', '8√3 m', '14 m', '18 m', 'C', 'tan 30° = h / 12√3 => 1/√3 = h / 12√3 => h = 12 m. Total height of tree = 12 + 2 = 14 m.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 24, 'CM-07', 'Express the bearing of 312° in compass direction form.', false, NULL, 'S 48° W', 'N 48° W', 'S 48° E', 'N 48° E', 'B', '312° lies in North-West quadrant. Angle from North = 360° - 312° = 48°. Compass bearing = N 48° W.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 25, 'CM-11', 'A fair die is thrown once. What is the probability of obtaining 3?', false, NULL, '1/6', '1/3', '1/2', '1', 'A', 'Number of favorable outcomes = 1 (number 3). Total outcomes = 6. Probability = 1/6.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 26, 'CM-10', 'The table shows the distribution of the ages of members of a school choir. Calculate the mean age.', false, NULL, '15 years', '16 years', '17 years', '18 years', 'B', 'Sum f*x = 15(5) + 16(6) + 17(3) + 18(1) = 75 + 96 + 51 + 18 = 240. Total students Σf = 15. Mean = 240 / 15 = 16 years.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 27, 'CM-10', 'Using the age distribution table from question 26, find the median age.', false, NULL, '15 1/2 years', '16 years', '16 1/2 years', '17 years', 'B', 'Total frequency = 15. Median position = (15 + 1)/2 = 8th position. Cumulative frequencies: 5 (age 15), 11 (age 16). 8th item lies in age 16.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 28, 'CM-02', 'If x = mn/3 and m = v/y², express x in terms of v, y and n.', false, NULL, 'x = 3vy / n', 'x = vy / 3n', 'x = vyn / 3', 'x = vn / 3y²', 'D', 'Substitute m into x: x = (v/y²) × n / 3 = (v n) / (3 y²).', 'easy', false),
+
+('Core Mathematics', 2018, 1, 29, 'CM-01', 'If M_six = 123_five, find the value of M.', false, NULL, '53', '55', '62', '102', 'D', '123_five = 1(25) + 2(5) + 3(1) = 38_ten. Convert 38_ten to base 6: 38 ÷ 6 = 6 r 2; 6 ÷ 6 = 1 r 0; 1 ÷ 6 = 0 r 1. M_six = 102_six.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 30, 'CM-06', 'In triangle XYZ, |XY| = 8 cm and Z is equidistant from X and Y. If Z is 5 cm from X, find the area of the triangle.', false, NULL, '24 cm²', '18 cm²', '12 cm²', '10 cm²', 'C', 'Isosceles △XYZ with sides 5 cm, 5 cm, 8 cm. Height h = √(5² - 4²) = 3 cm. Area = 1/2 × base × height = 1/2 × 8 × 3 = 12 cm².', 'easy', false),
+
+('Core Mathematics', 2018, 1, 31, 'CM-06', 'Calculate the total surface area of a cuboid whose dimensions are 12 cm x 8 cm x 3 cm.', false, NULL, '96 cm²', '156 cm²', '288 cm²', '312 cm²', 'D', 'TSA = 2(lb + lh + bh) = 2(12×8 + 12×3 + 8×3) = 2(96 + 36 + 24) = 2(156) = 312 cm².', 'easy', false),
+
+('Core Mathematics', 2018, 1, 32, 'CM-06', 'Calculate, correct to the nearest whole number, the volume of a sphere with diameter 6 cm. [Take π = 22/7]', false, NULL, '15 cm³', '36 cm³', '113 cm³', '124 cm³', 'C', 'Radius r = 3 cm. V = (4/3)πr³ = (4/3) × (22/7) × 27 = 2376 / 21 = 113.14 cm³ ≈ 113 cm³.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 33, 'CM-05', 'The diagram shows a circle centre O. Find the value of y.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q33-34-circle-tangent.png', '43°', '47°', '54°', '86°', 'B', 'Angle between tangent and radius is 90°. In right-angled triangle formed at tangent point: y = 90° - 43° = 47°.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 34, 'CM-05', 'Using the circle diagram from question 33, find the value of x.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q33-34-circle-tangent.png', '43°', '47°', '54°', '89°', 'A', 'Alternate segment theorem: angle x in alternate segment equals angle between tangent and chord (43°).', 'easy', false),
+
+('Core Mathematics', 2018, 1, 35, 'CM-04', 'Find the nth term of the Geometric Progression (G.P.): 1/2, 1/4, 1/8, ...', false, NULL, '2ⁿ⁻¹', '2ⁿ', '1/2ⁿ', '1/2ⁿ⁻¹', 'C', 'First term a = 1/2, common ratio r = 1/2. T_n = a rⁿ⁻¹ = (1/2)(1/2)ⁿ⁻¹ = (1/2)ⁿ = 1/2ⁿ.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 36, 'CM-01', 'An old man goes for a walk every 6 days. If he went for a walk on Wednesday, when will he go for the next walk?', false, NULL, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'B', 'Wednesday + 6 days = Tuesday (since 7 days completes a week, 6 days is 1 day before Wednesday).', 'easy', false),
+
+('Core Mathematics', 2018, 1, 37, 'CM-10', 'The cumulative frequency curve (Ogive) shows the distribution of waiting time of some customers. Estimate the interquartile range.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q37-38-ogive-curve.png', '0.70', '0.75', '0.80', '0.85', 'C', 'Total N = 50. Q1 at N/4 = 12.5 (≈ 2.55 mins), Q3 at 3N/4 = 37.5 (≈ 3.35 mins). IQR = 3.35 - 2.55 = 0.80 minutes.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 38, 'CM-10', 'Using the cumulative frequency curve from question 37, how many customers waited for at least 3 minutes?', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q37-38-ogive-curve.png', '16', '17', '18', '19', 'C', 'At waiting time t = 3.0 minutes, cumulative frequency from graph = 32. Customers waiting at least 3 minutes = 50 - 32 = 18.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 39, 'CM-02', 'What is the coefficient of x in the expansion of (4x² + 3x - 1)(3x + 1)?', false, NULL, '-1', '0', '1', '2', 'B', 'Terms producing x: 3x(1) + (-1)(3x) = 3x - 3x = 0x. Coefficient of x is 0.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 40, 'CM-02', 'Find the quadratic equation whose roots are 1/2 and -3/2.', false, NULL, 'x² + 4x - 3 = 0', '4x² + x - 3 = 0', 'x² - 4x - 3 = 0', '4x² + 4x - 3 = 0', 'D', '(x - 1/2)(x + 3/2) = 0 => x² + x - 3/4 = 0 => 4x² + 4x - 3 = 0.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 41, 'CM-02', 'Two times a number added to one-third of the number gives 5 1/6. Find the number.', false, NULL, '2 2/7', '2 3/14', '2 1/7', '2 1/14', 'B', '2x + x/3 = 31/6 => (7/3)x = 31/6 => x = (31/6) × (3/7) = 31/14 = 2 3/14.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 42, 'CM-10', 'Find the mean deviation of 5, 8, 3, 7, 2.', false, NULL, '0', '2', '5', '10', 'B', 'Mean = (5 + 8 + 3 + 7 + 2) / 5 = 25 / 5 = 5. Absolute deviations: |5-5|=0, |8-5|=3, |3-5|=2, |7-5|=2, |2-5|=3. Sum = 10. Mean deviation = 10/5 = 2.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 43, 'CM-11', 'In a certain community, 1 out of every 8 persons is a graduate. If Yomi and Etteh are members of the community, what is the probability that they are both graduates?', false, NULL, '1/64', '1/16', '1/8', '1/4', 'A', 'Independent events: P(both graduates) = (1/8) × (1/8) = 1/64.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 44, 'CM-05', 'Which of the following statements is false?', false, NULL, 'In a circle, equal chords subtend equal angles at the centre', 'The length of an arc is proportional to the angle subtended by the arc at the centre of the circle', 'The circumference of a circle is directly proportional to its diameter', 'The angle between the tangent to a circle and its radius is complementary', 'D', 'The angle between a tangent and radius at point of contact is perpendicular (90°), not complementary (which refers to two angles summing to 90°).', 'easy', false),
+
+('Core Mathematics', 2018, 1, 45, 'CM-08', 'Find the equation of the graph in the diagram.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q45-quadratic-graph.png', 'y = 2 - x - x²', 'y = 2 - x + x²', 'y = 2 + x - x²', 'y = 2 + x + x²', 'A', 'Y-intercept is (0, 2). Roots are x = -2 and x = 1. Equation y = -a(x + 2)(x - 1) = -(x² + x - 2) = 2 - x - x².', 'medium', false),
+
+('Core Mathematics', 2018, 1, 46, 'CM-01', 'If log x = 0.3030, log y = 0.4771 and log Z = 0.8451, evaluate: [log x - log Z^(1/3)] / log y³.', false, NULL, '1.4313', '0.8466', '0.5466', '0.0149', 'D', 'Numerator = log x - (1/3)log Z = 0.3030 - (0.8451 / 3) = 0.3030 - 0.2817 = 0.0213. Denominator = 3 log y = 3(0.4771) = 1.4313. Fraction = 0.0213 / 1.4313 = 0.01488 ≈ 0.0149.', 'medium', false),
+
+('Core Mathematics', 2018, 1, 47, 'CM-12', 'Consider these two statements: P: n is an odd number; Q: n is a prime number greater than 2. Express "If n is not an odd number then n is not a prime number greater than 2" in symbolic form.', false, NULL, '~P ∧ ~Q', '~P ⇒ Q', 'P ⇒ ~Q', '~P ⇒ ~Q', 'D', '"If not P then not Q" translates directly into conditional logic as ~P ⇒ ~Q.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 48, 'CM-01', 'Which of the following is not a rational number?', false, NULL, '-5', '√4', '3 3/4', '√90', 'D', '√90 = 3√10 is an irrational number because 90 is not a perfect square.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 49, 'CM-05', 'Use the diagram to find the value of m.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q49-50-circle-geometry.png', '35°', '45°', '65°', '75°', 'A', 'In the semicircle with diameter across centre O, angle subtended by chord with marked angle 35° gives m = 35° by isosceles triangle properties from centre.', 'easy', false),
+
+('Core Mathematics', 2018, 1, 50, 'CM-05', 'Use the diagram from question 49 to find the value of n.', true, 'C-Math/2018/Paper 1/CM-2018-P1-Q49-50-circle-geometry.png', '70°', '65°', '55°', '35°', 'C', 'In right triangle in semicircle: n = 90° - 35° = 55°.', 'easy', false);
+
+
+-- =======================================================
+-- WASSCE 2018 CORE MATHEMATICS - PAPER 2 (Theory)
+-- =======================================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id, 
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+('Core Mathematics', 2018, 2, 1, 'a', 'CM-02', 'Solve: 1/2 (4x - 6) - 1/3 (5 - 4x) ≥ 8.', false, NULL, 'x ≥ 3.8 (or x ≥ 19/5). 2x - 3 - 5/3 + (4/3)x ≥ 8 => (10/3)x - 14/3 ≥ 8 => (10/3)x ≥ 38/3 => 10x ≥ 38 => x ≥ 3.8.', 4),
+
+('Core Mathematics', 2018, 2, 1, 'b', 'CM-02', 'Solve the simultaneous equations: 3/x - 4/y = 1/3, 2/x - 5/y = 1.', false, NULL, 'x = -3, y = -3. Let u = 1/x, v = 1/y. 9u - 12v = 1 and 2u - 5v = 1 => u = -1/3, v = -1/3 => x = -3, y = -3.', 4),
+
+('Core Mathematics', 2018, 2, 2, 'a', 'CM-01', 'A woman spent 1/6 of her monthly salary on foodstuffs, 1/3 on drugs, 1/4 on utility bills and had GH¢ 285.00 left. Calculate her monthly salary.', false, NULL, 'Monthly salary = GH¢ 1,140.00. Total fraction spent = 1/6 + 1/3 + 1/4 = 9/12 = 3/4. Fraction left = 1/4. 1/4 × Salary = 285 => Salary = 285 × 4 = GH¢ 1,140.00.', 4),
+
+('Core Mathematics', 2018, 2, 2, 'b', 'CM-05', 'In the diagram, WY // PR, ∠WXO = 50°, reflex ∠XOQ = 280° and ∠OQR = V. Find the value of V.', true, 'C-Math/2018/Paper 2/CM-2018-P2-Q02b-parallel-lines.png', 'V = 30°. Interior ∠XOQ = 360° - 280° = 80°. Draw parallel line through O: top alternate angle = 50°, bottom alternate angle = 80° - 50° = 30°. Alternate angle ∠OQR = V = 30°.', 4),
+
+('Core Mathematics', 2018, 2, 3, 'a', 'CM-07', 'From two points P and Q, 15 m apart and on the same horizontal line as the foot of a tower, the angles of elevation of the top of the tower are 35° and 45°, respectively. If P and Q are on the same side of the tower, represent the information in a diagram.', false, NULL, 'Diagram showing tower of height h with point Q (angle 45°) closer and point P (angle 35°) 15 m further back.', 2),
+
+('Core Mathematics', 2018, 2, 3, 'b', 'CM-07', 'Using data from question 3(a), find, correct to the nearest metre, the height of the tower.', false, NULL, 'Height = 35 m. Let height = h. At Q: tan 45° = h/d => d = h. At P: tan 35° = h/(h + 15) => 0.7002(h + 15) = h => 10.503 = 0.2998 h => h = 35.03 m ≈ 35 m.', 4),
+
+('Core Mathematics', 2018, 2, 4, 'a', 'CM-06', 'The area of a sector of a circle of radius 12 cm, is 132 cm². If the sector is folded such that its straight edges coincide to form a cone, find the radius of the base of the cone. [Take π = 22/7]', false, NULL, 'Base radius = 3.5 cm. Sector area = 1/2 × L × r => 132 = 1/2 × L × 12 => L = 22 cm. Base circumference of cone = L => 2π r_cone = 22 => 2 × (22/7) × r_cone = 22 => r_cone = 3.5 cm.', 4),
+
+('Core Mathematics', 2018, 2, 4, 'b', 'CM-06', 'A circle centre O has radius 5 cm. A chord PQ of the circle is 6 cm long. Calculate: (i) the distance of the chord from the centre O; (ii) angle POQ.', false, NULL, '(i) Distance = 4 cm. d = √(5² - 3²) = √(25 - 9) = 4 cm. (ii) Angle POQ = 73.7°. sin(∠POQ / 2) = 3/5 = 0.6 => ∠POQ / 2 = 36.87° => ∠POQ = 73.74° ≈ 73.7°.', 4),
+
+('Core Mathematics', 2018, 2, 5, 'a', 'CM-11', 'The probabilities that Ade, Kofi and Fati will pass an examination are 2/3, 5/8 and 3/4, respectively. Find the probability that the three of them will pass the examination.', false, NULL, 'Probability = 5/16. P(all pass) = 2/3 × 5/8 × 3/4 = 30 / 96 = 5/16.', 2),
+
+('Core Mathematics', 2018, 2, 5, 'b', 'CM-11', 'Find the probability that none of them will pass the examination.', false, NULL, 'Probability = 1/32. P(none pass) = (1 - 2/3) × (1 - 5/8) × (1 - 3/4) = 1/3 × 3/8 × 1/4 = 3 / 96 = 1/32.', 2),
+
+('Core Mathematics', 2018, 2, 5, 'c', 'CM-11', 'Find the probability that Ade and Kofi only will pass the examination.', false, NULL, 'Probability = 5/48. P(Ade pass, Kofi pass, Fati fail) = 2/3 × 5/8 × (1 - 3/4) = 2/3 × 5/8 × 1/4 = 10 / 96 = 5/48.', 2),
+
+('Core Mathematics', 2018, 2, 7, 'a', 'CM-02', 'Solve the equation: (2x + 3)/(x - 1) = (5x - 3)/(3 - x).', false, NULL, 'x = 2 or x = -3/7. (2x + 3)(3 - x) = (5x - 3)(x - 1) => 6x - 2x² + 9 - 3x = 5x² - 5x - 3x + 3 => 7x² - 11x - 6 = 0 => (7x + 3)(x - 2) = 0 => x = 2 or x = -3/7.', 5),
+
+('Core Mathematics', 2018, 2, 7, 'b', 'CM-05', 'In the diagram, RQ is the base of the isosceles triangle PQR. If the perimeter of the triangle is 20 cm, find the values of x and y.', true, 'C-Math/2018/Paper 2/CM-2018-P2-Q07b-isosceles-triangle.png', 'x = 2, y = 3. Isosceles => x + y + 1 = 2x - y + 5 => x - 2y = -4. Perimeter => (x + y + 1) + (2x - y + 5) + (x + y + 3) = 20 => 4x + y = 11. Solving simultaneously: x = 2, y = 3.', 7),
+
+('Core Mathematics', 2018, 2, 13, 'a', 'CM-05', 'In the diagram, ∠TPQ = 32° and |PQ| = |QT| = |TR|. Calculate ∠TRS.', true, 'C-Math/2018/Paper 2/CM-2018-P2-Q13a-triangle-angles.png', '∠TRS = 116°. In △PTQ (isosceles): ∠PTQ = ∠TPQ = 32°. Exterior angle ∠TQR = 32° + 32° = 64°. In △QTR (isosceles): ∠TRQ = ∠TQR = 64°. Exterior angle ∠TRS = 180° - 64° = 116°.', 6),
+
+('Core Mathematics', 2018, 2, 13, 'b', 'CM-05', 'In the diagram, O is the centre of the circle, |TS| = |SR|, ∠TPR = x°, ∠TQR = y°, ∠TOR = z° and ∠TSR = 118°. (i) Find the relationship between x, y and z. (ii) Calculate ∠STP.', true, 'C-Math/2018/Paper 2/CM-2018-P2-Q13b-circle-geometry.png', '(i) x = y and z = 2x (or z = 2y). (ii) ∠STP = 31°. (i) Angles subtended by same arc TR at circumference are equal: x = y. Angle at centre z = 2x. (ii) In △TSR (isosceles with TS=SR): ∠STR = (180° - 118°)/2 = 31°. Since ∠STP = ∠STR, ∠STP = 31°.', 6);
+
+COMMIT;

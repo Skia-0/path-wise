@@ -1,0 +1,40 @@
+/* Remove-from-dashboard link and dashboard action messages. */
+
+.subject-remove {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.subject-remove:hover:not(:disabled) {
+  color: var(--danger);
+}
+
+.subject-remove:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.subject-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dash-action-error {
+  margin: 0 0 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subject-remove {
+    transition: none;
+  }
+}

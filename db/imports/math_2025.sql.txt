@@ -1,0 +1,678 @@
+BEGIN;
+
+-- ============================================================================
+-- WASSCE 2025 CORE MATHEMATICS - PAPER 1 (OBJECTIVE TEST)
+-- 50 MCQs → questions table
+-- ============================================================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id,
+    question_text, has_diagram, diagram_url,
+    option_a, option_b, option_c, option_d,
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+(
+    'Core Mathematics', 2025, 1, 1, 'CM-01',
+    'Given that log_10(5) = x and log_10(11) = y, express log_10(275) in terms of x and y.',
+    FALSE, NULL,
+    '2x + y', '2(x + y)', 'x + 2y', '2xy',
+    'A',
+    '275 = 25 * 11 = 5² * 11. log_10(275) = log_10(5²) + log_10(11) = 2*log_10(5) + log_10(11) = 2x + y.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 2, 'CM-01',
+    'The sets P = {x: x = 3, 5, 6} and Q = {x: 2 <= x <= 5} are subsets of universal set u = {x: 1 <= x <= 10, where x is an integer}. Find P'' ∩ Q.',
+    FALSE, NULL,
+    '{2, 4}', '{1, 4}', '{4, 5}', '{3, 4}',
+    'A',
+    'P = {3, 5, 6} => P'' = {1, 2, 4, 7, 8, 9, 10}. Q = {2, 3, 4, 5}. Therefore P'' ∩ Q = {2, 4}.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 3, 'CM-06',
+    'A pyramid has a rectangular base of length 6.5 cm and width 4.2 cm. If the height of the pyramid is 12 cm, find the volume.',
+    FALSE, NULL,
+    '32.70 cm³', '109.2 cm³', '10.20 cm³', '327.6 cm³',
+    'B',
+    'Volume = (1/3) * Base Area * height = (1/3) * (6.5 * 4.2) * 12 = 4 * 27.3 = 109.2 cm³.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 4, 'CM-01',
+    'Given that (1 + 2/3)^x = 4 + 17/27, find the value of x.',
+    FALSE, NULL,
+    '3', '2', '5', '6',
+    'A',
+    '1 + 2/3 = 5/3. 4 + 17/27 = 125/27. So (5/3)^x = 125/27 = (5/3)³ => x = 3.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 5, 'CM-04',
+    'The first 4 terms of an Arithmetic Progression (A.P) are 8, x, y and 17. Find the value of (x + y).',
+    FALSE, NULL,
+    '25', '20', '31', '40',
+    'A',
+    'In an A.P, the sum of terms equidistant from the ends is constant: x + y = 8 + 17 = 25.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 6, 'CM-10',
+    'In a test, the mean mark of 25 students in a class, P, is 72.2 and the mean mark of 20 students in another class, Q, is 65. Find the mean mark of all the students in P and Q.',
+    FALSE, NULL,
+    '69', '70', '68', '66',
+    'A',
+    'Total marks = (25 * 72.2) + (20 * 65) = 1805 + 1300 = 3105. Total students = 25 + 20 = 45. Overall mean = 3105 / 45 = 69.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 7, 'CM-03',
+    'Mr. Gyan bought a car for $16,800.00 and later sold it at 85% of the original cost. He spent $3,930.75 from the money he received from the sale of the car and invested the remaining at 18% per annum simple interest. How much interest did he earn in 9 years?',
+    FALSE, NULL,
+    '$32,018.32', '$67,657.00', '$20,848.19', '$16,765.79',
+    'D',
+    'Selling price = 0.85 * 16,800 = $14,280. Remainder = 14,280 - 3,930.75 = $10,349.25. Interest = P * R * T = 10,349.25 * 0.18 * 9 = $16,765.785 ≈ $16,765.79.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 8, 'CM-10',
+    'The mean and range of 1.20, 1.00, 0.90, 1.40, 0.80, 0.80, 1.20 and 1.10 are m and r respectively. Find the value of (m + r).',
+    FALSE, NULL,
+    '2.45', '2.55', '1.85', '1.65',
+    'D',
+    'Sum = 8.40 => Mean m = 8.40 / 8 = 1.05. Range r = 1.40 - 0.80 = 0.60. Thus m + r = 1.05 + 0.60 = 1.65.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 9, 'CM-02',
+    'Given that 3/(x + y) - 4/(x - y) = 0, find the value of x/y, where y ≠ 0.',
+    FALSE, NULL,
+    '-7', '7', '-1/7', '1/7',
+    'A',
+    '3/(x + y) = 4/(x - y) => 3(x - y) = 4(x + y) => 3x - 3y = 4x + 4y => -x = 7y => x/y = -7.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 10, 'CM-04',
+    'The last term of the sequence: 7, 11, 15, ... is 115. Find the number of terms in the sequence.',
+    FALSE, NULL,
+    '28', '29', '27', '26',
+    'A',
+    'a = 7, d = 4. T_n = 7 + (n - 1)4 = 115 => 4(n - 1) = 108 => n - 1 = 27 => n = 28.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 11, 'CM-10',
+    'Find the mean deviation of 2, 5, 7, 9 and 15.',
+    FALSE, NULL,
+    '3.52', '2.45', '4.14', '5.23',
+    'A',
+    'Mean = (2 + 5 + 7 + 9 + 15)/5 = 7.6. Absolute deviations: |2-7.6|=5.6, |5-7.6|=2.6, |7-7.6|=0.6, |9-7.6|=1.4, |15-7.6|=7.4. Mean deviation = (5.6+2.6+0.6+1.4+7.4)/5 = 17.6/5 = 3.52.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 12, 'CM-05',
+    'The locus, L is such that |PM| = |PN|. Which of the following best describes L?',
+    FALSE, NULL,
+    'It is the locus of points parallel to line MN.',
+    'It is the locus of points perpendicular to the line MN.',
+    'It is the locus of points equidistant from M and N.',
+    'It is the circle centre P, radius MN.',
+    'C',
+    'The set of all points P satisfying |PM| = |PN| is the perpendicular bisector of MN, i.e., the locus of points equidistant from M and N.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 13, 'CM-01',
+    'A train is moving at 60 miles per hour. If it passes a sign post in 15 seconds, find, in yards, the length of the train. [Take 1 mile = 1760 yards]',
+    FALSE, NULL,
+    '420 yards', '440 yards', '400 yards', '360 yards',
+    'B',
+    'Speed = (60 * 1760) / 3600 = 88/3 yards/sec. Length = Speed * time = (88/3) * 15 = 440 yards.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 14, 'CM-02',
+    'Kwaku is 2 years older than Atanga and 6 years younger than Esi. The sum of their ages is 70. If they decide to share $153.00 in the ratio of their ages, how much will the eldest person receive?',
+    FALSE, NULL,
+    '$51.00', '$61.20', '$48.09', '$43.71',
+    'B',
+    'Let Kwaku = K. Atanga = K - 2, Esi = K + 6. K + (K - 2) + (K + 6) = 70 => 3K + 4 = 70 => K = 22. Ages: Atanga=20, Kwaku=22, Esi=28. Eldest is Esi (28/70 * $153) = $61.20.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 15, 'CM-01',
+    'Solve: log_3(2x - 1) / log_3(243) = 2/5.',
+    FALSE, NULL,
+    'x = 4', 'x = 3', 'x = 5', 'x = 6',
+    'C',
+    'log_3(243) = 5. So log_3(2x - 1) / 5 = 2/5 => log_3(2x - 1) = 2 => 2x - 1 = 3² = 9 => 2x = 10 => x = 5.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 16, 'CM-02',
+    'The sum of the ages of Esi and Amina is 24 years and the difference in their ages is 6 years. If Amina is older than Esi, find Esi''s age.',
+    FALSE, NULL,
+    '12', '9', '13', '15',
+    'B',
+    'A + E = 24 and A - E = 6. Subtracting the equations: 2E = 18 => E = 9 years.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 17, 'CM-01',
+    'Solve: 4x + 1 ≡ 3 (mod 11).',
+    FALSE, NULL,
+    '4', '3', '5', '6',
+    'D',
+    '4x ≡ 2 ≡ 24 (mod 11) => x ≡ 6 (mod 11).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 18, 'CM-06',
+    'In the diagram, |PQ| = 6.7 cm, |QR| = 5.5 cm and |RT| = 3.3 cm. Find the area of the figure.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q18-trapezium.png',
+    '36.74 cm²', '45.93 cm²', '27.56 cm²', '26.40 cm²',
+    'A',
+    'Height |QT| = sqrt(5.5² - 3.3²) = 4.4 cm. Area of trapezium = 1/2 * (6.7 + (6.7 + 3.3)) * 4.4 = 1/2 * 16.7 * 4.4 = 36.74 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 19, 'CM-05',
+    'In the diagram, triangle OMN is similar to triangle OPQ. |OQ| = 10 cm, |MN| = 6 cm, |PQ| = 8 cm. Find |MQ|.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q19-similar-triangles.png',
+    '3.5 cm', '4.0 cm', '3.0 cm', '2.5 cm',
+    'D',
+    'By similarity: |OM| / |OQ| = |MN| / |PQ| => |OM| / 10 = 6 / 8 => |OM| = 7.5 cm. |MQ| = |OQ| - |OM| = 10 - 7.5 = 2.5 cm.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 20, 'CM-01',
+    'A scientific sensor records air pollution levels in base 3. If the highest recorded pollution level for a week was 2120_3, what is the decimal equivalent?',
+    FALSE, NULL,
+    '65', '62', '69', '72',
+    'C',
+    '2120_3 = 2(3³) + 1(3²) + 2(3¹) + 0(3⁰) = 54 + 9 + 6 + 0 = 69.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 21, 'CM-02',
+    'Factorize: 5p² + 4pq - 15pr - 12qr.',
+    FALSE, NULL,
+    '(p + 3r)(5p - 4q)', '(p - 3r)(5p + 4q)', '(p + 3r)(5p + 4q)', '(p - 3r)(5p - 4q)',
+    'D',
+    'Group terms: p(5p + 4q) - 3r(5p + 4q) = (p - 3r)(5p + 4q).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 22, 'CM-01',
+    'A school has a total population of 1,800 students. Out of this number 4/9 are in SHS 1, 13/36 are in SHS 2 and the rest are in SHS 3. Calculate the number of students in SHS 3.',
+    FALSE, NULL,
+    '650', '800', '500', '350',
+    'D',
+    'SHS 1 = (4/9)*1800 = 800. SHS 2 = (13/36)*1800 = 650. SHS 3 = 1800 - (800 + 650) = 350.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 23, 'CM-08',
+    'The straight line 3y + bx - 6 = 0 passes through (3, 4). Find the value of b.',
+    FALSE, NULL,
+    '8', '12', '-2', '-8',
+    'C',
+    'Substitute x = 3, y = 4: 3(4) + b(3) - 6 = 0 => 12 + 3b - 6 = 0 => 3b = -6 => b = -2.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 24, 'CM-02',
+    'A function is defined by g: x -> (2x - 1) / (3x - 2). For what value of x is g not defined?',
+    FALSE, NULL,
+    '-2/3', '2/3', '1/2', '-1/2',
+    'B',
+    '3x - 2 = 0 => 3x = 2 => x = 2/3.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 25, 'CM-05',
+    'In the diagram angle QPR = 90°. If q² = 25 - r², find the value of p.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q25-right-triangle.png',
+    '5', '4', '3', '6',
+    'A',
+    'Pythagoras theorem: p² = q² + r². Given q² + r² = 25 => p² = 25 => p = 5.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 26, 'CM-02',
+    'In the diagram PQRST is a trapezium. |ST| = 3 cm, |RS| = y cm and |PS| = 4 cm. For what values of y will the area of the trapezium PQRST be less than or equal to 10 cm²?',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q26-trapezium.png',
+    'y <= 1 cm', 'y <= 4 cm', 'y <= 2 cm', 'y <= 6 cm',
+    'A',
+    'Area = 1/2 * (y + (3 + y)) * 4 = 2(2y + 3) = 4y + 6. Given 4y + 6 <= 10 => 4y <= 4 => y <= 1 cm.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 27, 'CM-07',
+    'A town P is due south of town Q and town R is on a bearing of 125° from Q. If town R is 20 km due east of P, find |PQ|.',
+    FALSE, NULL,
+    '15 km', '20 km', '14 km', '12 km',
+    'C',
+    'Angle PQR = 180° - 125° = 55°. In right triangle QPR, tan(55°) = 20 / |PQ| => |PQ| = 20 / tan(55°) ≈ 14 km.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 28, 'CM-06',
+    'The diagram shows a sector of a circle of radius 42 cm. If the sector is folded to form a right circular cone, find the curved surface area of the cone. [Take π = 22/7]',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q28-sector-cone.png',
+    '5,544 cm²', '4,158 cm²', '11,088 cm²', '29,106 cm²',
+    'B',
+    'Curved surface area = (270/360) * π * R² = (3/4) * (22/7) * 42² = 4,158 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 29, 'CM-05',
+    'In the diagram, P, Q, R and S are points on the circle centre O and angle PQR = 104°. Find the angle marked y.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q29-circle-angle.png',
+    '76°', '152°', '52°', '208°',
+    'B',
+    'Reflex angle POR = 2 * 104° = 208°. Interior angle y = 360° - 208° = 152°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 30, 'CM-05',
+    'In the diagram TX and TY are tangents to the circle XYZ at X and Y respectively. TX || YZ and angle XTY = 100°. Find angle ZXY.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q30-tangents-parallel.png',
+    '100°', '130°', '90°', '80°',
+    'A',
+    'In isosceles triangle TXY, base angles = 40°. By alternate segment and parallel line theorems, angle XZY = 40° and angle XYZ = 40°. angle ZXY = 180° - 80° = 100°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 31, 'CM-06',
+    'The radius of a circle is 4 times the radius of another circle. What is the relationship between their areas?',
+    FALSE, NULL,
+    'The area of one is 16 times that of the other.',
+    'The area of one is 64 times that of the other.',
+    'The area of one is 12 times that of the other.',
+    'The area of one is 8 times that of the other.',
+    'A',
+    'Area ratio = (r1 / r2)² = (4 / 1)² = 16.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 32, 'CM-05',
+    'In the diagram, angle QMP = 40° and angle RPM = 30°. Find the value of x.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q32-circle-secants.png',
+    '70°', '40°', '100°', '110°',
+    'A',
+    'Exterior angle x of triangle MPR at vertex R equals sum of opposite interior angles = 30° + 40° = 70°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 33, 'CM-05',
+    'Some of the interior angles of a pentagon are 111°, 131° and 79°. The remaining angles are x and y in the ratio 2 : 3 respectively. Find, correct to the nearest whole number, the value of x.',
+    FALSE, NULL,
+    '56°', '44°', '80°', '88°',
+    'D',
+    'Sum of interior angles of pentagon = 540°. x + y = 540° - 321° = 219°. x = (2/5) * 219° = 87.6° ≈ 88°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 34, 'CM-05',
+    'In the diagram, P, Q, R and S are points on the circle centre O. QS is a diameter and angle ORQ = 41°. Find angle QSR.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q34-circle-square.png',
+    '49°', '41°', '60°', '82°',
+    'A',
+    'Isosceles triangle ORQ => central angle QOR = 180° - 2(41°) = 98°. Angle QSR = (1/2) * 98° = 49°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 35, 'CM-05',
+    'In the diagram, O is the centre of the circle and angle OXZ = 19°. Find angle XYZ.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q35-circle-center.png',
+    '109°', '142°', '71°', '68°',
+    'C',
+    'Isosceles triangle OXZ => central angle XOZ = 180° - 2(19°) = 142°. angle XYZ = (1/2) * 142° = 71°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 36, 'CM-01',
+    'A car consumes 36 gallons of fuel over a distance of 2,268 km. Find, in km per litre, the fuel consumption. [Take 1 gallon = 4.5 litres]',
+    FALSE, NULL,
+    '15', '14', '50', '63',
+    'B',
+    'Total litres = 36 * 4.5 = 162 litres. km per litre = 2268 / 162 = 14.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 37, 'CM-02',
+    'Make w the subject of the relation 1/w = (h - 1)(1/m - 1/n).',
+    FALSE, NULL,
+    'w = mn / ((h - n)(1 - m))',
+    'w = mn / ((h - 1)(n - m))',
+    'w = mn / ((m - 1)(h - n))',
+    'w = mn / ((n + 1)(h - m))',
+    'B',
+    '1/w = (h - 1)(n - m) / (mn) => w = mn / ((h - 1)(n - m)).',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 38, 'CM-02',
+    'The inverse of the sum of -3 and twice a certain number is 1/5. Find the number.',
+    FALSE, NULL,
+    '1(1/2)', '1', '1(3/5)', '4',
+    'D',
+    'Reciprocal of sum is 1/5 => sum = 5. -3 + 2x = 5 => 2x = 8 => x = 4.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 39, 'CM-05',
+    'In the diagram, O is the centre of the circle, angle KLM = x and |OM| = |ML| = |LK| = |KO|. Find angle OKL.',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q39-circle-rhombus.png',
+    '30°', '15°', '60°', '120°',
+    'C',
+    'Since OK = KL = OL (radii + rhombus side equalities), triangle OKL is equilateral, so angle OKL = 60°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 40, 'CM-06',
+    'The diagram shows a field MNPQRST, where MTS is a semicircle. Find the area of the field. [Take π = 22/7]',
+    TRUE, 'C-Math/2025/Paper 1/CM-2025-P1-Q40-semicircle-field.png',
+    '26.3 cm²', '25.7 cm²', '27.5 cm²', '28.6 cm²',
+    'B',
+    'Rectangle area = 8 * 4 = 32. Cutout semicircle radius = 2 cm, area = 1/2 * (22/7) * 4 = 6.29. Field area = 32 - 6.29 = 25.71 ≈ 25.7 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 41, 'CM-11',
+    'A box contains 12 red, 8 yellow and 10 green pebbles, all of the same size. If two pebbles are selected at random one after the other, with replacement, find the probability that the first is green and the second is not a red pebble.',
+    FALSE, NULL,
+    '1/9', '1/5', '15/20', '17/20',
+    'B',
+    'P(Green) = 10/30 = 1/3. P(Not Red) = 18/30 = 3/5. Combined probability = (1/3) * (3/5) = 1/5.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 42, 'CM-02',
+    'Find the coefficient of x² in the expansion of (4x + 5)(3 - 2x).',
+    FALSE, NULL,
+    '8', '15', '2', '-8',
+    'D',
+    '(4x + 5)(3 - 2x) = 12x - 8x² + 15 - 10x = -8x² + 2x + 15. Coefficient of x² is -8.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 43, 'CM-02',
+    'Gifty is 19 years younger than her mother. In three years time the sum of their ages will be 67 years. Find the sum of their ages now.',
+    FALSE, NULL,
+    '40 years', '22 years', '48 years', '61 years',
+    'D',
+    'Sum in 3 years = 67 => Sum now = 67 - 2(3) = 61 years.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 44, 'CM-11',
+    'A fair die is thrown once. What is the probability of obtaining a 3 or 5?',
+    FALSE, NULL,
+    '2/3', '1/6', '1/3', '1/2',
+    'C',
+    'Favorable outcomes = 2. Total outcomes = 6. Probability = 2/6 = 1/3.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 45, 'CM-10',
+    'The mean of a, b, c, d and e is 15. Calculate the mean of (a + 1), (b + 3), (c + 5), (d + 7) and (e + 9).',
+    FALSE, NULL,
+    '25', '40', '20', '15',
+    'C',
+    'New sum = 5(15) + (1 + 3 + 5 + 7 + 9) = 75 + 25 = 100. New mean = 100 / 5 = 20.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 46, 'CM-02',
+    'If V = π*r²*h and S = 2*π*r*h, express V in terms of r and S.',
+    FALSE, NULL,
+    'V = (1/2)*r*S', 'V = 2r / S', 'V = r / 2S', 'V = 2rS',
+    'A',
+    'π*r*h = S/2. V = r * (π*r*h) = (1/2)*r*S.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 47, 'CM-02',
+    'A man cycles a distance of (3a) km at V km/h and then walks a distance of a km at (V - 7) km/h. Find the total number of hours he spent travelling.',
+    FALSE, NULL,
+    'V / 3a + (V - 7) / a',
+    '3a / V + a / (V - 7)',
+    '4a / (2V - 7)',
+    '(2V - 7) / 4a',
+    'B',
+    'Time = Distance / Speed. Total hours = 3a / V + a / (V - 7).',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 48, 'CM-07',
+    'Peter is in the East of Tom and Tom is in the North of John. If Mike is in the South of John, in which direction of Peter is Mike?',
+    FALSE, NULL,
+    'South West', 'South East', 'South', 'North East',
+    'A',
+    'Mike lies to the South and to the West relative to Peter, placing him South West of Peter.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 49, 'CM-02',
+    'Simplify: (25p² - q²) / (5p² + 6pq + q²).',
+    FALSE, NULL,
+    '(5p - q) / (p + q)',
+    '(5p - q) / (p - q)',
+    '(5p + q) / (p + q)',
+    '(5p + q) / (p - q)',
+    'A',
+    'Numerator = (5p - q)(5p + q). Denominator = (5p + q)(p + q). Cancelling (5p + q) gives (5p - q) / (p + q).',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2025, 1, 50, 'CM-01',
+    'Correct 5.40514 to three significant figures.',
+    FALSE, NULL,
+    '5.41', '541', '5.45', '5.40',
+    'A',
+    'First 3 significant figures are 5, 4, 0. Since the next digit is 5, round up to 5.41.',
+    'easy', FALSE
+);
+
+-- ============================================================================
+-- WASSCE 2025 CORE MATHEMATICS - PAPER 2 (STRUCTURED / THEORY)
+-- ============================================================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id,
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+(
+    'Core Mathematics', 2025, 2, 1, 'a', 'CM-01',
+    'A distributing van supplies drinks between two Depots, Koti and Abam, covering the first half of the distance at an average speed of 60 km/h and the second half at 90 km/h. The total distance between the two depots is 300 km. Calculate for the entire journey, the average speed of the van.',
+    FALSE, NULL,
+    'First 150 km time = 150/60 = 2.5 h. Second 150 km time = 150/90 = 5/3 h. Total time = 2.5 + 1.667 = 4.167 h. Average speed = 300 / 4.167 = 72 km/h.',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 1, 'b', 'CM-01',
+    'If the speed of the van in the first half of the journey is reduced to 50 km/h, determine its effect on the overall time.',
+    FALSE, NULL,
+    'New first half time = 150/50 = 3 h. New total time = 3 + 1.667 = 4.667 h. Overall time increases by 0.5 hours (30 minutes).',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 2, 'a', 'CM-03',
+    'A businessman invested some amount in two accounts which pay 11% and 10% simple interest annually. The amount invested at 11% is 140% of the amount invested at 10%. After 3.5 years, he earned a total of GH₵ 22,580.60 as interest. How much was invested at 11%?',
+    FALSE, NULL,
+    'Let amount at 10% = x. Amount at 11% = 1.4x. Total interest = x*0.10*3.5 + 1.4x*0.11*3.5 = 0.35x + 0.539x = 0.889x = 22,580.60 => x = GH₵ 25,400. Amount at 11% = 1.4 * 25,400 = GH₵ 35,560.00.',
+    12
+),
+(
+    'Core Mathematics', 2025, 2, 3, 'a', 'CM-06',
+    'Abudu builds a rainwater collection system in a shape of a hemispherical tank of radius 2 m to irrigate a 500 m² farm. Each square metre of the farm requires 50 litres of water. Determine, with a mathematical statement, if a full tank of water would be sufficient to irrigate the farm? [Take π = 22/7]',
+    FALSE, NULL,
+    'Hemisphere volume = (2/3)*π*r³ = (2/3)*(22/7)*8 = 16.762 m³ = 16,762 litres. Water required = 500 * 50 = 25,000 litres. Since 16,762 < 25,000, a full tank is NOT sufficient.',
+    12
+),
+(
+    'Core Mathematics', 2025, 2, 4, 'a', 'CM-07',
+    'From the top of a lighthouse 100 m high, the angles of depression of two cargo ships are observed at 48° and 36°. The foot of the lighthouse and the sea level are on the same horizontal and the two ships are on the same side of the lighthouse. Illustrate the information in a diagram.',
+    FALSE, NULL,
+    'Diagram showing lighthouse of height 100 m, ships A and B on level ground with angles 48° and 36°.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 4, 'b', 'CM-07',
+    'Find, correct to the nearest metre, the distance between the two ships.',
+    FALSE, NULL,
+    'Distance ship 1 = 100 / tan(48°) = 100 / 1.1106 = 90.04 m. Distance ship 2 = 100 / tan(36°) = 100 / 0.7265 = 137.64 m. Distance between ships = 137.64 - 90.04 = 47.6 m ≈ 48 m.',
+    8
+),
+(
+    'Core Mathematics', 2025, 2, 5, 'a', 'CM-08',
+    'The midpoint of the line joining P(2x, 3) and H(-4, y) is M(1, 2x - 1). Find the values of x and y.',
+    FALSE, NULL,
+    '(2x - 4)/2 = 1 => 2x - 4 = 2 => x = 3. Y-midpoint = (3 + y)/2 = 2(3) - 1 = 5 => 3 + y = 10 => y = 7.',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 5, 'b', 'CM-08',
+    'Using x = 3, y = 7, find the length |PH|.',
+    FALSE, NULL,
+    'P = (6, 3), H = (-4, 7). |PH| = sqrt((-4 - 6)² + (7 - 3)²) = sqrt(100 + 16) = sqrt(116) ≈ 10.77 units.',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 6, 'a', 'CM-03',
+    'The estimated cost of building a basketball court was $64,000.00 (labour : materials : contractor = 12 : 15 : 5). Labour increased by s%, materials by 2s%, contractor unchanged. New labour cost = (2/3) new materials cost. Determine the value of s.',
+    FALSE, NULL,
+    '32 parts = 64,000 => Labour = 24,000, Materials = 30,000, Contractor = 10,000. New labour = 24,000(1 + s/100). New materials = 30,000(1 + 2s/100). 24,000(1 + s/100) = (2/3)*30,000(1 + 2s/100) = 20,000(1 + 2s/100) => 24 + 0.24s = 20 + 0.4s => 0.16s = 4 => s = 25.',
+    8
+),
+(
+    'Core Mathematics', 2025, 2, 6, 'b', 'CM-03',
+    'Determine the new cost of building the court.',
+    FALSE, NULL,
+    'New labour = 24,000 * 1.25 = 30,000. New materials = 30,000 * 1.50 = 45,000. Contractor = 10,000. Total new cost = $85,000.00.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 7, 'a', 'CM-06',
+    'The shaded region of the figure is a pattern to be produced in a steel casting shop. If the area of triangle PTL is 98 m², calculate correct to one decimal place, the value of r.',
+    TRUE, 'C-Math/2025/Paper 2/CM-2025-P2-Q07-triangle-pattern.png',
+    'Base PT = r + (2r + 3) = 3r + 3. Height LP = 7. Area = 1/2 * (3r + 3) * 7 = 98 => 21r + 21 = 196 => 21r = 175 => r = 8.3 m.',
+    5
+),
+(
+    'Core Mathematics', 2025, 2, 7, 'b', 'CM-06',
+    'Calculate the area of the pattern (triangle OPL).',
+    TRUE, 'C-Math/2025/Paper 2/CM-2025-P2-Q07-triangle-pattern.png',
+    'Base OP = 2r + 3 = 2(8.33) + 3 = 19.67 m. Area = 1/2 * 19.67 * 7 = 68.8 m².',
+    3
+),
+(
+    'Core Mathematics', 2025, 2, 7, 'c', 'CM-06',
+    'Calculate the perimeter of the pattern.',
+    TRUE, 'C-Math/2025/Paper 2/CM-2025-P2-Q07-triangle-pattern.png',
+    'OL = sqrt(19.67² + 7²) = sqrt(386.9 + 49) = 20.88 m. Perimeter = 19.67 + 7 + 20.88 = 47.6 m.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 8, 'a', 'CM-02',
+    'i) Seidu planned to plough 120 acres of farmland each day. Due to unforeseen circumstances, 85 acres could be ploughed each day, resulting in an increase in the planned time by 2 days with 40 acres remaining. Calculate the number of days Seidu planned to plough the land initially. ii) Calculate the total area of the farmland.',
+    FALSE, NULL,
+    'Let initial days = d. Total area A = 120d. Ploughed area = 85(d + 2) = 120d - 40 => 85d + 170 = 120d - 40 => 35d = 210 => d = 6 days. Total area = 120 * 6 = 720 acres.',
+    8
+),
+(
+    'Core Mathematics', 2025, 2, 8, 'b', 'CM-07',
+    'Nkwanta is 5° N and Aboabo is 6.8° N on the earth''s surface. Find, correct to the nearest whole number, the distance between the two towns. [Take π = 22/7, R = 6,400 km]',
+    FALSE, NULL,
+    'Angular difference = 6.8° - 5° = 1.8°. Distance = (1.8 / 360) * 2 * (22/7) * 6400 = 201.14 km ≈ 201 km.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 9, 'a', 'CM-07',
+    'A telecommunication mast and a pillar stand on the same horizontal level. From the midpoint, O, between the foot of the pillar, X, and the foot of the mast, Y, the angle of elevation of the top of the mast E, is 70°. From point O, the angle of elevation of the top of the pillar, P, is 28°. If the pillar is 10 m high: represent the information in a diagram.',
+    FALSE, NULL,
+    'Diagram showing O as midpoint between X and Y. Pillar height = 10 m at angle 28°. Mast angle = 70°.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 9, 'b', 'CM-07',
+    'Calculate, correct to the nearest whole number: i) height of the mast; ii) length |PE|.',
+    FALSE, NULL,
+    'i) OX = 10 / tan(28°) = 10 / 0.5317 = 18.83 m. OY = OX = 18.83 m. Height of mast EY = 18.83 * tan(70°) = 18.83 * 2.7475 = 51.73 m ≈ 52 m. ii) Horizontal distance XE = 2 * 18.83 = 37.66 m. Height diff = 51.73 - 10 = 41.73 m. |PE| = sqrt(37.66² + 41.73²) = 56.2 m ≈ 56 m.',
+    8
+),
+(
+    'Core Mathematics', 2025, 2, 10, 'a', 'CM-05',
+    'The points A, T and M lie on a circle with centre O. An angle subtended at the centre by the minor arc AT is 88°. i) Illustrate the information in a diagram. ii) If M is a point on the minor arc, determine the value of the angle subtended by the chord AT at M.',
+    FALSE, NULL,
+    'i) Circle showing minor arc AT subtending central angle 88°. ii) Angle on major arc = 88° / 2 = 44°. In cyclic quad ATMM'', angle AMT on minor arc = 180° - 44° = 136°.',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 10, 'b', 'CM-01',
+    'A painter, Fiifi, is able to paint 400 doors each day in 8 hours. Another painter, Joojo, paints at 3/2 times Fiifi''s rate when painting same kind of doors. i) How many doors can Joojo paint in 8 hours? ii) If both Fiifi and Joojo decide to work together, determine the time required to paint 2000 doors.',
+    FALSE, NULL,
+    'i) Joojo doors in 8 hours = (3/2) * 400 = 600 doors. ii) Combined doors per hour = 50 + 75 = 125 doors/hour. Time for 2000 doors = 2000 / 125 = 16 hours.',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 11, 'a', 'CM-05',
+    'A playground is in the form of an isosceles triangle with vertices KLM. |KL| = |KM| = (2u + v) m, |LM| = (3u + 5) m and the perimeter of the playground is (7v + 3) m. Illustrate the information in a diagram.',
+    FALSE, NULL,
+    'Diagram of isosceles triangle KLM with sides marked 2u + v, 2u + v, and 3u + 5.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 11, 'b', 'CM-06',
+    'Given that u : v = 2 : 3, find, correct to one decimal place, the: i) value of u and v; ii) area of the playground.',
+    FALSE, NULL,
+    'Perimeter equation: 2(2u + v) + (3u + 5) = 7v + 3 => 7u - 5v = -2. Given u/v = 2/3 => v = 1.5u. 7u - 7.5u = -2 => -0.5u = -2 => u = 4.0, v = 6.0. Sides: |KL|=|KM|=14 m, |LM|=17 m. Semi-perimeter s = 22.5 m. Area = sqrt(22.5 * 8.5 * 8.5 * 5.5) = 117.7 m².',
+    8
+),
+(
+    'Core Mathematics', 2025, 2, 12, 'a', 'CM-10',
+    'Construct a cumulative frequency table for the 50 students test marks using class intervals 1-10, 11-20, ..., 91-100.',
+    FALSE, NULL,
+    'Frequencies: 1-10(2), 11-20(4), 21-30(4), 31-40(5), 41-50(7), 51-60(9), 61-70(6), 71-80(7), 81-90(4), 91-100(2). Cum freq: 2, 6, 10, 15, 22, 31, 37, 44, 48, 50.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 12, 'b', 'CM-10',
+    'Draw a cumulative frequency curve (ogive) for the distribution.',
+    FALSE, NULL,
+    'Plot upper boundaries (10.5, 20.5, ..., 100.5) against cumulative frequencies (2, 6, 10, ..., 50) and join with a smooth S-curve.',
+    4
+),
+(
+    'Core Mathematics', 2025, 2, 12, 'c', 'CM-10',
+    'Use the curve to find the upper quartile (Q3).',
+    FALSE, NULL,
+    'Q3 position = (3/4) * 50 = 37.5th student. From graph, Q3 ≈ 71.5 marks.',
+    2
+),
+(
+    'Core Mathematics', 2025, 2, 12, 'd', 'CM-10',
+    'If only 10% of the students passed the test, use the curve to determine the pass mark.',
+    FALSE, NULL,
+    'Top 10% passed = top 5 students => 45th student cumulative position. From graph at CF = 45, pass mark ≈ 81.5 marks.',
+    2
+),
+(
+    'Core Mathematics', 2025, 2, 13, 'a', 'CM-05',
+    'In the diagram, P, Q, R and S lie on the circumference of circle centre O. PR and QS intersect at T such that angle RQS = 30° and angle STP = 110°. Calculate: i) angle POQ; ii) angle TPS.',
+    TRUE, 'C-Math/2025/Paper 2/CM-2025-P2-Q13a-circle-intersect.png',
+    'i) Angle STR = angle STP = 110° (vertically opposite). In triangle SRT, angle PRQ = 30°. angle QPR = angle RQS = 30° (angles in same segment). Central angle POQ = 2 * 30° = 60°. ii) Angle TPS = 110° - 30° = 80°.',
+    6
+),
+(
+    'Core Mathematics', 2025, 2, 13, 'b', 'CM-12',
+    'Consider statements: f: Most Arts students are good at acting. g: Some Non-Arts students are also good at acting. i) Illustrate the information in a Venn diagram. ii) Determine validity of: α) Alfred is a non-Arts student so he is NOT good at acting; β) Fafa is an Arts student so she is good at acting.',
+    FALSE, NULL,
+    'i) Venn diagram shows set A (Arts) overlapping with set G (Good at acting), and set N (Non-Arts) also overlapping with set G. ii) α) Invalid (Non-Arts students can still be in set G). β) Invalid (Not ALL Arts students are in set G, only "most").',
+    6
+);
+
+COMMIT;

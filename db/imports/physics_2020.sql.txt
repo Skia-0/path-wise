@@ -1,0 +1,135 @@
+BEGIN;
+
+-- ==========================================
+-- WASSCE 2020 ELECTIVE PHYSICS - PAPER 1 (50 MCQs)
+-- ==========================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id, question_text, 
+    has_diagram, diagram_url, option_a, option_b, option_c, option_d, 
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+('Elective Physics', 2020, 1, 1, 'PH-01', 'Which of the following physical quantities is a fundamental quantity?', false, NULL, 'Velocity', 'Mass', 'Force', 'Acceleration', 'B', 'Mass is one of the seven basic SI fundamental quantities. Velocity, force, and acceleration are derived quantities.', 'easy', false),
+
+('Elective Physics', 2020, 1, 2, 'PH-02', 'A body moves with a constant speed in a circular path. Which of the following statements is true?', false, NULL, 'Its velocity is constant.', 'Its acceleration is zero.', 'A force acts towards the center of the circle.', 'No work is done by the centripetal force.', 'C', 'Circular motion at constant speed requires a centripetal force directed towards the center of the circle.', 'medium', false),
+
+('Elective Physics', 2020, 1, 3, 'PH-02', 'Calculate the momentum of an object of mass 10 kg moving with a velocity of 5 m/s.', false, NULL, '2 kg m/s', '15 kg m/s', '50 kg m/s', '100 kg m/s', 'C', 'Momentum = mass × velocity = 10 kg × 5 m/s = 50 kg m/s.', 'easy', false),
+
+('Elective Physics', 2020, 1, 4, 'PH-03', 'An object of mass 2 kg is dropped from a height of 10 m. Calculate its kinetic energy just before hitting the ground. [g = 10 m/s²]', false, NULL, '20 J', '100 J', '200 J', '400 J', 'C', 'By conservation of energy, Kinetic Energy at bottom = Potential Energy at top = mgh = 2 × 10 × 10 = 200 J.', 'medium', false),
+
+('Elective Physics', 2020, 1, 5, 'PH-06', 'Which of the following temperature scales is the absolute scale of temperature?', false, NULL, 'Celsius scale', 'Fahrenheit scale', 'Kelvin scale', 'Reaumur scale', 'C', 'The Kelvin scale is the absolute temperature scale, where 0 K represents absolute zero.', 'easy', false),
+
+('Elective Physics', 2020, 1, 6, 'PH-04', 'The maximum displacement of a wave particle from its rest position is known as its:', false, NULL, 'Wavelength', 'Frequency', 'Amplitude', 'Period', 'C', 'Amplitude is defined as the maximum displacement of a point on a wave from its equilibrium position.', 'easy', false),
+
+('Elective Physics', 2020, 1, 7, 'PH-05', 'Refraction of light occurs because light:', false, NULL, 'Bends around obstacles', 'Changes speed when moving between media of different optical densities', 'Bounces off polished surfaces', 'Splits into constituent colors', 'B', 'Refraction is caused by the change in the speed of light when traveling from one transparent medium to another.', 'easy', false),
+
+('Elective Physics', 2020, 1, 8, 'PH-07', 'The SI unit of electric current is the:', false, NULL, 'Volt', 'Ohm', 'Ampere', 'Coulomb', 'C', 'The Ampere (A) is the SI fundamental unit of electric current.', 'easy', false),
+
+('Elective Physics', 2020, 1, 9, 'PH-07', 'Two resistors of resistance 4 Ω and 6 Ω are connected in series. What is the equivalent resistance?', false, NULL, '2.4 Ω', '5.0 Ω', '10.0 Ω', '24.0 Ω', 'C', 'In series, Total Resistance R = R1 + R2 = 4 + 6 = 10 Ω.', 'easy', false),
+
+('Elective Physics', 2020, 1, 10, 'PH-09', 'Which of the following radiations has the highest penetrating power?', false, NULL, 'Alpha rays', 'Beta rays', 'Gamma rays', 'Infrared rays', 'C', 'Gamma rays have the highest energy and penetrating power among nuclear radiations.', 'easy', false),
+
+('Elective Physics', 2020, 1, 11, 'PH-01', 'Which instrument is most suitable for measuring the internal diameter of a small test tube?', false, NULL, 'Metre rule', 'Vernier callipers', 'Micrometer screw gauge', 'Tape measure', 'B', 'Vernier callipers feature internal jaws specifically designed for measuring internal diameters.', 'easy', false),
+
+('Elective Physics', 2020, 1, 12, 'PH-05', 'Refer to the diagram. Which ray diagram correctly shows light passing through a triangular glass prism at minimum deviation?', true, 'Physics/2020/Paper 1/PH-2020-P1-Q12-prism-rays.png', 'Diagram A', 'Diagram B', 'Diagram C', 'Diagram D', 'A', 'At minimum deviation, the ray passes symmetrically through the prism parallel to the base.', 'medium', false),
+
+('Elective Physics', 2020, 1, 13, 'PH-02', 'A car accelerates uniformly from rest to a speed of 20 m/s in 10 s. Calculate the distance traveled.', false, NULL, '50 m', '100 m', '200 m', '400 m', 'B', 'Distance s = average velocity × time = [(0 + 20)/2] × 10 = 10 × 10 = 100 m.', 'medium', false),
+
+('Elective Physics', 2020, 1, 14, 'PH-03', 'Work done is defined as the product of force and:', false, NULL, 'Time', 'Velocity', 'Distance in the direction of the force', 'Acceleration', 'C', 'Work = Force × Displacement in the direction of the force.', 'easy', false),
+
+('Elective Physics', 2020, 1, 15, 'PH-06', 'Refer to the graph. Which curve represents the heating process of a pure crystalline solid?', true, 'Physics/2020/Paper 1/PH-2020-P1-Q15-temperature-time-graphs.png', 'Graph A', 'Graph B', 'Graph C', 'Graph D', 'B', 'Pure crystalline solids exhibit distinct flat horizontal plateaus during phase changes (melting/boiling).', 'medium', false),
+
+('Elective Physics', 2020, 1, 16, 'PH-05', 'A ray of light is incident on a plane mirror at an angle of 33.5° to the normal. What is the angle of deviation?', false, NULL, '33.5°', '67.0°', '113.0°', '146.5°', 'C', 'Angle of deviation d = 180° - 2i = 180° - 2(33.5°) = 180° - 67° = 113°.', 'hard', false),
+
+('Elective Physics', 2020, 1, 17, 'PH-04', 'The pitch of a musical note depends primarily on its:', false, NULL, 'Amplitude', 'Frequency', 'Overtones', 'Intensity', 'B', 'Pitch is directly proportional to the frequency of sound waves.', 'easy', false),
+
+('Elective Physics', 2020, 1, 18, 'PH-07', 'According to Ohm''s law, current is directly proportional to voltage provided that:', false, NULL, 'Resistance is zero', 'Temperature remains constant', 'Power remains constant', 'Current flows continuously', 'B', 'Ohm''s law holds true only under constant physical conditions, especially temperature.', 'easy', false),
+
+('Elective Physics', 2020, 1, 19, 'PH-08', 'Which material is a p-type semiconductor doped with?', false, NULL, 'Pentavalent impurities', 'Trivalent impurities', 'Hexavalent impurities', 'Monovalent impurities', 'B', 'Doping pure silicon with trivalent atoms (like boron) creates p-type semiconductors.', 'medium', false),
+
+('Elective Physics', 2020, 1, 20, 'PH-09', 'An atom has 6 protons and 8 neutrons. Its atomic number and mass number are respectively:', false, NULL, '6 and 8', '8 and 6', '6 and 14', '14 and 6', 'C', 'Atomic number Z = protons = 6. Mass number A = protons + neutrons = 6 + 8 = 14.', 'easy', false),
+
+('Elective Physics', 2020, 1, 21, 'PH-07', 'How does the capacitance of a parallel plate capacitor change when the distance between its plates is doubled?', false, NULL, 'It is doubled.', 'It is halved.', 'It is quadrupled.', 'It remains unchanged.', 'B', 'Capacitance C = εA/d. Since d is doubled, capacitance C is halved.', 'medium', false),
+
+('Elective Physics', 2020, 1, 22, 'PH-02', 'A body of mass 5 kg falls freely under gravity from rest. Calculate its velocity after 3 seconds. [g = 10 m/s²]', false, NULL, '15 m/s', '30 m/s', '45 m/s', '50 m/s', 'B', 'v = u + gt = 0 + (10 × 3) = 30 m/s.', 'easy', false),
+
+('Elective Physics', 2020, 1, 23, 'PH-07', 'Refer to the I-V graph. Which electrical component exhibits non-ohmic resistance behavior?', true, 'Physics/2020/Paper 1/PH-2020-P1-Q23-iv-characteristics.png', 'Copper wire', 'Filament lamp', 'Carbon resistor', 'Constantan wire', 'B', 'Filament lamps exhibit non-ohmic behavior due to increasing resistance as temperature rises.', 'medium', false),
+
+('Elective Physics', 2020, 1, 24, 'PH-06', 'Which mode of heat transfer does NOT require a material medium?', false, NULL, 'Conduction', 'Convection', 'Radiation', 'Evaporation', 'C', 'Radiation transfers heat via electromagnetic waves and travels through vacuums.', 'easy', false),
+
+('Elective Physics', 2020, 1, 25, 'PH-02', 'Refer to the diagram. What is the efficiency of an inclined plane inclined at 30° if a force of 100 N pulls a 150 N load up the plane?', true, 'Physics/2020/Paper 1/PH-2020-P1-Q25-26-inclined-plane.png', '50%', '75%', '85%', '100%', 'B', 'Velocity Ratio VR = 1 / sin(30°) = 2. Mechanical Advantage MA = Load/Effort = 150/100 = 1.5. Efficiency = (MA/VR) × 100% = (1.5/2) × 100% = 75%.', 'hard', false),
+
+('Elective Physics', 2020, 1, 26, 'PH-02', 'Using the same inclined plane setup, calculate the work done against friction if the length of the plane is 10 m.', true, 'Physics/2020/Paper 1/PH-2020-P1-Q25-26-inclined-plane.png', '150 J', '250 J', '500 J', '1000 J', 'B', 'Work Input = Effort × Distance = 100 × 10 = 1000 J. Useful Work Output = Load × Height = 150 × (10 sin 30°) = 750 J. Friction Work = 1000 - 750 = 250 J.', 'hard', false),
+
+('Elective Physics', 2020, 1, 27, 'PH-04', 'Which wave property is responsible for the formation of echoes?', false, NULL, 'Refraction', 'Diffraction', 'Reflection', 'Interference', 'C', 'Echoes are created by the reflection of sound waves from hard barriers.', 'easy', false),
+
+('Elective Physics', 2020, 1, 28, 'PH-07', 'An electric iron rated 1000 W, 220 V is operated for 2 hours. Calculate the electrical energy consumed in kWh.', false, NULL, '0.5 kWh', '1.0 kWh', '2.0 kWh', '4.0 kWh', 'C', 'Energy = Power (kW) × Time (h) = 1 kW × 2 h = 2 kWh.', 'easy', false),
+
+('Elective Physics', 2020, 1, 29, 'PH-10', 'The acceleration due to gravity on Earth is approximately 10 m/s². What is the weight of a 60 kg person on Earth?', false, NULL, '6 N', '60 N', '600 N', '6000 N', 'C', 'Weight = mg = 60 kg × 10 m/s² = 600 N.', 'easy', false),
+
+('Elective Physics', 2020, 1, 30, 'PH-09', 'The half-life of a radioactive sample is 4 days. What fraction of the original sample remains after 12 days?', false, NULL, '1/2', '1/4', '1/8', '1/16', 'C', 'Number of half-lives = 12 / 4 = 3. Remaining fraction = (1/2)³ = 1/8.', 'medium', false),
+
+('Elective Physics', 2020, 1, 31, 'PH-01', 'Which of the following contains derived units only?', false, NULL, 'N, J, W', 'kg, m, s', 'A, K, mol', 'cd, m, N', 'A', 'Newton (N), Joule (J), and Watt (W) are all derived units.', 'easy', false),
+
+('Elective Physics', 2020, 1, 32, 'PH-02', 'A body moving at 10 m/s accelerates at 2 m/s² for 5 s. Find its final velocity.', false, NULL, '15 m/s', '20 m/s', '25 m/s', '30 m/s', 'B', 'v = u + at = 10 + (2 × 5) = 20 m/s.', 'easy', false),
+
+('Elective Physics', 2020, 1, 33, 'PH-05', 'The speed of light in vacuum is 3.0 × 10⁸ m/s. Calculate its speed in glass of refractive index 1.5.', false, NULL, '1.5 × 10⁸ m/s', '2.0 × 10⁸ m/s', '3.0 × 10⁸ m/s', '4.5 × 10⁸ m/s', 'B', 'Speed in medium v = c / n = (3.0 × 10⁸) / 1.5 = 2.0 × 10⁸ m/s.', 'medium', false),
+
+('Elective Physics', 2020, 1, 34, 'PH-04', 'The fundamental frequency of a stretched string fixed at both ends is 200 Hz. What is the frequency of its second harmonic?', false, NULL, '100 Hz', '200 Hz', '400 Hz', '600 Hz', 'C', 'Second harmonic f2 = 2 × fundamental frequency = 2 × 200 = 400 Hz.', 'medium', false),
+
+('Elective Physics', 2020, 1, 35, 'PH-06', 'Refer to the heating curve. What does the horizontal region labeled QR represent?', true, 'Physics/2020/Paper 1/PH-2020-P1-Q35-heating-curve.png', 'Sensible heating of solid', 'Melting at constant temperature', 'Sensible heating of liquid', 'Vaporization at constant temperature', 'B', 'The first horizontal plateau on a heating curve represents phase change from solid to liquid (melting).', 'medium', false),
+
+('Elective Physics', 2020, 1, 36, 'PH-03', 'Which of the following devices converts mechanical energy into electrical energy?', false, NULL, 'Electric motor', 'Electric generator', 'Transformer', 'Battery', 'B', 'A generator converts mechanical rotational energy into electrical energy via electromagnetic induction.', 'easy', false),
+
+('Elective Physics', 2020, 1, 37, 'PH-07', 'The magnetic field pattern around a straight current-carrying wire consists of:', false, NULL, 'Parallel straight lines', 'Concentric circles', 'Ellipses', 'Hyperbolas', 'B', 'Current in a straight conductor produces concentric circular magnetic field lines centered on the conductor.', 'easy', false),
+
+('Elective Physics', 2020, 1, 38, 'PH-10', 'Why is the acceleration due to gravity greater at the poles than at the equator?', false, NULL, 'The Earth rotates faster at the poles.', 'The Earth is flattened at the poles, making equatorial radius larger.', 'The poles are colder.', 'Atmospheric pressure is higher at the poles.', 'B', 'Because Earth is an oblate spheroid, polar radius is smaller than equatorial radius, resulting in higher g at the poles.', 'medium', false),
+
+('Elective Physics', 2020, 1, 39, 'PH-08', 'Which component allows current to flow in only one direction?', false, NULL, 'Resistor', 'Capacitor', 'Semiconductor Diode', 'Inductor', 'C', 'A semiconductor diode allows unidirectional current flow when forward-biased.', 'easy', false),
+
+('Elective Physics', 2020, 1, 40, 'PH-09', 'The emission of electrons from a metal surface when illuminated with light of sufficient frequency is called:', false, NULL, 'Thermionic emission', 'Photoelectric emission', 'Field emission', 'Secondary emission', 'B', 'Photoelectric emission is light-driven electron liberation from metal surfaces.', 'easy', false),
+
+('Elective Physics', 2020, 1, 41, 'PH-02', 'A simple pendulum completes 20 oscillations in 40 seconds. Calculate its period.', false, NULL, '0.5 s', '2.0 s', '20 s', '40 s', 'B', 'Period T = Total Time / Number of oscillations = 40 / 20 = 2.0 s.', 'easy', false),
+
+('Elective Physics', 2020, 1, 42, 'PH-07', 'Calculate the force experienced by a 2 C charge in an electric field of strength 500 N/C.', false, NULL, '250 N', '500 N', '1000 N', '2000 N', 'C', 'Force F = qE = 2 C × 500 N/C = 1000 N.', 'easy', false),
+
+('Elective Physics', 2020, 1, 43, 'PH-05', 'What type of lens is used to correct myopia (short-sightedness)?', false, NULL, 'Convex lens', 'Concave lens', 'Cylindrical lens', 'Bifocal lens', 'B', 'Concave (diverging) lenses correct myopia by diverging incoming light rays onto the retina.', 'easy', false),
+
+('Elective Physics', 2020, 1, 44, 'PH-06', 'The heat energy required to change 1 kg of a substance from liquid to gas at its boiling point without temperature change is:', false, NULL, 'Specific heat capacity', 'Latent heat of fusion', 'Specific latent heat of vaporization', 'Heat capacity', 'C', 'Specific latent heat of vaporization refers to the liquid-to-gas phase transition heat per unit mass.', 'easy', false),
+
+('Elective Physics', 2020, 1, 45, 'PH-03', 'A machine of efficiency 80% requires an effort of 50 N to lift a load. If VR = 5, calculate the load.', false, NULL, '200 N', '250 N', '300 N', '400 N', 'A', 'Efficiency = (MA / VR) × 100% -> 0.80 = MA / 5 -> MA = 4. Load = MA × Effort = 4 × 50 N = 200 N.', 'medium', false),
+
+('Elective Physics', 2020, 1, 46, 'PH-04', 'The speed of electromagnetic waves in vacuum is:', false, NULL, '3.0 × 10⁶ m/s', '3.0 × 10⁸ m/s', '3.0 × 10¹⁰ m/s', '3.0 × 10¹² m/s', 'B', 'All EM waves travel at c = 3.0 × 10⁸ m/s in vacuum.', 'easy', false),
+
+('Elective Physics', 2020, 1, 47, 'PH-07', 'Which device protects electrical appliances from damage caused by excessive current?', false, NULL, 'Transformer', 'Switch', 'Fuse', 'Rheostat', 'C', 'A fuse contains a metal wire that melts when current exceeds its safe rating, breaking the circuit.', 'easy', false),
+
+('Elective Physics', 2020, 1, 48, 'PH-09', 'Alpha particles consist of:', false, NULL, '2 protons and 2 neutrons', '1 proton and 1 neutron', '2 electrons and 2 protons', 'High energy photons', 'A', 'An alpha particle is a helium nucleus consisting of 2 protons and 2 neutrons.', 'easy', false),
+
+('Elective Physics', 2020, 1, 49, 'PH-02', 'A force of 10 N acts on a body of mass 2 kg. Calculate the acceleration produced.', false, NULL, '2 m/s²', '5 m/s²', '10 m/s²', '20 m/s²', 'B', 'a = F / m = 10 N / 2 kg = 5 m/s².', 'easy', false),
+
+('Elective Physics', 2020, 1, 50, 'PH-05', 'The image formed by a plane mirror is:', false, NULL, 'Real and inverted', 'Virtual and erect', 'Real and erect', 'Virtual and inverted', 'B', 'Plane mirrors form virtual, erect, laterally inverted images of equal size behind the mirror.', 'easy', false);
+
+
+-- ==========================================
+-- WASSCE 2020 ELECTIVE PHYSICS - PAPER 2 (Theory)
+-- ==========================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id, 
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+('Elective Physics', 2020, 2, 1, 'a', 'PH-02', 'Explain why a helical spring stretches when a load is suspended from it.', false, NULL, 'Model Answer: The force of gravity acting on the suspended load produces a downward tensile force that overcomes internal cohesive forces between the spring molecules, causing extension per Hooke''s Law.', 3),
+
+('Elective Physics', 2020, 2, 2, 'a', 'PH-05', 'State two safety precautions to observe when working with a high-power laser in a laboratory.', false, NULL, 'Model Answer: 1. Wear protective laser safety goggles rated for the laser wavelength. 2. Avoid looking directly into the laser beam or pointing it at reflective surfaces.', 2),
+
+('Elective Physics', 2020, 2, 3, 'a', 'PH-07', 'Distinguish between soft magnetic materials and hard magnetic materials, giving one example of each.', false, NULL, 'Model Answer: Soft magnetic materials (e.g., Soft Iron) are easily magnetized and demagnetized. Hard magnetic materials (e.g., Steel) are difficult to magnetize but retain magnetism permanently.', 4),
+
+('Elective Physics', 2020, 2, 4, 'a', 'PH-08', 'Explain energy band theory as applied to conductors, semiconductors, and insulators.', false, NULL, 'Model Answer: In conductors, conduction and valence bands overlap. In semiconductors, there is a small energy forbidden gap. In insulators, there is a wide forbidden energy gap.', 4),
+
+('Elective Physics', 2020, 2, 5, 'a', 'PH-02', 'A bullet is fired horizontally from a height of 80 m above level ground with an initial speed u. If it lands 100 m horizontally from the release point, calculate u. [g = 10 m/s²]', false, NULL, 'Model Answer: Vertical motion: h = 0.5gt² -> 80 = 0.5(10)t² -> t² = 16 -> t = 4 s. Horizontal motion: Range x = u × t -> 100 = u × 4 -> u = 25 m/s.', 5),
+
+('Elective Physics', 2020, 2, 6, 'a', 'PH-10', 'Derive an expression for the escape velocity of a body from the Earth''s gravitational field.', false, NULL, 'Model Answer: Kinetic Energy = Gravitational Potential Energy -> 0.5 m (v_e)² = G M m / R -> (v_e)² = 2 G M / R -> Since g = GM/R², v_e = √(2 g R).', 4),
+
+('Elective Physics', 2020, 2, 7, 'a', 'PH-06', 'State Stefan-Boltzmann Law of black body radiation.', false, NULL, 'Model Answer: The total energy radiated per unit surface area of a black body per unit time is directly proportional to the fourth power of its absolute temperature (E = σ T⁴).', 2);
+
+COMMIT;

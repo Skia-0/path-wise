@@ -1,0 +1,709 @@
+BEGIN;
+
+-- ============================================================================
+-- WASSCE 2023 CORE MATHEMATICS - PAPER 1 (OBJECTIVE TEST)
+-- 50 MCQs → questions table
+-- ============================================================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id,
+    question_text, has_diagram, diagram_url,
+    option_a, option_b, option_c, option_d,
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+(
+    'Core Mathematics', 2023, 1, 1, 'CM-07',
+    'A point on the ground is 5 m away from the foot of a vertical wall 12 m high. Calculate, correct to the nearest degree, the angle of depression of the point from the top of the wall.',
+    FALSE, NULL,
+    '25°', '23°', '67°', '65°',
+    'C',
+    'tan(θ) = 12 / 5 = 2.4 => θ = arctan(2.4) ≈ 67.38° ≈ 67°.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 2, 'CM-08',
+    'The gradient of the line passing through the points (3, 6) and (x, 4) is -2/5. Find the value of x.',
+    FALSE, NULL,
+    '3', '8', '6', '5',
+    'B',
+    'Gradient m = (4 - 6) / (x - 3) = -2 / (x - 3) = -2/5 => x - 3 = 5 => x = 8.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 3, 'CM-06',
+    'A woman pours 85 litres of kerosene into a cylindrical container with radius 7 cm. Calculate, correct to the nearest cm, the depth of the kerosene in the container. [Take π = 22/7]',
+    FALSE, NULL,
+    '240 cm', '552 cm', '480 cm', '595 cm',
+    'B',
+    'Volume V = 85 litres = 85,000 cm³. V = π*r²*h => 85000 = (22/7)*7²*h = 154h => h = 85000/154 ≈ 551.95 cm ≈ 552 cm.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 4, 'CM-02',
+    'Given that x² - 11x + m is a perfect square, find the value of m.',
+    FALSE, NULL,
+    '11/2', '121/8', '121/4', '121',
+    'C',
+    'For a perfect square x² + bx + m, m = (b/2)² = (-11/2)² = 121/4.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 5, 'CM-06',
+    'The sides of a scalene triangle are 4 cm, 9 cm and 11 cm. Calculate, correct to the nearest whole number, the area of the triangle.',
+    FALSE, NULL,
+    '13 cm²', '17 cm²', '21 cm²', '19 cm²',
+    'B',
+    'Semi-perimeter s = (4 + 9 + 11)/2 = 12 cm. Area = sqrt(12(12-4)(12-9)(12-11)) = sqrt(12 * 8 * 3 * 1) = sqrt(288) ≈ 16.97 cm² ≈ 17 cm².',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 6, 'CM-11',
+    'In a hall, there are 175 persons. 12% are children, 56 are men and the rest are women. If one person is selected at random from the hall, find the probability that a woman is selected.',
+    FALSE, NULL,
+    '3/25', '11/25', '8/25', '14/25',
+    'D',
+    'Children = 12% of 175 = 21. Women = 175 - 21 - 56 = 98. P(Woman) = 98 / 175 = 14/25.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 7, 'CM-01',
+    'A student measured the length of a classroom and obtained 3.99 m which is less than the actual length. If the percentage error was 5%, what was the actual length?',
+    FALSE, NULL,
+    '3.80 m', '3.78 m', '4.18 m', '4.20 m',
+    'D',
+    'Percentage error = ((Actual - 3.99)/Actual) * 100% = 5% => 1 - 3.99/Actual = 0.05 => 3.99/Actual = 0.95 => Actual = 4.20 m.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 8, 'CM-01',
+    'A car covers the first 80 km of a journey in 2 hours and completes the journey by travelling further for 2.5 hours at 50 km/h. What is the average speed of the entire journey?',
+    FALSE, NULL,
+    '44(4/9) km/h', '45(5/9) km/h', '47(1/4) km/h', '63(1/4) km/h',
+    'B',
+    'Second distance = 2.5 * 50 = 125 km. Total distance = 80 + 125 = 205 km. Total time = 2 + 2.5 = 4.5 h. Average speed = 205 / 4.5 = 410/9 = 45(5/9) km/h.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 9, 'CM-01',
+    'If log x = 2 - 3*log 2, find the value of x.',
+    FALSE, NULL,
+    '5/2', '2/5', '2/25', '25/2',
+    'D',
+    'log x = log 100 - log(2³) = log(100/8) = log(25/2) => x = 25/2.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 10, 'CM-02',
+    'The graph of y = x² - 5x + k passes through the point (3, 1). Find the value of k.',
+    FALSE, NULL,
+    '2', '3', '7', '5',
+    'C',
+    '1 = 3² - 5(3) + k = 9 - 15 + k = -6 + k => k = 7.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 11, 'CM-05',
+    'In the diagram, the exterior angles of a convex polygon are (2x+5)°, (2x)°, (x-20)°, x°, (3x+10)° and (x+15)°. Find the value of x.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q11-polygon-exterior.png',
+    '41', '37', '35', '31',
+    'C',
+    'Sum of exterior angles of any convex polygon = 360°. (2x+5) + 2x + (x-20) + x + (3x+10) + (x+15) = 360 => 10x + 10 = 360 => 10x = 350 => x = 35.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 12, 'CM-05',
+    'In the diagram, p + q = 250°. Find the angle marked s.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q12-triangle-exterior.png',
+    '70°', '110°', '290°', '250°',
+    'A',
+    'Base interior angles of the triangle are (180° - p) and (180° - q). s + (180° - p) + (180° - q) = 180° => s + 360° - (p + q) = 180° => s = (p + q) - 180° = 250° - 180° = 70°.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 13, 'CM-02',
+    'If x : y : z = 2 : 3 : 4, evaluate (9x + 3y) / (6z - 2y).',
+    FALSE, NULL,
+    '1.5', '2.5', '2.0', '3.0',
+    'A',
+    'Let x=2k, y=3k, z=4k. (9(2k) + 3(3k)) / (6(4k) - 2(3k)) = (18k + 9k) / (24k - 6k) = 27k / 18k = 1.5.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 14, 'CM-10',
+    'Find the mean of (x + y), (2x + 3y), (2x - 2y) and (3x - 2y).',
+    FALSE, NULL,
+    '4x', 'x', '2x', '3x',
+    'C',
+    'Sum = (x + 2x + 2x + 3x) + (y + 3y - 2y - 2y) = 8x. Mean = 8x / 4 = 2x.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 15, 'CM-11',
+    'A box contains 2 red, 6 white and 5 black balls, all of the same size. If a ball is selected at random, what is the probability that it is black?',
+    FALSE, NULL,
+    '2/13', '5/11', '5/13', '11/13',
+    'C',
+    'Total balls = 2 + 6 + 5 = 13. P(Black) = 5 / 13.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 16, 'CM-05',
+    'In the diagram, MNPQ is a circle, centre O. Angle MQN = 43° and angle QNP = 57°. Find the value of y.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q16-circle-intersecting-chords.png',
+    '70°', '90°', '80°', '100°',
+    'D',
+    'Angle MPN = angle MQN = 43° (subtended by same arc MN). Angle y is the exterior angle at the intersection of MP and NQ = 57° + 43° = 100°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 17, 'CM-05',
+    'Describe the locus, l in the diagram.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q17-angle-bisector-locus.png',
+    'Locus of points equidistant from x and z.',
+    'Locus of points equidistant from x and y.',
+    'Locus of points equidistant from xy and zy.',
+    'Locus of points equidistant from zx and zy.',
+    'D',
+    'Line l bisects the angle formed by lines zx and zy, so it is the locus of points equidistant from the line segments zx and zy.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 18, 'CM-06',
+    'The base radius and slant height of a solid cone are 8 cm and 14 cm respectively. Calculate, correct to two decimal places, its volume. [Take π = 22/7]',
+    FALSE, NULL,
+    '553.14 cm³', '640.87 cm³', '838.67 cm³', '770.32 cm³',
+    'D',
+    'Height h = sqrt(14² - 8²) = sqrt(132) ≈ 11.4891 cm. Volume = (1/3) * (22/7) * 8² * 11.4891 = 770.32 cm³.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 19, 'CM-01',
+    'Abudu can do a piece of work in 6 days and Efah can do the same work in 3 days. What fraction of the work can both do together in a day?',
+    FALSE, NULL,
+    '1/3', '1/8', '2/3', '1/2',
+    'D',
+    'Abudu 1 day = 1/6, Efah 1 day = 1/3. Combined in 1 day = 1/6 + 1/3 = 3/6 = 1/2.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 20, 'CM-01',
+    'If P = {x: 1 <= x <= 6} and Q = {x: 2 < x < 9} where x in R, find P ∩ Q.',
+    FALSE, NULL,
+    '{x: 2 <= x < 6}', '{x: 2 <= x <= 6}', '{x: 2 < x <= 6}', '{x: 2 < x < 6}',
+    'C',
+    'P = [1, 6], Q = (2, 9). The overlap P ∩ Q is (2, 6], i.e., {x: 2 < x <= 6}.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 21, 'CM-02',
+    'Given that p² + q² + r² = 50, p = 5 and sqrt(q) = 2, find the positive value of r.',
+    FALSE, NULL,
+    '5', '3', '4', '2',
+    'B',
+    'sqrt(q) = 2 => q = 4 => q² = 16. p = 5 => p² = 25. 25 + 16 + r² = 50 => r² = 9 => r = 3.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 22, 'CM-02',
+    'If 1/2 and -3 are the roots of px² + qx + r = 0, find the values of p, q and r.',
+    FALSE, NULL,
+    'p = 2, q = -5, r = 3', 'p = 2, q = 5, r = 3', 'p = 2, q = 5, r = -3', 'p = -2, q = 5, r = 3',
+    'C',
+    'Sum of roots = 1/2 - 3 = -5/2 = -q/p. Product = (1/2)(-3) = -3/2 = r/p. Choosing p = 2 gives q = 5, r = -3.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 23, 'CM-06',
+    'A cylindrical container closed at both ends has radius 5 cm and height 10 cm. Calculate, correct to two decimal places, the total surface area. [Take π = 22/7]',
+    FALSE, NULL,
+    '470.43 cm²', '471.43 cm²', '456.43 cm²', '460.43 cm²',
+    'B',
+    'Total surface area = 2πr(r + h) = 2 * (22/7) * 5 * (5 + 10) = (44/7) * 75 = 3300/7 ≈ 471.43 cm².',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 24, 'CM-02',
+    'Badu is four times as old as Juliet. In 10 years Badu will be twice as old as Juliet. Find Juliet''s age.',
+    FALSE, NULL,
+    '3 years', '6 years', '5 years', '8 years',
+    'C',
+    'Let Juliet = j, Badu = 4j. In 10 years: 4j + 10 = 2(j + 10) => 4j + 10 = 2j + 20 => 2j = 10 => j = 5 years.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 25, 'CM-08',
+    'When the point (4,5) is rotated through an angle in the anticlockwise direction about the origin, its image is (-5, 4). What is the angle of rotation?',
+    FALSE, NULL,
+    '90°', '270°', '180°', '300°',
+    'A',
+    'An anticlockwise rotation of 90° about origin maps (x, y) -> (-y, x). (4, 5) -> (-5, 4), which matches 90°.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 26, 'CM-05',
+    'In the diagram, find the value of x.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q26-parallel-lines-angle.png',
+    '165°', '50°', '95°', '85°',
+    'D',
+    'Draw a line parallel to the vertical lines through vertex x: Upper portion = 35° (alternate), lower portion = 180° - 130° = 50° (co-interior). x = 35° + 50° = 85°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 27, 'CM-03',
+    'A woman bought a washing machine for $18,000.00. If the exchange rate is $0.045 to ₦1.00, find in ₦, the cost of the machine.',
+    FALSE, NULL,
+    '₦ 400,000.00', '₦ 600,000.00', '₦ 250,000.00', '₦ 300,000.00',
+    'A',
+    'Cost in ₦ = 18,000 / 0.045 = ₦ 400,000.00.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 28, 'CM-01',
+    'Determine the least value of x such that 7 + x ≡ 3 (mod 8).',
+    FALSE, NULL,
+    '3', '4', '5', '6',
+    'B',
+    '7 + x ≡ 3 (mod 8) => x ≡ 3 - 7 ≡ -4 ≡ 4 (mod 8). Least non-negative x = 4.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 29, 'CM-02',
+    'If (4m + 3n)/(4m - 3n) = 5/2, find the ratio of m : n.',
+    FALSE, NULL,
+    '4 : 7', '4 : 3', '3 : 4', '7 : 4',
+    'D',
+    '2(4m + 3n) = 5(4m - 3n) => 8m + 6n = 20m - 15n => 21n = 12m => m/n = 21/12 = 7/4 => m : n = 7 : 4.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 30, 'CM-03',
+    'Yakubu received 12(1/2)% of the sales made in a certain month. If the amount he received was $35,000.00, what was the total sales made?',
+    FALSE, NULL,
+    '$245,000.00', '$140,000.00', '$315,000.00', '$280,000.00',
+    'D',
+    '12.5% of Total = 35,000 => (1/8) * Total = 35,000 => Total = 35,000 * 8 = $280,000.00.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 31, 'CM-07',
+    'The angle of elevation of the top of a vertical pole from a point, P on a level ground is 60°. The distance from P to the foot of the pole is 55 m. Find the height of the pole.',
+    FALSE, NULL,
+    '55/2 m', '55*sqrt(3) m', '(55*sqrt(3))/3 m', '(55*sqrt(3))/2 m',
+    'B',
+    'tan(60°) = h / 55 => h = 55 * tan(60°) = 55*sqrt(3) m.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 32, 'CM-01',
+    'The ratio of girls to boys in a certain committee is 5 : 2. If there are 35 members in the committee, how many more boys must be added to the committee to have the ratio of girls to boys as 5 : 4?',
+    FALSE, NULL,
+    '20', '10', '15', '5',
+    'B',
+    'Girls = (5/7)*35 = 25, Boys = (2/7)*35 = 10. New ratio 25 / (10 + b) = 5/4 => 50 + 5b = 100 => b = 10.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 33, 'CM-02',
+    'Find the values of x for which (x + 1) / (3x² - 12) is not defined.',
+    FALSE, NULL,
+    'x = 2, -4', 'x = 4, -4', 'x = -2, 2', 'x = 0, 2',
+    'C',
+    'Denominator 3x² - 12 = 0 => 3(x² - 4) = 0 => x² = 4 => x = -2 or 2.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 34, 'CM-07',
+    'Given that tan x = 12/5, find the value of (sin x * cos x).',
+    FALSE, NULL,
+    '165/60', '169/65', '60/169', '65/169',
+    'C',
+    'opp = 12, adj = 5 => hyp = 13. sin x = 12/13, cos x = 5/13. sin x * cos x = (12/13)*(5/13) = 60/169.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 35, 'CM-12',
+    'Consider these two statements: P: N is an odd number; Q: N is a prime number greater than 2. Express "If N is not an odd number then N is not a prime number greater than 2" in symbolic form.',
+    FALSE, NULL,
+    '~P => Q', '~P ^ ~Q', 'P => ~Q', '~P => ~Q',
+    'D',
+    '"Not P" is ~P. "Not Q" is ~Q. Statement "If not P then not Q" is ~P => ~Q.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 36, 'CM-06',
+    'A sector which subtends an angle 150° is cut from a circular plate of radius 14 cm. Find, correct to one decimal place, the perimeter of the remaining plate. [Take π = 22/7]',
+    FALSE, NULL,
+    '65.3 cm', '79.3 cm', '84.7 cm', '64.7 cm',
+    'B',
+    'Remaining angle = 360° - 150° = 210°. Arc length = (210/360)*2*(22/7)*14 = 51.33 cm. Perimeter = 51.33 + 2(14) = 79.3 cm.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 37, 'CM-07',
+    'One side of a gutter is 15 cm lower than the other side. A plank of wood, which is laid across the gutter to form a bridge, slopes at an angle of 35° to the horizontal. How wide is the gutter?',
+    FALSE, NULL,
+    '18.31 cm', '21.42 cm', '26.15 cm', '10.50 cm',
+    'B',
+    'tan(35°) = 15 / width => width = 15 / tan(35°) = 15 / 0.7002 ≈ 21.42 cm.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 38, 'CM-05',
+    'In the diagram, MOP is the diameter of the circle MNP centre O. Angle NMP = (2x)° and angle EPM = (5x+18)°. Find the value of x.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q38-circle-diameter-tangent.png',
+    '72°', '24°', '48°', '18°',
+    'B',
+    'Angle NPN = 90° (angle in semicircle). Straight line supplementary angles: (5x + 18) + (90 - 2x) = 180 => 3x + 108 = 180 => 3x = 72 => x = 24.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 39, 'CM-06',
+    'The height of a square base pyramid is thrice the length of a side of its base. If the base area is 324 cm², find the volume of the pyramid.',
+    FALSE, NULL,
+    '17,496 cm³', '5,832 cm³', '324 cm³', '972 cm³',
+    'B',
+    'Base side s = sqrt(324) = 18 cm. Height h = 3 * 18 = 54 cm. Volume = (1/3) * 324 * 54 = 5,832 cm³.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 40, 'CM-01',
+    'If 4^x = 1/1024, find the value of x.',
+    FALSE, NULL,
+    '-10', '-5', '8', '4',
+    'B',
+    '1024 = 4⁵ => 1/1024 = 4⁻⁵ => 4^x = 4⁻⁵ => x = -5.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 41, 'CM-05',
+    'In the diagram, O is the centre of the circle WXY. |WX| = |XZ| and angle ZXY = 26°. Find angle XYZ.',
+    TRUE, 'C-Math/2023/Paper 1/CM-2023-P1-Q41-circle-diameter-isosceles.png',
+    '62°', '42°', '52°', '32°',
+    'D',
+    'WY is diameter => angle WXY = 90°. angle WXZ = 90° - 26° = 64°. Isosceles triangle WXZ => angle XWY = (180° - 64°)/2 = 58°. In right triangle WXY, angle XYZ = 90° - 58° = 32°.',
+    'hard', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 42, 'CM-01',
+    'Evaluate: 141_six + 233_six - 102_six.',
+    FALSE, NULL,
+    '412_six', '405_six', '312_six', '305_six',
+    'C',
+    '141_six + 233_six = 414_six. 414_six - 102_six = 312_six.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 43, 'CM-04',
+    'In the first year, Mr. Kwakye''s annual salary was $1,560.00. His salary was increased each year by a constant value, y until it was $13,980.00 in the 13th year. Calculate the value of y.',
+    FALSE, NULL,
+    '$955.38', '$1,230.00', '$1,129.09', '$1,035.00',
+    'D',
+    'T_13 = a + 12y = 1560 + 12y = 13980 => 12y = 12420 => y = $1,035.00.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 44, 'CM-04',
+    'Given that 16/9, x, 1, y is a Geometric Progression (G.P), find the value of xy.',
+    FALSE, NULL,
+    '9/16', '25/12', '2', '1',
+    'D',
+    'Common ratio r² = 1 / (16/9) = 9/16 => r = 3/4. x = (16/9)*(3/4) = 4/3. y = 1*(3/4) = 3/4. xy = (4/3)*(3/4) = 1.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 45, 'CM-05',
+    'A chord of a circle, 12 cm long subtends an angle of 150° at the centre of the circle. Find the radius of the circle.',
+    FALSE, NULL,
+    '3.0 cm', '4.3 cm', '6.0 cm', '6.2 cm',
+    'D',
+    'Chord = 2r*sin(75°) => 12 = 2r*(0.9659) = 1.9318r => r = 12 / 1.9318 ≈ 6.2 cm.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 46, 'CM-08',
+    'The lines 3x + 2y = 4 and y = 2x - 5 intersect at a point P(x, y). Find the coordinates of P.',
+    FALSE, NULL,
+    '(2, 1)', '(-2, 1)', '(2, -1)', '(-2, -1)',
+    'C',
+    '3x + 2(2x - 5) = 4 => 7x - 10 = 4 => 7x = 14 => x = 2. y = 2(2) - 5 = -1. P = (2, -1).',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 47, 'CM-02',
+    'Make u the subject of the relation t / (s + u) = s / (t - u).',
+    FALSE, NULL,
+    'u = s - t', 'u = t - s', 'u = t*s', 'u = t + s',
+    'B',
+    't(t - u) = s(s + u) => t² - tu = s² + su => t² - s² = u(s + t) => (t - s)(t + s) = u(s + t) => u = t - s.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 48, 'CM-10',
+    'The table shows the number of subjects registered by a class of students: [Subjects: 1..8, Students: 2,1,4,3,8,5,4,3]. Calculate the mean of the distribution.',
+    FALSE, NULL,
+    '2', '3', '8', '5',
+    'D',
+    'Total students = 30. Total fx = 2+2+12+12+40+30+28+24 = 150. Mean = 150 / 30 = 5.',
+    'easy', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 49, 'CM-10',
+    'Using the same distribution table as Q48, find the median.',
+    FALSE, NULL,
+    '2', '5', '3', '8',
+    'B',
+    'Cumulative frequencies reach 18 at x = 5 (positions 11 through 18). Median is the average of 15th and 16th values = 5.',
+    'medium', FALSE
+),
+(
+    'Core Mathematics', 2023, 1, 50, 'CM-06',
+    'A rectangular tank of sides 4 m by 8 m by 11 m has the same volume as a cylindrical tank of height 7 m. Calculate the base radius of the cylindrical tank. [Take π = 22/7]',
+    FALSE, NULL,
+    '4 m', '22 m', '8 m', '88 m',
+    'A',
+    'Volume = 4 * 8 * 11 = 352 m³. Cylindrical volume = (22/7)*r²*7 = 22r² = 352 => r² = 16 => r = 4 m.',
+    'easy', FALSE
+);
+
+-- ============================================================================
+-- WASSCE 2023 CORE MATHEMATICS - PAPER 2 (STRUCTURED / THEORY)
+-- ============================================================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id,
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+(
+    'Core Mathematics', 2023, 2, 1, 'a', 'CM-01',
+    'In a talent hunt competition of 35 artistes, they indicated their interest in playing Cymbal, Saxophone, and Bongo. Out of the number, 24 preferred Cymbal, 16 Saxophone and 18 Bongo. 8 preferred Cymbal only, 2 Saxophone only and 6 Bongo only. 4 played all three instruments while 7 preferred Cymbal and Saxophone only. Illustrate the information in a Venn diagram.',
+    FALSE, NULL,
+    'Total = 35. Draw 3 overlapping sets C, S, B.
+C-only = 8, S-only = 2, B-only = 6, All-three = 4, C∩S-only = 7.
+Let x = C∩B-only, y = S∩B-only.
+8 + 7 + 4 + x = 24 => x = 5.
+2 + 7 + 4 + y = 16 => y = 3.
+Check B: 6 + 5 + 4 + 3 = 18. All region counts match total 35.',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 1, 'b', 'CM-01',
+    'Find the number of artistes who preferred: i) only two types of instruments; ii) only one type of instrument.',
+    FALSE, NULL,
+    'i) Only two types = (C∩S-only) + (C∩B-only) + (S∩B-only) = 7 + 5 + 3 = 15 artistes.
+ii) Only one type = 8 + 2 + 6 = 16 artistes.',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 2, 'a', 'CM-07',
+    'Doris walked 2t km from a village, K to visit a friend in another village, L on a bearing of 065°. After spending some time with her friend, she continued to a nearby town, M, 3t km away on a bearing of 155°. If the distance between K and M is 6*sqrt(13) km, illustrate the information in a diagram.',
+    FALSE, NULL,
+    'Diagram showing P(065°) from K to L (2t km), and bearing 155° from L to M (3t km). Angle KLM = 180° - 65° + 155°... angle inside triangle KLM at L = 90°.',
+    5
+),
+(
+    'Core Mathematics', 2023, 2, 2, 'b', 'CM-07',
+    'Calculate, correct to the nearest whole number: i) value of t; ii) bearing of M from K.',
+    FALSE, NULL,
+    'i) In right-angled triangle KLM (angle L = 90°): |KM|² = (2t)² + (3t)² = 13t².
+Given |KM| = 6*sqrt(13) => 13t² = 36 * 13 => t² = 36 => t = 6.
+ii) tan(LKM) = 3t / 2t = 1.5 => angle LKM = arctan(1.5) ≈ 56.3°.
+Bearing of M from K = 65° + 56.3° = 121.3° ≈ 121°.',
+    7
+),
+(
+    'Core Mathematics', 2023, 2, 3, 'a', 'CM-06',
+    'In the frustum of a cone, the bottom diameter is thrice the top diameter. If the height of the frustum is 12 cm, calculate the height of the whole cone.',
+    FALSE, NULL,
+    'Let top radius = r, bottom radius = 3r, height of whole cone = H.
+By similar triangles: r / 3r = (H - 12) / H => 1/3 = (H - 12) / H => H = 3H - 36 => 2H = 36 => H = 18 cm.',
+    5
+),
+(
+    'Core Mathematics', 2023, 2, 3, 'b', 'CM-06',
+    'Given that the volume of the whole cone is 39,600 cm³, find, correct to four significant figures, the radius. [Take π = 22/7]',
+    FALSE, NULL,
+    'Volume = (1/3)*π*R²*H = 39,600 => (1/3)*(22/7)*R²*18 = 39,600 => (132/7)*R² = 39,600 => R² = 2100 => R = 45.83 cm.',
+    7
+),
+(
+    'Core Mathematics', 2023, 2, 4, 'a', 'CM-05',
+    'In the diagram, JKLMN is a regular pentagon and KOPQRL is a regular hexagon. Find: angle JNM.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q04-pentagon-hexagon.png',
+    'Interior angle of regular pentagon = (5-2)*180° / 5 = 108°. In isosceles triangle JNM (|JN|=|NM|), base angle JNM = (180° - 108°)/2 = 36°.',
+    4
+),
+(
+    'Core Mathematics', 2023, 2, 4, 'b', 'CM-05',
+    'In the diagram, JKLMN is a regular pentagon and KOPQRL is a regular hexagon. Find: angle KOP.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q04-pentagon-hexagon.png',
+    'Interior angle of regular hexagon = (6-2)*180° / 6 = 120°.',
+    3
+),
+(
+    'Core Mathematics', 2023, 2, 4, 'c', 'CM-05',
+    'In the diagram, JKLMN is a regular pentagon and KOPQRL is a regular hexagon. Find: angle MLR.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q04-pentagon-hexagon.png',
+    'Angle at vertex L: pentagon angle JLK = 108°, hexagon angle KLR = 120°. Angle MLR = 360° - (108° + 120°) = 132°.',
+    5
+),
+(
+    'Core Mathematics', 2023, 2, 5, 'a', 'CM-10',
+    'The mean age of a second year class of a school is 18(2/5). At the end of the promotion examination, 3 students aged 20, 19 and 19 years were repeated. The new mean age of the class became 18(1/3). Calculate the number of students who were in the class before the promotion examination.',
+    FALSE, NULL,
+    'Let initial number of students = N. Initial total age = 18.4 N.
+After 3 repeated students leave, remaining students = N - 3.
+New total age = 18.4 N - (20 + 19 + 19) = 18.4 N - 58.
+New mean = (18.4 N - 58) / (N - 3) = 55/3 => 3(18.4 N - 58) = 55(N - 3) => 55.2 N - 174 = 55 N - 165 => 0.2 N = 9 => N = 45 students.',
+    12
+),
+(
+    'Core Mathematics', 2023, 2, 6, 'a', 'CM-04',
+    'In a certain spider web, the lengths of the shortest and longest threads are 3.4 mm and 50.2 mm respectively. If the length of the cross threads form an Arithmetic Progression (A.P), find the number of cross threads if they are 1.2 mm apart.',
+    FALSE, NULL,
+    'First term a = 3.4, nth term L = 50.2, common difference d = 1.2.
+L = a + (n - 1)d => 50.2 = 3.4 + (n - 1)(1.2) => 46.8 = 1.2(n - 1) => n - 1 = 39 => n = 40 cross threads.',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 6, 'b', 'CM-02',
+    'At noon, a cargo plane leaves Moi airport and heads towards Kisumu 500 km away at 180 km/h. At 1.00 pm, a jet takes off from Moi and flies on the same course at 450 km/h. What time will the jet overtake the cargo plane?',
+    FALSE, NULL,
+    'Distance covered by cargo plane by 1:00 pm (1 hour) = 180 km.
+Relative speed of jet = 450 - 180 = 270 km/h.
+Time to overtake = 180 / 270 = 2/3 hour = 40 minutes.
+Overtake time = 1:00 pm + 40 mins = 1:40 pm.',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 7, 'a', 'CM-01',
+    'A man left an estate for his wife, extended family and children: Dakorah, Gifty and Gemma. In the will, 1/3 of the estate must be given to Dakorah, 1/3 of the remaining to Gifty, 3/4 of what still remains to Gemma, 2/3 of the remaining to the wife and the rest to the extended family. If the wife received a total of GH₵ 105,500.00 as her share, find the total value of the estate.',
+    FALSE, NULL,
+    'Let total estate = E.
+Dakorah = (1/3)E, Rem1 = (2/3)E.
+Gifty = (1/3)(2/3)E = (2/9)E, Rem2 = (2/3)(2/3)E = (4/9)E.
+Gemma = (3/4)(4/9)E = (1/3)E, Rem3 = (1/4)(4/9)E = (1/9)E.
+Wife = (2/3)(1/9)E = (2/27)E.
+Given (2/27)E = 105,500 => E = 105,500 * 27 / 2 = GH₵ 1,424,250.00.',
+    8
+),
+(
+    'Core Mathematics', 2023, 2, 7, 'b', 'CM-01',
+    'Find the extended family''s share of the estate.',
+    FALSE, NULL,
+    'Extended family = (1/3) of Rem3 = (1/3)(1/9)E = (1/27)E = GH₵ 105,500 / 2 = GH₵ 52,750.00.',
+    4
+),
+(
+    'Core Mathematics', 2023, 2, 8, 'a', 'CM-07',
+    'In the diagram, MNR is a right angle triangle. |MN| = 15 m, |MR| = 10*sqrt(3) m and angle MQN = 72°. Calculate, correct to the nearest whole number: the value of the angle marked x.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q08-triangles.png',
+    'cos(NMR) = 15 / (10*sqrt(3)) = 15 / 17.32 = 0.8660 => angle NMR = 30°.
+In right triangle MQN: angle NMQ = 90° - 72° = 18°.
+Angle x = angle NMR - angle NMQ = 30° - 18° = 12° ≈ 12°.',
+    4
+),
+(
+    'Core Mathematics', 2023, 2, 8, 'b', 'CM-07',
+    'In the diagram, MNR is a right angle triangle. Calculate, correct to the nearest whole number: |QR|.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q08-triangles.png',
+    '|QN| = 15 * tan(18°) = 15 * 0.3249 = 4.87 m.
+|NR| = sqrt((10*sqrt(3))² - 15²) = sqrt(300 - 225) = sqrt(75) = 8.66 m.
+|QR| = |NR| - |QN| = 8.66 - 4.87 = 3.79 m ≈ 4 m.',
+    4
+),
+(
+    'Core Mathematics', 2023, 2, 8, 'c', 'CM-07',
+    'In the diagram, calculate the area of triangle MQR.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q08-triangles.png',
+    'Area of triangle MQR = Area(MNR) - Area(MNQ) = 1/2 * 15 * 8.66 - 1/2 * 15 * 4.87 = 64.95 - 36.53 = 28.42 m² ≈ 28 m².',
+    4
+),
+(
+    'Core Mathematics', 2023, 2, 9, 'a', 'CM-05',
+    'In the diagram, A, B, C, D are points on a circle. ADE and BCE are straight lines. angle DCE = 56°, angle ABE = (5x - 16)° and angle BAE = ((3/2)x + 4y)°. If angle DCE : angle CDE = 7 : 8, find: angle AEB.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q09-circle-secants.png',
+    'Given angle DCE = 56° and ratio 7:8 => angle CDE = 56° * (8/7) = 64°.
+In triangle CDE: angle AEB = 180° - (56° + 64°) = 60°.',
+    5
+),
+(
+    'Core Mathematics', 2023, 2, 9, 'b', 'CM-05',
+    'Using the information from Q9a, find the values of x and y.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q09-circle-secants.png',
+    'Cyclic quadrilateral ABCD => exterior angle ABE = angle CDE => 5x - 16 = 64 => 5x = 80 => x = 16.
+Exterior angle BAE = angle DCE => (3/2)x + 4y = 56 => (3/2)(16) + 4y = 56 => 24 + 4y = 56 => 4y = 32 => y = 8.',
+    7
+),
+(
+    'Core Mathematics', 2023, 2, 10, 'a', 'CM-11',
+    'A cupboard contains three kinds of notebooks: J, K and L, all of the same size. The number of book J is 3 more than half of book L. The number of K is one-third the number of L. i) If there are 25 books in the cupboard, find the number of each kind of book. ii) If a book is picked at random, what is the probability that it is K or L?',
+    FALSE, NULL,
+    'i) Let L = number of L books. J = (1/2)L + 3, K = (1/3)L.
+J + K + L = 25 => (1/2)L + 3 + (1/3)L + L = 25 => (11/6)L = 22 => L = 12.
+J = (1/2)(12) + 3 = 9. K = (1/3)(12) = 4. Books: J = 9, K = 4, L = 12.
+ii) P(K or L) = (4 + 12) / 25 = 16/25.',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 10, 'b', 'CM-05',
+    'In the diagram, PQRST is a circle with centre O. POR and QOT are straight lines, QT || RS, angle RTQ = 33° and |RS| = |ST|. Find angle RST.',
+    TRUE, 'C-Math/2023/Paper 2/CM-2023-P2-Q10b-circle-parallel.png',
+    'QT || RS => alternate angle TRS = angle RTQ = 33°. In isosceles triangle RST (|RS|=|ST|), base angle STR = angle TRS = 33°. Angle RST = 180° - (33° + 33°) = 114°.',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 11, 'a', 'CM-07',
+    'From the top, X of a building 320 m high, the angles of depression of the top, Y and bottom, Z of another building on the same horizontal ground are 29° and 41° respectively. i) Illustrate the information in a diagram. ii) Calculate, correct to the nearest metre, the height of the other building.',
+    FALSE, NULL,
+    'i) Diagram showing X (320 m high), horizontal distance d to building YZ. Angle of depression to Z = 41°, to Y = 29°.
+ii) Distance d = 320 / tan(41°) = 320 / 0.8693 = 368.28 m.
+Height difference h_diff = d * tan(29°) = 368.28 * 0.5543 = 204.14 m.
+Height of second building = 320 - 204.14 = 115.86 m ≈ 116 m.',
+    8
+),
+(
+    'Core Mathematics', 2023, 2, 11, 'b', 'CM-02',
+    'The time taken to travel a distance of 120 km was reduced by 30 minutes when the speed was increased by 20 km/h. Calculate the initial speed.',
+    FALSE, NULL,
+    '120/v - 120/(v + 20) = 0.5 => 120(v + 20) - 120v = 0.5v(v + 20) => 2400 = 0.5v² + 10v => v² + 20v - 4800 = 0 => (v + 80)(v - 60) = 0 => initial speed v = 60 km/h.',
+    4
+),
+(
+    'Core Mathematics', 2023, 2, 12, 'a', 'CM-12',
+    'Consider statements: S: Most businessmen are rich. T: No salary worker is rich. i) Draw a Venn diagram to illustrate the information. ii) State whether valid or not: α) Ali is a businessman and is therefore rich. β) Ahmed is not rich because he is a salary worker.',
+    FALSE, NULL,
+    'i) Venn diagram shows overlap between Businessman (B) and Rich (R). Salary Workers (W) is entirely disjoint from Rich (R).
+ii) α) Invalid (Ali could be a businessman in the non-rich subset of B).
+ii) β) Valid (W and R are disjoint, so being in W guarantees not being in R).',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 12, 'b', 'CM-10',
+    'The table shows the distribution of height of seedlings in a nursery: [Heights: 60-64 (7), 65-69 (6), 70-74 (5), 75-79 (8), 80-84 (4)]. Calculate, correct to one decimal place: i) mean; ii) variance of the distribution.',
+    FALSE, NULL,
+    'Midpoints x: 62, 67, 72, 77, 82. Frequencies f: 7, 6, 5, 8, 4. Total f = 30.
+fx: 434, 402, 360, 616, 328 => Sum fx = 2140. Mean = 2140 / 30 = 71.3 cm.
+fx²: 26908, 26934, 25920, 47432, 26896 => Sum fx² = 154090.
+Variance = (154090 / 30) - (71.333)² = 5136.33 - 5088.44 = 47.9 cm².',
+    6
+),
+(
+    'Core Mathematics', 2023, 2, 13, 'a', 'CM-08',
+    'Using a scale of 2 cm to 1 unit on both axes, draw perpendicular axes ox and oy for 0 <= x <= 8 and -6 <= y <= 6. i) Plot points M(3,1), N(1,1), P(3,5). Join to get triangle MNP. ii) Draw image triangle M1 N1 P1 (reflection of MNP in x-axis). State coordinates. iii) Draw image triangle M2 N2 P2 under mapping (x,y) -> (2x, -y). State coordinates.',
+    FALSE, NULL,
+    'i) Triangle M(3,1), N(1,1), P(3,5).
+ii) Reflection in x-axis: (x, y) -> (x, -y). Coordinates: M1(3, -1), N1(1, -1), P1(3, -5).
+iii) Mapping (x, y) -> (2x, -y): Coordinates: M2(6, -1), N2(2, -1), P2(6, -5).',
+    8
+),
+(
+    'Core Mathematics', 2023, 2, 13, 'b', 'CM-08',
+    'Find the equation of the line joining the points M and M2.',
+    FALSE, NULL,
+    'Points M(3, 1) and M2(6, -1).
+Gradient m = (-1 - 1) / (6 - 3) = -2/3.
+Equation: y - 1 = (-2/3)(x - 3) => 3y - 3 = -2x + 6 => 2x + 3y = 9.',
+    4
+);
+
+COMMIT;

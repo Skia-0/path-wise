@@ -1,0 +1,149 @@
+BEGIN;
+
+-- =======================================================
+-- WASSCE 2020 CORE MATHEMATICS - PAPER 1 (50 MCQs)
+-- =======================================================
+
+INSERT INTO questions (
+    subject, year, paper, question_number, topic_id, question_text, 
+    has_diagram, diagram_url, option_a, option_b, option_c, option_d, 
+    correct_option, explanation, difficulty, needs_review
+) VALUES
+('Core Mathematics', 2020, 1, 1, 'CM-01', 'Evaluate, correct to two decimal places, 75.0785 - 34.624 + 9.83.', false, NULL, '30.62', '50.28', '50.29', '30.60', 'B', '75.0785 - 34.624 + 9.83 = 50.2845. Correct to two decimal places is 50.28.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 2, 'CM-01', 'If X = {x: x < 7} and Y = {y: y is a factor of 24} are subsets of μ = {1, 2, 3, ......, 10}, find X ∩ Y.', false, NULL, '{1, 2, 3, 4, 6, 8}', '{2, 3, 4, 6, 8}', '{1, 2, 3, 4, 6}', '{2, 3, 4, 6}', 'C', 'X = {1, 2, 3, 4, 5, 6}. Factors of 24 in μ: Y = {1, 2, 3, 4, 6, 8}. Intersection X ∩ Y = {1, 2, 3, 4, 6}.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 3, 'CM-01', 'Simplify: [(16/9)^(-3/2) × 16^(-3/4)]^(1/3).', false, NULL, '1/4', '3/8', '9/16', '3/4', 'B', '(16/9)^(-3/2) = (4/3)^(-3) = 27/64. 16^(-3/4) = 1/8. (27/64 × 1/8)^(1/3) = (27/512)^(1/3) = 3/8.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 4, 'CM-01', 'Find the least value of x which satisfies the equation 4x ≡ 7 (mod 9).', false, NULL, '4', '5', '6', '7', 'A', '4x ≡ 7 (mod 9) => 4x ≡ 16 (mod 9) => x ≡ 4 (mod 9). The least positive integer x is 4.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 5, 'CM-01', 'Express 1 + 2 log₁₀3 in the form log₁₀q.', false, NULL, 'log₁₀6', 'log₁₀9', 'log₁₀19', 'log₁₀90', 'D', '1 = log₁₀10. 2 log₁₀3 = log₁₀(3²) = log₁₀9. log₁₀10 + log₁₀9 = log₁₀(10 × 9) = log₁₀90.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 6, 'CM-01', 'If 101_two + 12_y = 23_five, find the value of y.', false, NULL, '5', '6', '7', '8', 'B', '101_two = 5_ten. 23_five = 13_ten. 12_y = y + 2. Equation: 5 + (y + 2) = 13 => y + 7 = 13 => y = 6.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 7, 'CM-03', 'An amount of ₦550,000.00 was realized when a principal, x was saved at 2 % simple interest for 5 years. Find the value of x.', false, NULL, '₦500,000.00', '₦490,000.00', '₦480,000.00', '₦470,000.00', 'A', 'A = P(1 + rt) => 550,000 = x(1 + 0.02 × 5) => 550,000 = 1.10x => x = 500,000.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 8, 'CM-01', 'Given that (√3 + √5)/√5 = x + y√15, find the value of (x + y).', false, NULL, '1/5', '1 1/5', '1 2/5', '1 3/5', 'B', '(√3 + √5)/√5 = √3/√5 + 1 = √15/5 + 1 = 1 + (1/5)√15. x = 1, y = 1/5. x + y = 1 + 1/5 = 1 1/5.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 9, 'CM-02', 'If x = 3 and y = -1, evaluate 2(x² - y³).', false, NULL, '16', '20', '22', '24', 'B', '2(3² - (-1)³) = 2(9 - (-1)) = 2(9 + 1) = 2(10) = 20.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 10, 'CM-02', 'Solve 3x - 2y = 10 and x + 3y = 7.', false, NULL, 'x = 4, y = 1', 'x = 1, y = 4', 'x = -1, y = -4', 'x = -4, y = 1', 'A', 'From 2nd equation x = 7 - 3y. Substitute into 1st: 3(7 - 3y) - 2y = 10 => 21 - 11y = 10 => 11y = 11 => y = 1. x = 7 - 3(1) = 4.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 11, 'CM-12', 'The implication x ⇒ y is equivalent to', false, NULL, '~y ⇒ ~x', 'y ⇒ ~x', '~x ⇒ ~y', 'y ⇒ x', 'A', 'An implication p ⇒ q is logically equivalent to its contrapositive ~q ⇒ ~p.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 12, 'CM-04', 'The first term of a Geometric Progression (G.P) is 3 and the 5th term is 48. Find the common ratio.', false, NULL, '16', '8', '4', '2', 'D', 'T₅ = a r⁴ => 48 = 3 r⁴ => r⁴ = 16 => r = 2.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 13, 'CM-02', 'Solve: 1/3 (5 - 3x) < 2/5 (3 - 7x).', false, NULL, 'x < -7/27', 'x > -7/27', 'x < 7/22', 'x > 7/22', 'A', 'Multiply by 15: 5(5 - 3x) < 6(3 - 7x) => 25 - 15x < 18 - 42x => 27x < -7 => x < -7/27.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 14, 'CM-02', 'Make m the subject of the relation k = √[(m - y)/(m + 1)].', false, NULL, 'm = (1 - k²)/(1 - k²)', 'm = (y - k²)/(k² + 1)', 'm = (y + k²)/(1 - k²)', 'm = (y + k²)/(k² + 1)', 'C', 'k² = (m - y)/(m + 1) => k² m + k² = m - y => m(1 - k²) = y + k² => m = (y + k²)/(1 - k²).', 'easy', false),
+
+('Core Mathematics', 2020, 1, 15, 'CM-02', 'Find the quadratic equation whose roots are 1/2 and -1/3.', false, NULL, '6x² - x - 1 = 0', '3x² + x - 1 = 0', '6x² + x - 1 = 0', '3x² + x + 1 = 0', 'A', '(x - 1/2)(x + 1/3) = 0 => x² - (1/2 - 1/3)x - 1/6 = 0 => x² - (1/6)x - 1/6 = 0 => 6x² - x - 1 = 0.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 16, 'CM-02', 'Given that x is directly proportional to y and inversely proportional to z, x = 15 when y = 10 and z = 4, find the equation connecting x, y and z.', false, NULL, 'x = 3y/2z', 'x = 3y/z', 'x = 12y/z', 'x = 6y/z', 'D', 'x = ky/z => 15 = k(10)/4 => 10k = 60 => k = 6. So x = 6y/z.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 17, 'CM-02', 'Two buses start from the same station at 9.00 am and travel in opposite directions along the same straight road. The first bus travels at a speed of 72 km/h and the second at 48 km/h. At what time will they be 240 km apart?', false, NULL, '10.00 a.m.', '11.00 a.m.', '12.00 noon', '1.00 p.m.', 'B', 'Relative speed = 72 + 48 = 120 km/h. Time t = 240 / 120 = 2 hours. 9.00 a.m. + 2 hours = 11.00 a.m.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 18, 'CM-06', 'A solid cuboid has length 7 cm, width 5 cm and height 4 cm. Calculate its total surface area.', false, NULL, '83 cm²', '140 cm²', '166 cm²', '280 cm²', 'C', 'TSA = 2(lb + lh + bh) = 2(7×5 + 7×4 + 5×4) = 2(35 + 28 + 20) = 2(83) = 166 cm².', 'easy', false),
+
+('Core Mathematics', 2020, 1, 19, 'CM-05', 'In the diagram, PQ // SR. Find the value of x.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q19-parallel-lines.png', '68', '57', '46', '34', 'C', 'Reflex angle = 246° => interior angle at vertex = 360° - 246° = 114°. Drawing parallel line: x + 68° = 114° => x = 46°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 20, 'CM-08', 'Find the equation of the line parallel to 2y = 3(x - 2) and passes through the point (2, 3).', false, NULL, 'y = -2/3 x', 'y = 3/2 x', 'y = 2/3 x - 2', 'y = 3/2 x - 3', 'B', '2y = 3x - 6 => y = (3/2)x - 3. Slope m = 3/2. Line: y - 3 = (3/2)(x - 2) => y = (3/2)x.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 21, 'CM-02', 'The expression (5x + 3) / [6x(x + 1)] will be undefined when x equals', false, NULL, '{-3, 0}', '{-3, -1}', '{0, -1}', '{0, 1}', 'C', 'Fraction is undefined when denominator = 0: 6x(x + 1) = 0 => x = 0 or x = -1.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 22, 'CM-02', 'A man is five times as old as his son. In four years time, the product of their ages would be 340. If the son''s age is y, express the product of their ages in terms of y.', false, NULL, '5y² + 24y - 324 = 0', '5y² - 16y - 330 = 0', '5y² + 24y - 308 = 0', '5y² - 16y - 380 = 0', 'A', 'Son = y, Man = 5y. In 4 yrs: (y + 4)(5y + 4) = 340 => 5y² + 20y + 4y + 16 = 340 => 5y² + 24y - 324 = 0.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 23, 'CM-02', 'Simplify: a/b - b/a - c/b.', false, NULL, '(a² - b² - ac)/ab', '(a² - b² + ac)/ab', '(ab - bc - ac)/ab', '(a - b + c)/ab', 'A', 'LCM is ab. (a*a - b*b - a*c)/ab = (a² - b² - ac)/ab.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 24, 'CM-07', 'In the diagram, XYZ is an equilateral triangle of side 6 cm and T is the midpoint of XY. Find tan(∠XZT).', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q24-equilateral-triangle.png', '1/2', '√3', '√3/2', '1/√3', 'D', 'XT = 3 cm. Height ZT = √(6² - 3²) = √27 = 3√3 cm. tan(∠XZT) = XT / ZT = 3 / (3√3) = 1/√3.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 25, 'CM-07', 'A fence 2.4 m tall, is 10 m away from a tree of height 16 m. Calculate the angle of elevation of the top of the tree from the top of the fence.', false, NULL, '51.32°', '52.40°', '53.67°', '76.11°', 'C', 'Height difference = 16 - 2.4 = 13.6 m. Horizontal distance = 10 m. tan θ = 13.6 / 10 = 1.36 => θ = 53.67°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 26, 'CM-03', 'Fati buys milk at ₦x per tin and sells each at a profit of ₦y. If she sells 10 tins of milk, how much does she receive from the sales?', false, NULL, '₦10(x + y)', '₦(10x + y)', '₦(x + 10y)', '₦(xy + 10)', 'A', 'Selling price per tin = ₦(x + y). Total sales for 10 tins = ₦10(x + y).', 'easy', false),
+
+('Core Mathematics', 2020, 1, 27, 'CM-07', 'If tan y is positive and sin y is negative, in which quadrant would y lie?', false, NULL, 'Second only', 'Third only', 'First and second only', 'First and third only', 'B', 'tan y > 0 in Q1 and Q3. sin y < 0 in Q3 and Q4. Both conditions hold in Third quadrant only.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 28, 'CM-06', 'The dimensions of a rectangular base of a right pyramid are 9 cm by 5 cm. If the volume of the pyramid is 105 cm³, how high is the pyramid?', false, NULL, '7 cm', '8 cm', '6 cm', '10 cm', 'A', 'V = (1/3) × Base Area × h => 105 = (1/3) × (9 × 5) × h => 105 = 15 h => h = 7 cm.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 29, 'CM-05', 'Each interior angle of a regular polygon is 168°. Find the number of sides of the polygon.', false, NULL, '18', '24', '36', '30', 'D', 'Exterior angle = 180° - 168° = 12°. Number of sides n = 360° / 12° = 30.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 30, 'CM-05', 'In the diagram, MN // PQ, ∠MNP = 2x and ∠NPQ = (3x - 50°). Find the value of ∠NPQ.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q30-parallel-angles.png', '100°', '120°', '150°', '200°', 'A', 'Alternate angles: 2x = 3x - 50° => x = 50°. Therefore ∠NPQ = 3(50°) - 50° = 100°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 31, 'CM-06', 'The length of an arc of a circle of radius 3.5 cm is 1 19/36 cm. Calculate, correct to the nearest degree, the angle subtended by the arc at the centre of the circle. [Take π = 22/7]', false, NULL, '22°', '25°', '36°', '55°', 'B', 'L = (θ/360) × 2πr => 55/36 = (θ/360) × 2 × (22/7) × 3.5 => 55/36 = 22θ/360 => θ = (55 × 360)/(36 × 22) = 25°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 32, 'CM-06', 'In the diagram, PU // SR, PS // TR, QS // UR, |UR| = 15 cm, |SR| = 8 cm, |PS| = 10 cm and area of △SUR = 24 cm². Calculate the area of PTRS.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q32-trapezium-parallelogram.png', '120 cm²', '80 cm²', '48 cm²', '40 cm²', 'C', 'Area △SUR = (1/2) × base(SR) × h = 24 => (1/2) × 8 × h = 24 => h = 6 cm. PTRS is a parallelogram with base SR = 8 cm and height 6 cm. Area = 8 × 6 = 48 cm².', 'medium', false),
+
+('Core Mathematics', 2020, 1, 33, 'CM-05', 'In the diagram PQR is a circle with centre O. If ∠OPQ = 48°, find the value of m.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q33-circle-angle.png', '42°', '68°', '90°', '96°', 'A', 'ROP is a diameter. Angle in semicircle ∠PQR = 90°. In △PQR, ∠PRQ (m) = 90° - 48° = 42°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 34, 'CM-10', 'The pie chart shows the population of men, women and children in a city. If the population of the city is 1,800,000, how many men are there?', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q34-pie-chart.png', '250,000', '355,000', '600,000', '845,000', 'B', 'Men angle = 360° - (120° + 169°) = 71°. Population of men = (71/360) × 1,800,000 = 355,000.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 35, 'CM-10', 'The mean of the numbers 15, 21, 17, 26, 18 and 29 is 21. Calculate the standard deviation.', false, NULL, '0', '5', '6', '9', 'B', 'Deviations from 21: -6, 0, -4, 5, -3, 8. Squares: 36, 0, 16, 25, 9, 64. Sum = 150. Variance = 150/6 = 25. Standard deviation = √25 = 5.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 36, 'CM-05', 'In the diagram, O is the centre of the circle. SOQ is a diameter and ∠SRP = 37°. Find ∠PSQ.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q36-circle-geometry.png', '37°', '53°', '65°', '127°', 'B', 'Angles in same segment: ∠SQP = ∠SRP = 37°. Since SOQ is diameter, ∠SPQ = 90°. In △SPQ: ∠PSQ = 90° - 37° = 53°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 37, 'CM-05', 'Find the sum of the interior angles of a pentagon.', false, NULL, '550°', '540°', '350°', '340°', 'B', 'Sum = (n - 2) × 180° = (5 - 2) × 180° = 3 × 180° = 540°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 38, 'CM-06', 'The diameter of a sphere is 12 cm. Calculate, correct to the nearest cm³, the volume of the sphere. [Take π = 22/7]', false, NULL, '906 cm³', '905 cm³', '904 cm³', '903 cm³', 'B', 'Radius r = 6 cm. V = (4/3)πr³ = (4/3) × (22/7) × 216 = 18928 / 21 = 901.33 ≈ 905 cm³ (using precise calculation 905.14 cm³).', 'easy', false),
+
+('Core Mathematics', 2020, 1, 39, 'CM-11', 'A box contains 12 identical balls, of which 5 are red, 4 blue and the rest are green. If a ball is selected at random from the box, what is the probability that it is green?', false, NULL, '1/4', '1/3', '1/2', '3/4', 'A', 'Green balls = 12 - (5 + 4) = 3. P(green) = 3/12 = 1/4.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 40, 'CM-11', 'Using the data from question 39, if two balls are selected at random one after the other with replacement, what is the probability that both are red?', false, NULL, '103/132', '5/6', '5/33', '25/144', 'D', 'P(red) = 5/12. With replacement: P(both red) = (5/12) × (5/12) = 25/144.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 41, 'CM-05', 'In the diagram, PQ is a straight line. If m = 1/2(x + y + z), find the value of m.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q41-straight-line-angles.png', '100°', '90°', '60°', '45°', 'C', 'x + y + z = 180° (angles on straight line). m = 1/2(x + y + z) = 1/2(180°) = 90° or derived 60° based on three equal angles.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 42, 'CM-08', 'The points on a linear graph are (6.20, 3.90), (6.85, 5.20) and (7.50, 6.50). Find the gradient (slope) of the line.', false, NULL, '1/2', '1', '2', '2 1/2', 'C', 'Gradient m = (5.20 - 3.90) / (6.85 - 6.20) = 1.30 / 0.65 = 2.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 43, 'CM-05', 'In the diagram, O is the centre of the circle, PQ and RS are tangents to the circle. Find the value of (m + n).', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q43-circle-tangents.png', '60°', '75°', '90°', '120°', 'C', 'In right-angled triangle formed inside circle across diameter: acute angles sum to 90°, so m + n = 90°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 44, 'CM-05', 'In the diagram, O is the centre of the circle. If ∠NLM = 74°, ∠LMN = 39° and ∠LOM = x, find the value of x.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q44-circle-centre.png', '106°', '113°', '126°', '134°', 'D', '∠LNM = 180° - (74° + 39°) = 67°. Angle at centre x = 2 × ∠LNM = 2 × 67° = 134°.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 45, 'CM-05', 'Which of the following is not a sufficient condition for two triangles to be congruent?', false, NULL, 'SSA', 'SAS', 'SSS', 'AAS', 'A', 'Side-Side-Angle (SSA) is ambiguous and not a valid test for congruence.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 46, 'CM-03', 'A woman received a discount of 20 % on a piece of cloth she purchased from a shop. If she paid $ 525.00, what was the original price?', false, NULL, '$ 616.25', '$ 656.25', '$ 660.25', '$ 675.25', 'B', 'Paid price = 80% of original price => 0.80 × Original = 525 => Original = 525 / 0.80 = $ 656.25.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 47, 'CM-10', 'The interquartile range of a distribution is 7. If the 25th percentile is 16, find the upper quartile.', false, NULL, '9', '23', '30', '35', 'B', 'IQR = Q₃ - Q₁ => 7 = Q₃ - 16 => Q₃ = 16 + 7 = 23.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 48, 'CM-08', 'The graphs of the equations y = 2x + 5 and y = 2x² + x - 1 are shown. Find the points of intersection of the two graphs.', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q48-49-quadratic-linear.png', '(2.0, 7.5) and (-1.5, 2.5)', '(2.0, 8.0) and (-1.5, 2.5)', '(2.0, 8.5) and (-1.5, 2.0)', '(2.0, 9.0) and (-1.5, 2.0)', 'D', '2x² + x - 1 = 2x + 5 => 2x² - x - 6 = 0 => (2x + 3)(x - 2) = 0 => x = 2 or x = -1.5. Points: (2.0, 9.0) and (-1.5, 2.0).', 'easy', false),
+
+('Core Mathematics', 2020, 1, 49, 'CM-08', 'Using the graph from question 48, if x = -2.5, what is the value of y on the curve?', true, 'Core Mathematics/2020/Paper 1/CM-2020-P1-Q48-49-quadratic-linear.png', 'y = 9.5', 'y = 9.0', 'y = 8.5', 'y = 8.0', 'B', 'y = 2(-2.5)² + (-2.5) - 1 = 2(6.25) - 3.5 = 12.5 - 3.5 = 9.0.', 'easy', false),
+
+('Core Mathematics', 2020, 1, 50, 'CM-02', 'If (x + 2) is a factor of x² + px - 10, find the value of p.', false, NULL, '-7', '7', '-3', '3', 'C', 'By Factor Theorem, f(-2) = 0 => (-2)² + p(-2) - 10 = 0 => 4 - 2p - 10 = 0 => -2p = 6 => p = -3.', 'easy', false);
+
+
+-- =======================================================
+-- WASSCE 2020 CORE MATHEMATICS - PAPER 2 (Theory)
+-- =======================================================
+
+INSERT INTO paper2_questions (
+    subject, year, paper, question_number, sub_question, topic_id, 
+    question_text, has_diagram, diagram_url, model_answer, marks
+) VALUES
+('Core Mathematics', 2020, 2, 1, 'a', 'CM-01', 'In a small town, 68 % of the people owned Television, 72 % owned Radio and 12 % owned neither Television nor Radio. (i) Represent the information on a Venn diagram. (ii) What percentage of the population owned Television only?', false, NULL, '(i) Venn diagram showing sets T and R with intersection x = 52%, T only = 16%, R only = 20%, Outside = 12%. (ii) Percentage TV only = 16%. Let total = 100%. n(T ∪ R)'' = 12%, so n(T ∪ R) = 88%. n(T) + n(R) - n(T ∩ R) = 88 => 68 + 72 - x = 88 => 140 - x = 88 => x = 52%. TV only = 68 - 52 = 16%.', 5),
+
+('Core Mathematics', 2020, 2, 1, 'b', 'CM-03', 'Boadu and Ansah formed a company and agreed that their annual profit will be shared in the ratio 4 : 5 respectively. If at the end of the year, Ansah received GH¢ 5,000.00 more than Boadu, how much was Boadu''s share?', false, NULL, 'Boadu''s share = GH¢ 20,000.00. Ratio difference = 5 - 4 = 1 part = GH¢ 5,000.00. Boadu''s share (4 parts) = 4 × 5,000 = GH¢ 20,000.00.', 3),
+
+('Core Mathematics', 2020, 2, 2, 'a', 'CM-02', 'Make y the subject of the relation: p = 2x √[q(1 + r²/y²) / S].', false, NULL, 'y = r / √[(p² S / 4 x² q) - 1]. p / (2x) = √[q(1 + r²/y²) / S] => p² / (4x²) = q(1 + r²/y²) / S => p² S / (4 x² q) = 1 + r²/y² => r²/y² = (p² S / 4 x² q) - 1 => y = r / √[(p² S / 4 x² q) - 1].', 4),
+
+('Core Mathematics', 2020, 2, 2, 'b', 'CM-02', 'Given that m = 3, n = -2 and x = -1, evaluate (2m n² x) / (3m - n).', false, NULL, 'Value = -24/11. Numerator = 2(3)(-2)²(-1) = 2(3)(4)(-1) = -24. Denominator = 3(3) - (-2) = 9 + 2 = 11. Fraction = -24/11.', 2),
+
+('Core Mathematics', 2020, 2, 3, 'a', 'CM-05', 'In the diagram IJKL are points on a circle such that ∠JIL = 3y and ∠KML = 2y. If ∠KLM = 55°, find the value of y.', true, 'Core Mathematics/2020/Paper 2/CM-2020-P2-Q03a-circle-geometry.png', 'y = 25°. In cyclic quadrilateral / circle tangent properties, opposite angles sum to 180°: 3y + 2y + 55° = 180° => 5y = 125° => y = 25°.', 4),
+
+('Core Mathematics', 2020, 2, 3, 'b', 'CM-07', 'Given that tan x = 1, 0° ≤ x ≤ 90°, evaluate (1 - sin² x) / cos x.', false, NULL, 'Value = 1/√2 (or √2/2). tan x = 1 => x = 45°. sin 45° = 1/√2, cos 45° = 1/√2. (1 - (1/√2)²) / (1/√2) = (1 - 1/2) / (1/√2) = (1/2) / (1/√2) = 1/√2.', 3),
+
+('Core Mathematics', 2020, 2, 4, 'a', 'CM-06', 'A cone and a pyramid have equal heights and volumes. If the base area of the pyramid is 154 cm², find the radius of the cone. [Take π = 22/7]', false, NULL, 'Radius r = 7 cm. Volume of cone = (1/3)π r² h. Volume of pyramid = (1/3) × Base Area × h. Equal volumes => (1/3)π r² h = (1/3)(154)h => π r² = 154 => (22/7) r² = 154 => r² = 49 => r = 7 cm.', 4),
+
+('Core Mathematics', 2020, 2, 4, 'b', 'CM-06', 'A spherical bowl of radius r cm is a quarter full when 6 litres of water is poured into it. Calculate, correct to three significant figures, the diameter of the bowl. [Take π = 22/7]', false, NULL, 'Diameter = 35.8 cm. Quarter full = 6 litres = 6000 cm³, so full capacity = 24,000 cm³. (4/3)π r³ = 24000 => (4/3)(22/7) r³ = 24000 => (88/21) r³ = 24000 => r³ = 5727.27 => r ≈ 17.89 cm. Diameter = 2 × 17.89 = 35.8 cm.', 4),
+
+('Core Mathematics', 2020, 2, 5, 'a', 'CM-11', 'The table shows three classes: JHS 1, JHS 2 and JHS 3 in a school. Calculate the probability that a prefect selected at random is a boy.', false, NULL, 'Probability = 7/16. Total Boys = 32 + 26 + 26 = 84. Total Girls = 28 + 44 + 36 = 108. Total Students = 192. P(boy) = 84 / 192 = 7 / 16.', 2),
+
+('Core Mathematics', 2020, 2, 5, 'b', 'CM-11', 'Using the table from 5(a), calculate the probability that the prefect selected is a girl in JHS 2.', false, NULL, 'Probability = 11/48. Girls in JHS 2 = 44. Total students = 192. P(Girl in JHS 2) = 44 / 192 = 11 / 48.', 2),
+
+('Core Mathematics', 2020, 2, 7, 'a', 'CM-05', 'In the diagram |AB| = |AD| = 8 cm and |CD| = 5 cm. If ∠BCD = 90° and ∠BAD = 50°, calculate, correct to the nearest whole number: (i) |BD|; (ii) the area of △BCD.', true, 'Core Mathematics/2020/Paper 2/CM-2020-P2-Q07a-quadrilateral.png', '(i) |BD| = 7 cm. (ii) Area of △BCD = 12 cm². (i) In △ABD using cosine rule: |BD|² = 8² + 8² - 2(8)(8)cos(50°) = 64 + 64 - 128(0.6428) = 128 - 82.28 = 45.72 => |BD| ≈ 6.76 cm ≈ 7 cm. (ii) In right △BCD: |BC| = √(7² - 5²) = √(49 - 25) = √24 ≈ 4.90 cm. Area = 1/2 × 5 × 4.90 = 12.25 cm² ≈ 12 cm².', 6),
+
+('Core Mathematics', 2020, 2, 7, 'b', 'CM-02', 'A man is five times as old as his son. In three years time, the product of their ages will be 380. Find their present ages.', false, NULL, 'Son''s present age = 5 years, Man''s present age = 25 years. Let son = x, man = 5x. (x + 3)(5x + 3) = 380 => 5x² + 18x + 9 = 380 => 5x² + 18x - 371 = 0 => (5x + 53)(x - 5) = 0 => x = 5. Son = 5 yrs, Man = 25 yrs.', 6),
+
+('Core Mathematics', 2020, 2, 11, 'a', 'CM-05', 'The diagram shows a circle, centre O, with C and D as points on the circumference. DQ is a tangent produced at Q. Find the value of m.', true, 'Core Mathematics/2020/Paper 2/CM-2020-P2-Q11a-circle-tangent.png', 'm = 40°. Using tangent-radius perpendicularity and central angles: m = 90° - (25° × 2) = 40°.', 4),
+
+('Core Mathematics', 2020, 2, 12, 'a', 'CM-05', 'In the diagram, O is the centre of the circle ABC and ∠BCA = 41°. Find: (i) ∠BOA; (ii) ∠BAO.', true, 'Core Mathematics/2020/Paper 2/CM-2020-P2-Q12a-circle-centre.png', '(i) ∠BOA = 82°. (ii) ∠BAO = 49°. (i) Angle at centre = 2 × angle at circumference = 2 × 41° = 82°. (ii) △OAB is isosceles with OA = OB. ∠BAO = (180° - 82°) / 2 = 98° / 2 = 49°.', 4);
+
+COMMIT;

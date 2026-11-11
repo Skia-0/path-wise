@@ -1,0 +1,257 @@
+.sus-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.sus-card {
+  background: var(--surface, #1e293b);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: susFadeIn 0.25s ease-out;
+}
+
+@keyframes susFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sus-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  position: relative;
+}
+
+.sus-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.sus-header p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 4px 0 0;
+}
+
+.sus-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.sus-close-btn:hover {
+  color: #f8fafc;
+}
+
+.sus-form {
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sus-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sus-progress span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent, #38bdf8);
+}
+
+.sus-progress-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.sus-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sus-question-item {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.sus-question-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.sus-q-num {
+  color: var(--accent, #38bdf8);
+  font-weight: 700;
+}
+
+.sus-likert-group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.sus-likert-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.sus-likert-label input {
+  display: none;
+}
+
+.sus-val {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.sus-lbl {
+  font-size: 0.65rem;
+  color: #64748b;
+  margin-top: 2px;
+  line-height: 1.1;
+}
+
+.sus-likert-label:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.sus-likert-label.selected {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(139, 92, 246, 0.25));
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.sus-likert-label.selected .sus-val {
+  color: #38bdf8;
+}
+
+.sus-likert-label.selected .sus-lbl {
+  color: #f8fafc;
+}
+
+.sus-feedback-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sus-feedback-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.sus-feedback-group textarea {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 8px;
+  padding: 10px;
+  color: #f8fafc;
+  font-family: inherit;
+  font-size: 0.85rem;
+  resize: vertical;
+}
+
+.sus-feedback-group textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.sus-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.sus-success {
+  padding: 40px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sus-score-badge {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.sus-success h3 {
+  color: #f8fafc;
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+
+.sus-success p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  max-width: 420px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .sus-likert-group {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .sus-lbl {
+    display: none; /* Hide verbose text on small screens */
+  }
+}
